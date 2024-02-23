@@ -10,6 +10,7 @@ class Game(models.Model):
     )
     trophies = models.CharField(max_length=4)
     hours = models.CharField(max_length=4)
+    image = models.ImageField(upload_to='images/', blank=True)
 
     def __str__(self):
         return f"{self.title}"
