@@ -114,6 +114,10 @@ This is the desktop wireframes for the key features of the Last Trophy applicati
 
 ## Testing
 
+- Fixed function attribute error by going back into the trophy model and adjusting some key values such as the related name component and the trophy field name on the game model.
+- Fixed an error where the trophies were not appearing, after completing the migrations for the model changes this fixed this issue.
+- Fixed Slug field error by renaming the slug field to include a slug field and not a char field which fixed this issue.
+
 ## Deployment
 
 ## Credits

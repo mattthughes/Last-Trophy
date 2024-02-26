@@ -1,1 +1,6 @@
 <h1>Home Page</h1>
+
+<h1>Games List</h1>
+    {% for game in object_list %}
+    <a href="{% url 'game_detail' game.slug %}">{{game.title}}</a><h2></h2>
+    {% endfor %}

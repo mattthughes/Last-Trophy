@@ -10,8 +10,12 @@
 
 <body>
     <h1>Games List</h1>
-    {% for game in object_list %}
     <h2>{{game.title}}</h2>
+    <p>{{ game.author }}</p>
+    <p> {{ game.trophy_count }}</p>
+
+    {% for trophy in trophies %}
+    {{ trophy.title }}
     {% endfor %}
 </body>
 
