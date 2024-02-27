@@ -5,7 +5,7 @@ from .models import Game, Trophy
 # Create your views here.
 class GameList(generic.ListView):
     queryset = Game.objects.filter()
-    template_name = "base.html"
+    template_name = "trophy_hunter/index.html"
 
 def game_detail(request, slug):
     queryset = Game.objects.filter()
