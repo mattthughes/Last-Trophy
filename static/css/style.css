@@ -1,4 +1,10 @@
-.heading-title {
+/* Generic styles */
+
+.heading-text {
     height: 40vh;
     text-align: center;
+}
+
+.btn {
+    margin-bottom: 10px;
 }
