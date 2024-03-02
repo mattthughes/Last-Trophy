@@ -19,8 +19,8 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Last Trophy</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -37,20 +37,40 @@
     </header>
 
     <main>
-        
+
     </main>
-    
+
     {% block content %}
     {% endblock content %}
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-black">
             {% block copyright %}Made by Matthew Hughes for Educational purposes{% endblock copyright %}
         </p>
-        <p class="m-0 text-center text-black">Follow us on our socials:<i class="fab fa-youtube-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-facebook-square ms-3"></i>
-        </p>
+        <p class="m-0 text-center text-black">Follow us on our socials:</p>
+        <ul class="social-icons">
+            <li>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                    aria-label="Find us on Youtube by clicking the Youtube icon (link opens in new tab)"><i
+                        class="fab fa-youtube-square ms-3"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://en-gb.facebook.com/" target="_blank" rel="noopener" aria-label="Find us on Facebook by clicking the Facebook icon (link opens in new tab)">
+                    <i class="fab fa-facebook-square ms-3"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Find us on Instagram by clicking the Instagram icon (link opens in new tab)">
+                    <i class="fab fa-instagram-square ms-3"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/?lang=en" target="_blank" rel="noopener" aria-label="Find us on Twitter by clicking the Twitter icon (link opens in new tab)">
+                    <i class="fab fa-twitter-square ms-3"></i>
+                </a>
+            </li>
+        </ul>
+        
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
