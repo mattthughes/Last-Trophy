@@ -1,10 +1,15 @@
 /* Generic styles */
 
 .heading-text {
-    height: 40vh;
+    height: 73vh;
     text-align: center;
+}
+
+.heading-paragraph {
+    padding: 15px; 
 }
 
 .btn {
     margin-bottom: 10px;
+    
 }
