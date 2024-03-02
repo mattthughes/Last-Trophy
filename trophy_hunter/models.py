@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 class Game(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -32,3 +33,8 @@ class Trophy(models.Model):
 
     def __str__(self):
         return f" {self.title} {self.description}"
+
+class Genre(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    description = models.TextField()
+    
