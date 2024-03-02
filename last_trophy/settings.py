@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mattthughes-lasttrophy-mynq24flmbe.ws-eu108.gitpod.io', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-mattthughes-lasttrophy-cdegp5edryc.ws-eu108.gitpod.io', '.herokuapp.com']
 
 
 # Application definition
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'trophy_hunter'
+    'trophy_hunter',
+    'category'
 ]
 
 MIDDLEWARE = [

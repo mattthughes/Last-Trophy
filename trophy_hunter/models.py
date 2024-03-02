@@ -10,6 +10,7 @@ class Game(models.Model):
     )
     trophy_count = models.CharField(max_length=4)
     hours = models.CharField(max_length=4)
+    genre = models.CharField(max_length=200, unique=True, default='action')
 
     def __str__(self):
         return f"{self.title}"
