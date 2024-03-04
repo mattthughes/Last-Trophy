@@ -8,7 +8,7 @@ def CategoryList(request):
 
     return render(
         request,
-        "trophy_hunter/category.html",
+        "category.html",
         {
             "categories": categories,
         },
