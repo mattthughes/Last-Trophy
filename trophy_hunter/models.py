@@ -45,7 +45,7 @@ class Genre(models.Model):
 class Categories(models.Model):
     title = models.CharField(max_length=200)
     genre = models.ForeignKey(
-        Genre, on_delete=models.CASCADE, related_name="categories"
+        Genre, on_delete=models.CASCADE, related_name="genres"
     )
     game = models.ForeignKey(
         Game, on_delete=models.CASCADE

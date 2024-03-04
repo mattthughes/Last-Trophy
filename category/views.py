@@ -4,11 +4,11 @@ from trophy_hunter.models import Categories
 # Create your views here.
 
 def CategoryList(request):
-    categories = Categories.objects.all()
+    categories = Categories.objects.all().order_by("-genre")
 
     return render(
         request,
-        "category.html",
+        "trophy_hunter/test.html",
         {
             "categories": categories,
         },
