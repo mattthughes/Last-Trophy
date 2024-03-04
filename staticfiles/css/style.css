@@ -1,0 +1,25 @@
+/* Generic styles */
+
+.heading-text {
+    height: 73vh;
+    text-align: center;
+}
+
+.heading-paragraph {
+    padding: 15px; 
+}
+
+.btn {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+}
+
+.social-icons>li {
+    font-size: 1.5em;
+    padding-left: 0;
+    padding-right: 20px;
+}
