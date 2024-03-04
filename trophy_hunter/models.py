@@ -44,6 +44,7 @@ class Genre(models.Model):
 
 class Categories(models.Model):
     title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200, unique=True, default="action")
     genre = models.ForeignKey(
         Genre, on_delete=models.CASCADE, related_name="genres"
     )

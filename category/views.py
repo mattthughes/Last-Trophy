@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from trophy_hunter.models import Categories
+from trophy_hunter.models import Categories, Game
 # Create your views here.
 
 def CategoryList(request):
@@ -13,3 +13,6 @@ def CategoryList(request):
             "categories": categories,
         },
     )
+
+
+

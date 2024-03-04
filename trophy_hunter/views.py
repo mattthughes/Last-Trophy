@@ -7,6 +7,7 @@ class GameList(generic.ListView):
     queryset = Game.objects.filter()
     template_name = "trophy_hunter/index.html"
 
+
 def game_detail(request, slug):
     queryset = Game.objects.filter()
     game = get_object_or_404(queryset, slug=slug)
