@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% for category in categories %}
+{% for category in object_list %}
 <p>{{category.genre}}</p>
-{{category.game}}
+<a href="{% url 'category_detail' category.slug %}">{{category.game}}</a>
 {% endfor %}
 
 
