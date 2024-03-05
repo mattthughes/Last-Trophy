@@ -3,9 +3,11 @@ from django.views import generic
 from .models import Game, Trophy
 
 # Create your views here.
-class GameList(generic.ListView):
-    queryset = Game.objects.filter()
-    template_name = "trophy_hunter/index.html"
+def index(request):
+    return render(
+        request,
+        "trophy_hunter/index.html"
+    )
 
 
 def game_detail(request, slug):
