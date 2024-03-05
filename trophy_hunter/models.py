@@ -11,7 +11,6 @@ class Game(models.Model):
     )
     trophy_count = models.CharField(max_length=4)
     hours = models.CharField(max_length=4)
-    genre = models.CharField(max_length=200, unique=True, default='action')
 
     def __str__(self):
         return f"{self.title}"
@@ -41,17 +40,13 @@ class Genre(models.Model):
     def __str__(self):
         return f"{self.title}"
 
-
-class Categories(models.Model):
-    title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, unique=True, default="action")
+class Category(models.Model):
     genre = models.ForeignKey(
-        Genre, on_delete=models.CASCADE, related_name="genres"
+        Genre, on_delete=models.CASCADE
     )
     game = models.ForeignKey(
         Game, on_delete=models.CASCADE
     )
 
     def __str__(self):
-        return f"{self.genre} {self.game}"
-    
+        return f"{self.genre}"
