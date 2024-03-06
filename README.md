@@ -119,6 +119,7 @@ This is the desktop wireframes for the key features of the Last Trophy applicati
 - Fixed Slug field error by renaming the slug field to include a slug field and not a char field which fixed this issue.
 - Fixed view error by first seperating the category and genre model into the trophy hunter app, I did this so I could reference the game model to link the game to the category. After this in the category view I imported the trophy hunter model and in particular the categories model so I could reference the model and then created the view. There was an issue with the url to fix this I added the url to the project and created the url within the category app which fixed the view error.
 - Fixed migrations database model bugs where a field already existed to fix this I deleted the existing migrations and created the database model again.
+- Fixed database already exists error by deleting all database models and creating them again starting with the genre model as when trying to delete the game orginally this would clash with the genre model not allowing me to create or add new migrations to the database model. Deleting and creating the models and the model structure again fixed this issue.
 
 ## Deployment
 
