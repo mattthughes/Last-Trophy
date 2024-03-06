@@ -1,6 +1,7 @@
 {% load static %}
 {% url 'home' as home_url %}
-{% url 'category' as category_url %}
+{% url 'genre' as category_url %}
+{% url 'game' as game_url %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,7 @@
                             <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'category' %}">Categories</a>
+                            <a class="nav-link" href="{% url 'genre' %}">Categories</a>
                         </li>
                 </div>
             </div>

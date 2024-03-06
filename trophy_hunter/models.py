@@ -33,16 +33,19 @@ class Trophy(models.Model):
     def __str__(self):
         return f" {self.title} {self.description}"
 
-class Genre(models.Model):
+class Genres(models.Model):
     title = models.CharField(max_length=200, unique=True)
     description = models.TextField()
+    game = models.ForeignKey(
+        Game, on_delete=models.CASCADE, default="horror"
+    )
 
     def __str__(self):
         return f"{self.title}"
 
-class Category(models.Model):
+class Categories(models.Model):
     genre = models.ForeignKey(
-        Genre, on_delete=models.CASCADE
+        Genres, on_delete=models.CASCADE
     )
     game = models.ForeignKey(
         Game, on_delete=models.CASCADE

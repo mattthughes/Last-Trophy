@@ -2,8 +2,9 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path("", views.CategoryList.as_view(), name='category'),
-    path('<slug:slug>/', views.category_detail, name='category_detail'),
+    path("genre", views.GenresList.as_view(), name='genre'),
+    path("game", views.GameList.as_view(), name="game"),
+    path('<slug:slug>/', views.game_detail, name='game_detail'),
     
     
 ]

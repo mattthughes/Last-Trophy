@@ -1,29 +1,31 @@
 from django.shortcuts import render,get_object_or_404, reverse
 from django.views import generic
-from trophy_hunter.models import Game, Trophy, Category
+from trophy_hunter.models import Game, Trophy, Categories, Genres
 from itertools import chain
 # Create your views here.
-
-
-class CategoryList(generic.ListView):
-    queryset = Category.objects.filter()
+    
+class GenresList(generic.ListView):
+    queryset = Genres.objects.filter()
     template_name = "category.html"
 
-def category_detail(request, slug):
-    queryset = Category.objects.filter()
-    categories = get_object_or_404(queryset, slug=slug)
-    game = Game.objects.all()
-    trophies = Trophy.objects.all()
+class GameList(generic.ListView):
+    queryset = Game.objects.filter()
+    template_name = "game.html"
+
+def game_detail(request, slug):
+    queryset = Game.objects.filter()
+    game = get_object_or_404(queryset, slug=slug)
+    trophies = game.trophies.all().order_by("-rarity")
 
     return render(
         request,
-        "category_detail.html",
+        "game_detail.html",
         {
-            "categories": categories,
             "game": game,
-            "trophies": trophies
-
+            "trophies": trophies,
+            
         },
     )
+
 
 
