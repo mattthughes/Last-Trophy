@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'trophy_hunter',
-    'category'
+    'category',
+    'django_filters',
 ]
 
 MIDDLEWARE = [

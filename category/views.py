@@ -5,12 +5,13 @@ from trophy_hunter.models import Genre, Games
 # Create your views here.
 
 class GenresList(generic.ListView):
-    queryset = Genre.objects.filter("title")
+    queryset = Genre.objects.filter()
     template_name = "category.html"    
 
 class GameList(generic.ListView):
     queryset = Games.objects.filter()
     template_name = "game.html"
+
 
 def game_detail(request, slug):
     queryset = Games.objects.filter()
@@ -21,11 +22,10 @@ def game_detail(request, slug):
         request,
         "game_detail.html",
         {
+            
             "game": game,
-            "trophies": trophies,
+            "trophies": trophies
             
         },
     )
-
-
 
