@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Genre,Games,Trophy
+from .models import Game, Trophies
 # Register your models here.
-admin.site.register(Genre)
-admin.site.register(Games)
-admin.site.register(Trophy)
+admin.site.register(Game)
+admin.site.register(Trophies)
