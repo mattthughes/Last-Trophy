@@ -1,10 +1,15 @@
 from django.shortcuts import render,get_object_or_404, reverse
 from django.views import generic
+from trophy_hunter.models import Game
+from trophy_hunter.forms import GameNameFilterForm
 # Create your views here.
 
-#class GenresList(generic.ListView):
-    #queryset = Genre.objects.filter()
-    #template_name = "category.html"    
+def game_list(request):
+    context = {
+        'form': GameNameFilterForm(),
+        'game': Game.objects.all()
+    }
+    return render(request, 'category.html', context)
 
 #def GameList(request):
     #genre = request.GET.get('action')

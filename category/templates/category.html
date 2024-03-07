@@ -1,9 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% for genre in object_list %}
-<a href="{% url 'game' %}">{{genre.title}}</a>
-{% endfor %}
+
+<form method="GET" action="{% url 'category'}">
+    {{form.as_p}}
+    <input type="submit" name="btn btn-primary" value="submit">
+</form>
+
+<hr>
+
+<h1>Game List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Trophy count</th>
+            <th>Hours</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for games in game %}
+        <tr>
+            <td>{{ games.title }}</td>
+            <td>{{ games.get_genre_display }}</td>
+            <td>{{ games.trophy_count }}</td>
+            <td>{{ games.hours }}</td>
+        {% endfor %}
+    </tbody>
+
+</table>
 
 
 {% endblock %}
