@@ -1,6 +1,14 @@
 import django_filters
-from trophy_hunter.models import Games
+from trophy_hunter.models import Game
 
 class GameFilter(django_filters.FilterSet):
-    model = Games
-    fields = ['title', 'genre']
+    trophy_count = django_filters.RangeFilter()
+    hours = django_filters.RangeFilter()
+    class Meta:
+        model = Game
+        fields = {
+            'title': ['icontains'],
+            'genre': ['exact'],
+
+
+        }

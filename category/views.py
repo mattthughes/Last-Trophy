@@ -1,13 +1,14 @@
 from django.shortcuts import render,get_object_or_404, reverse
 from django.views import generic
 from trophy_hunter.models import Game
-from trophy_hunter.forms import GameNameFilterForm
+from .filters import GameFilter
 # Create your views here.
 
 def game_list(request):
+    game_filter = GameFilter(request.GET, queryset=Game.objects.all())
     context = {
-        'form': GameNameFilterForm(),
-        'game': Game.objects.all()
+        'form': game_filter.form,
+        'game': game_filter.qs
     }
     return render(request, 'category.html', context)
 
@@ -23,19 +24,18 @@ def game_list(request):
     #return render(request, 'game.html', context)
 
 
-#def game_detail(request, slug):
-    #queryset = Games.objects.filter()
-    #game = get_object_or_404(queryset, slug=slug)
-    #trophies = game.trophies.all().order_by("-rarity")
+def game_detail(request, slug):
+    game = get_object_or_404(queryset, slug=slug)
+    trophies = game.trophies.all().order_by("-rarity")
 
-    #return render(
-        #request,
-        #"game_detail.html",
-        #{
+    return render(
+        request,
+        "game_detail.html",
+        {
             
-            #"game": game,
-            #"trophies": trophies
+            "game": game,
+            "trophies": trophies
             
-        #},
-    #)
+        },
+    )
 

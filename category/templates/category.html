@@ -2,9 +2,9 @@
 
 {% block content %}
 
-<form method="GET" action="{% url 'category'}">
+<form method="GET" action="{% url 'game' %}">
     {{form.as_p}}
-    <input type="submit" name="btn btn-primary" value="submit">
+    <input type="submit" value="Submit" class="btn btn-primary">
 </form>
 
 <hr>
@@ -22,7 +22,10 @@
     <tbody>
         {% for games in game %}
         <tr>
-            <td>{{ games.title }}</td>
+            <td>
+                <a href="">{{ games.title }}</a>
+                
+            </td>
             <td>{{ games.get_genre_display }}</td>
             <td>{{ games.trophy_count }}</td>
             <td>{{ games.hours }}</td>
