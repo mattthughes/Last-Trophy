@@ -31,6 +31,7 @@ class Trophies(models.Model):
     title = models.CharField(max_length=200, unique=True)
     game = models.ForeignKey(
         Game, on_delete=models.CASCADE, related_name='trophies')
+    featured_image = CloudinaryField('image', default='placeholder')
     description = models.CharField(max_length=200)
     difficulty = models.CharField(max_length=200)
     rarity = models.CharField(max_length=10)

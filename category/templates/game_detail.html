@@ -1,17 +1,41 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="image-container">
-    {% if "placeholder" in game.featured_image.url %}
-    <img class="img-fluid" src="{% static 'static/images/elden-ring-cover.jpg' %}"
-      alt="placeholder image">
-    {% else %}
-    <img class="img-fluid" alt="Responsive image" src=" {{ game.featured_image.url }}"
-      alt="{{ game.title }}">
-    {% endif %}
-    {% for trophy in trophies %}
-    {{ trophy.title }}
-    <p>{{trophy.description}}</p>
-    {% endfor %}
+<div class="container">
+  <div class="row">
+    <div class="game-heading">
+      <h1>{{game.title}}</h1>
+    </div>
+    <div class="game-img">
+      {% if "placeholder" in game.featured_image.url %}
+      <img class="img-thumbnail" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="placeholder image">
+      {% else %}
+      <img class="img-thumbnail" alt="Responsive image" src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
+      {% endif %}
+
+    </div>
+  </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="trophy-section">
+      {% for trophy in trophies %}
+      <h3>Trophies</h3>
+      <p>{{trophy.title}}</p>
+      <div class="games-images">
+        {% if "placeholder" in trophy.featured_image.url %}
+        <img class="trophy-img" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="placeholder image">
+        {% else %}
+        <img class="trophy-img" alt="Responsive image" src=" {{ trophy.featured_image.url }}" alt="{{ trophy.title }}">
+      </div>
+      <div class="trophy-text">
+        <p>{{trophy.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+
 {% endblock %}
