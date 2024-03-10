@@ -24,10 +24,21 @@ def game_list(request):
     #}
     #return render(request, 'game.html', context)
 
-class GameDetail(DetailView):
+def game_detail_view(request,slug):
     # specify the model to use
-    model = Game
-    template_name = 'game_detail.html'
+    queryset = Game.objects.filter()
+    game = get_object_or_404(queryset, slug=slug)
+    trophies = game.trophies.all().order_by("-rarity")
+
+    return render(
+        request,
+        "game_detail.html",
+        {
+            "game": game,
+            "trophies": trophies
+            
+        },
+    )
 
     
 

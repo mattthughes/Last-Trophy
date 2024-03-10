@@ -27,9 +27,7 @@
                 <a href="{% url 'game-detail' game.slug %}">{{ game.title }}</a>
                 
             </td>
-            <td>
-                <a href="">{{ game.get_genre_display }}</a>
-                </td>
+            <td>{{ game.get_genre_display }}</td>
             <td>{{ game.trophy_count }}</td>
             <td>{{ game.hours }}</td>
         {% endfor %}
