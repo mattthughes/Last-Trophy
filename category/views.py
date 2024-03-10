@@ -1,6 +1,7 @@
 from django.shortcuts import render,get_object_or_404, reverse
-from django.views import generic
-from trophy_hunter.models import Game
+   
+from django.views.generic.detail import DetailView
+from trophy_hunter.models import Game,Trophies
 from .filters import GameFilter
 # Create your views here.
 
@@ -8,7 +9,7 @@ def game_list(request):
     game_filter = GameFilter(request.GET, queryset=Game.objects.all())
     context = {
         'form': game_filter.form,
-        'game': game_filter.qs
+        'games': game_filter.qs
     }
     return render(request, 'category.html', context)
 
@@ -23,19 +24,11 @@ def game_list(request):
     #}
     #return render(request, 'game.html', context)
 
+class GameDetail(DetailView):
+    # specify the model to use
+    model = Game
+    template_name = 'game_detail.html'
 
-def game_detail(request, slug):
-    game = get_object_or_404(queryset, slug=slug)
-    trophies = game.trophies.all().order_by("-rarity")
+    
 
-    return render(
-        request,
-        "game_detail.html",
-        {
-            
-            "game": game,
-            "trophies": trophies
-            
-        },
-    )
 
