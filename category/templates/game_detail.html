@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-    {{game.title}}
-    <p> {{ game.trophy_count }}</p>
-
+<div class="image-container">
+    {% if "placeholder" in game.featured_image.url %}
+    <img class="card-img-top" src="{% static 'static/images/elden-ring-cover.jpg' %}"
+      alt="placeholder image">
+    {% else %}
+    <img class="card-img-top" src=" {{ game.featured_image.url }}"
+      alt="{{ game.title }}">
+    {% endif %}
     {% for trophy in trophies %}
     {{ trophy.title }}
     <p>{{trophy.description}}</p>
     {% endfor %}
+</div>
 {% endblock %}

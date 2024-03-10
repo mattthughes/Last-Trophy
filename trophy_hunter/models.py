@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
@@ -17,6 +18,7 @@ class Game(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE
     )
+    featured_image = CloudinaryField('image', default='placeholder')
     genre = models.CharField(max_length=1, choices=GenreChoices.choices)
     trophy_count = models.CharField(max_length=4)
     hours = models.CharField(max_length=4)
