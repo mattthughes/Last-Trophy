@@ -1,39 +1,49 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <form method="GET" action="{% url 'game' %}">
+            {{form.as_p}}
+            <input type="submit" value="Submit" class="btn btn-success">
+        </form>
+    </div>
+</div>
 
-<form method="GET" action="{% url 'game' %}">
-    {{form.as_p}}
-    <input type="submit" value="Submit" class="btn btn-primary">
-</form>
 
 <hr>
 
 
-<h1>Game List</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Genre</th>
-            <th>Trophy count</th>
-            <th>Hours</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for game in games %}
-        <tr>
-            <td>
-                <a href="{% url 'game-detail' game.slug %}">{{ game.title }}</a>
-                
-            </td>
-            <td>{{ game.get_genre_display }}</td>
-            <td>{{ game.trophy_count }}</td>
-            <td>{{ game.hours }}</td>
-        {% endfor %}
-    </tbody>
 
-</table>
+<div class="container-fluid">
+    <div class="row">
+        <h1>Game List</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Trophy count</th>
+                    <th>Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for game in games %}
+                <tr>
+                    <td>
+                        <a href="{% url 'game-detail' game.slug %}">{{ game.title }}</a>
 
+                    </td>
+                    <td>{{ game.get_genre_display }}</td>
+                    <td>{{ game.trophy_count }}</td>
+                    <td>{{ game.hours }}</td>
+                    {% endfor %}
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
 
 {% endblock %}

@@ -11,6 +11,7 @@
 
 .btn {
     margin-bottom: 10px;
+    width: fit-content;
 }
 
 .social-icons {
