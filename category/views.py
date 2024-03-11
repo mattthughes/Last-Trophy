@@ -13,16 +13,6 @@ def game_list(request):
     }
     return render(request, 'category.html', context)
 
-#def GameList(request):
-    #genre = request.GET.get('action')
-    #game = Games.objects.all()
-    #if genre:
-        #game = game.filter(genre_icontains=genre)
-    #context = {
-        #'genre': genre,
-        #'game': game
-    #}
-    #return render(request, 'game.html', context)
 
 def game_detail_view(request,slug):
     # specify the model to use

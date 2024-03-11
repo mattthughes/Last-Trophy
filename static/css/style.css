@@ -26,5 +26,5 @@
 }
 
 .trophy-img {
-    height: 10%;
+    display: flex;
 }
