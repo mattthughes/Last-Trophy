@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-  <div class="row">
+<div class="row">
+  <div class="col-md-12">
     <div class="game-heading">
       <h1>{{game.title}}</h1>
     </div>
@@ -17,23 +17,26 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
+<div class="row">
+  <div>
     <div class="trophy-section">
+      <h3 class="trophy-heading">Trophies</h3>
       {% for trophy in trophies %}
-      <h3>Trophies</h3>
-      <p>{{trophy.title}}</p>
-      <div class="games-images">
+      <div class="trophy-name">
+        <p>{{trophy.title}}</p>
+      </div>
+      <div class="col-md-4">
         {% if "placeholder" in trophy.featured_image.url %}
-        <img class="trophy-img" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="placeholder image">
+        <img class="image-size" width="20%" src="{% static 'static/images/elden-ring-cover.jpg' %}"
+          alt="placeholder image">
         {% else %}
-        <img class="trophy-img" alt="Responsive image" src=" {{ trophy.featured_image.url }}" alt="{{ trophy.title }}">
+        <img class="img-thumbnail" width="20%" alt="Responsive image" src=" {{ trophy.featured_image.url }}"
+          alt="{{ trophy.title }}">
       </div>
-      <div class="trophy-text">
-        <p>{{trophy.description}}</p>
-      </div>
+      <p class="trophy-description">{{trophy.description}}</p>
     </div>
   </div>
+</div>
 </div>
 {% endif %}
 {% endfor %}
