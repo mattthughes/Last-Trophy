@@ -39,13 +39,17 @@ img{
 
 }
 
-
 .trophy-name {
     padding-left: 5px;
+    padding-top: 10px;
+}
+
+.trophy-images {
+    display: flex;
+    align-self: flex-start;
 }
 
 
-
 .trophy-description{
-    padding-left: 4rem;
+    padding-left: 1rem;
 }
