@@ -2,20 +2,21 @@
 {% load static %}
 {% block content %}
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-4">
     <div class="game-heading">
       <h1>{{game.title}}</h1>
     </div>
-    <div class="game-img">
+  </div>
+    <div class="d-flex justify-content-center">
       {% if "placeholder" in game.featured_image.url %}
-      <img class="img-thumbnail" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="placeholder image">
+      <img class="img-fluid w-100" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="Responsive image">
       {% else %}
-      <img class="img-thumbnail" alt="Responsive image" src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
+      <img class="img-fluid" alt="Responsive image" src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
       {% endif %}
 
     </div>
   </div>
-</div>
+
 
 <div class="row">
     <div class="trophy-section">
