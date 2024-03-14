@@ -17,6 +17,8 @@
 .social-icons {
     list-style: none;
     display: flex;
+    justify-content: center;
+    padding-right: 35px;
 }
 
 .social-icons>li {
@@ -25,10 +27,12 @@
     padding-right: 20px;
 }
 
+
 img{
     float:left;
     margin-left: 2px;
 }
+
 
 .game-heading {
     padding-left: 4px;

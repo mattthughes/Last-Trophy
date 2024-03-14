@@ -3,17 +3,14 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <form method="GET" action="{% url 'game' %}">
+        <form method="GET" action="{% url 'game' %}" class="genre-form">
             {{form.as_p}}
             <input type="submit" value="Submit" class="btn btn-success">
         </form>
     </div>
 </div>
 
-
 <hr>
-
-
 
 <div class="container-fluid">
     <div class="row">
