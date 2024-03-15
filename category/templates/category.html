@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <form method="GET" action="{% url 'game' %}" class="d-flex flex-column flex-lg-row">
+        <form method="GET" action="{% url 'game' %}" class="d-flex flex-column flex-md-row flex-lg-row">
             {{form.as_p}}
             <input type="submit" value="Submit" class="btn btn-success">
         </form>
