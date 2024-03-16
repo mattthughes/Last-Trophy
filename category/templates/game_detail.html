@@ -18,6 +18,7 @@
 </div>
 
 
+
 <div class="row">
   <div class="trophy-section">
     <h3 class="trophy-heading">Trophies</h3>
@@ -34,6 +35,9 @@
       <img class="img-thumbnail" width="20%" alt="Responsive image" src=" {{ trophy.featured_image.url }}"
         alt="{{ trophy.title }}">
       <p class="trophy-description">{{trophy.description}}</p>
+      {% for guide in game_guide %}
+    <a href="">{{guide.body}}</a>
+    {% endfor %}
     </div>
   </div>
   {% endif %}

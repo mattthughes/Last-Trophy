@@ -19,6 +19,7 @@ def game_detail_view(request,slug):
     queryset = Game.objects.filter()
     game = get_object_or_404(queryset, slug=slug)
     trophies = game.trophies.all().order_by("-rarity")
+    game_guide = game.game_guide.all()
 
     return render(
         request,
@@ -26,9 +27,8 @@ def game_detail_view(request,slug):
         {
             "game": game,
             "trophies": trophies,
+            "game_guide": game_guide
             
         },
     )
 
-    
-    

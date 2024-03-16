@@ -29,7 +29,7 @@ class Game(models.Model):
 
 class Trophies(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, default="trophy-slug")
+    slug = models.SlugField(max_length=200, default="trop-slug")
     game = models.ForeignKey(
         Game, on_delete=models.CASCADE, related_name='trophies')
     featured_image = CloudinaryField('image', default='placeholder')
@@ -45,13 +45,14 @@ class Trophies(models.Model):
 
 
 class Guide(models.Model):
+    title = models.CharField(max_length=200, unique=True)
     game = models.ForeignKey(
-        Game, on_delete=models.CASCADE, related_name='guides'
+        Game, on_delete=models.CASCADE, related_name="game_guide"
     )
     author = models.ForeignKey(
         User, on_delete=models.CASCADE)
     trophy = models.ForeignKey(
-        Trophies, on_delete=models.CASCADE
+        Trophies, on_delete=models.CASCADE, related_name='guides'
     )
     body = models.TextField()
     approved = models.BooleanField(default=False)
