@@ -36,7 +36,7 @@
         alt="{{ trophy.title }}">
       <p class="trophy-description">{{trophy.description}}</p>
       {% for guide in game_guide %}
-    <a href="">{{guide.body}}</a>
+    <a href="{% url 'trophy-detail' trophy.slug %}">{{guide.body}}</a>
     {% endfor %}
     </div>
   </div>

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'trophy_hunter',
     'category',
+    'guides',
     'django_filters',
 ]
 
