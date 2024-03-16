@@ -5,7 +5,8 @@ from .views import game_detail_view
 
 urlpatterns = [
     path("", views.game_list, name='game'),
-    path('<slug:slug>/',views.game_detail_view, name='game-detail')
+    path('<slug:slug>/',views.game_detail_view, name='game-detail'),
+    
     
     
 ]

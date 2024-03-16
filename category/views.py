@@ -25,11 +25,10 @@ def game_detail_view(request,slug):
         "game_detail.html",
         {
             "game": game,
-            "trophies": trophies
+            "trophies": trophies,
             
         },
     )
 
     
-
-
+    

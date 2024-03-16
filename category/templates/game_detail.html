@@ -7,39 +7,41 @@
       <h1>{{game.title}}</h1>
     </div>
   </div>
-    <div class="d-flex justify-content-center">
-      {% if "placeholder" in game.featured_image.url %}
-      <img class="img-fluid w-100" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="Responsive image">
-      {% else %}
-      <img class="img-fluid" alt="Responsive image" src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
-      {% endif %}
+  <div class="d-flex justify-content-center">
+    {% if "placeholder" in game.featured_image.url %}
+    <img class="img-fluid w-100" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="Responsive image">
+    {% else %}
+    <img class="img-fluid" alt="Responsive image" src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
+    {% endif %}
 
-    </div>
   </div>
+</div>
 
 
 <div class="row">
-    <div class="trophy-section">
-      <h3 class="trophy-heading">Trophies</h3>
-      <hr>
-      {% for trophy in trophies %}
-      <div class="trophy-name">
-        <p class="trophy-title"><strong>{{trophy.title}}</strong></p>
-      </div>
-      <div class="col-md-4 col-lg-3 trophy-images">
-        {% if "placeholder" in trophy.featured_image.url %}
-        <img class="image-size" width="20%" src="{% static 'static/images/elden-ring-cover.jpg' %}"
-          alt="placeholder image">
-        {% else %}
-        <img class="img-thumbnail" width="20%" alt="Responsive image" src=" {{ trophy.featured_image.url }}"
-          alt="{{ trophy.title }}">
-          <p class="trophy-description">{{trophy.description}}</p>
-      </div>
-      <div><a href="">1 guide written</a></div>
+  <div class="trophy-section">
+    <h3 class="trophy-heading">Trophies</h3>
+    <hr>
+    {% for trophy in trophies %}
+    <div class="trophy-name">
+      <p class="trophy-title"><strong>{{trophy.title}}</strong></p>
     </div>
+    <div class="col-md-4 col-lg-3 trophy-images">
+      {% if "placeholder" in trophy.featured_image.url %}
+      <img class="image-size" width="20%" src="{% static 'static/images/elden-ring-cover.jpg' %}"
+        alt="placeholder image">
+      {% else %}
+      <img class="img-thumbnail" width="20%" alt="Responsive image" src=" {{ trophy.featured_image.url }}"
+        alt="{{ trophy.title }}">
+      <p class="trophy-description">{{trophy.description}}</p>
+    </div>
+    <a href="{% url 'guide-detail' guide.slug %}">Hi</a>
+  </div>
+  {% endif %}
+  {% endfor %}
+  <div>
+    
+  </div>
 </div>
-
-{% endif %}
-{% endfor %}
 
 {% endblock %}
