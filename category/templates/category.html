@@ -1,26 +1,25 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
-        <form method="GET" action="{% url 'game' %}" class="d-flex flex-column flex-md-row flex-lg-row">
+    <div class="row col-2 col-md-8 col-xl-12">
+        <form method="GET" action="{% url 'game' %}" class="d-flex flex-column flex-lg-row genre-form">
             {{form.as_p}}
             <input type="submit" value="Submit" class="btn btn-success">
         </form>
     </div>
 </div>
-
 <hr>
-
 <div class="container-fluid">
     <div class="row">
-        <h1>Game List</h1>
+        <h3 class="genre-list">Game List</h3>
         <table class="table">
             <thead>
                 <tr>
                     <th>Title</th>
                     <th>Genre</th>
-                    <th>Trophy count</th>
+                    <th>Trophies</th>
                     <th>Hours</th>
                 </tr>
             </thead>
