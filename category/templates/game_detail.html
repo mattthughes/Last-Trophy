@@ -14,8 +14,13 @@
     {% else %}
     <img class="img-thumbnail" src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
     {% endif %}
-    <p><i class="fa fa-solid fa-trophy"></i>{{game.trophy_count}}</p>
-    <p><i class="fa fa-solid fa-clock"></i>{{game.hours}}</p>
+    <div class="game-info">
+      <p>
+        <i class="fa fa-solid fa-trophy"></i>{{game.trophy_count}}
+        <i class="fa fa-solid fa-clock"></i>{{game.hours}}
+        <i class="fa fa-solid fa-g"></i>{{game.game_score}}
+      </p>
+    </div>
 
   </div>
 </div>
