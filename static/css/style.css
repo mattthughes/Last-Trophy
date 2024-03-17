@@ -18,19 +18,18 @@ h1,h2,h3 {
     width: fit-content;
 }
 
-.social-icons {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding-right: 35px;
+.genre-form {
+    padding-top: 8px;
 }
 
-.social-icons>li {
-    font-size: 1.5em;
-    padding-left: 0;
-    padding-right: 20px;
+.genre-form label {
+    padding-left: 8px;
+    padding-top: 3px;
 }
 
+.form-btn {
+    margin-left: 8px;
+}
 
 img{
     float:left;
@@ -57,5 +56,22 @@ img{
     display: flex;
     align-self: flex-start;
 }
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-right: 35px;
+}
+
+
+.social-icons>li {
+    font-size: 1.5em;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+
+
 
 

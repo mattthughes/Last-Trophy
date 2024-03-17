@@ -6,39 +6,36 @@
     <div class="row col-2 col-md-8 col-xl-12">
         <form method="GET" action="{% url 'game' %}" class="d-flex flex-column flex-lg-row genre-form">
             {{form.as_p}}
-            <input type="submit" value="Submit" class="btn btn-success">
+            <input type="submit" value="Submit" class="btn btn-success form-btn">
         </form>
     </div>
 </div>
 <hr>
-<div class="container-fluid">
-    <div class="row">
-        <h3 class="genre-list">Game List</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Genre</th>
-                    <th>Trophies</th>
-                    <th>Hours</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for game in games %}
-                <tr>
-                    <td>
-                        <a href="{% url 'game-detail' game.slug %}">{{ game.title }}</a>
+<div class="table-responsive p-2">
+    <h3 class="genre-list">Game List</h3>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Trophies</th>
+                <th>Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for game in games %}
+            <tr>
+                <td>
+                    <a href="{% url 'game-detail' game.slug %}">{{ game.title }}</a>
 
-                    </td>
-                    <td>{{ game.get_genre_display }}</td>
-                    <td>{{ game.trophy_count }}</td>
-                    <td>{{ game.hours }}</td>
-                    {% endfor %}
-            </tbody>
+                </td>
+                <td>{{ game.get_genre_display }}</td>
+                <td>{{ game.trophy_count }}</td>
+                <td>{{ game.hours }}</td>
+                {% endfor %}
+        </tbody>
 
-        </table>
-
-    </div>
+    </table>
 
 </div>
 
