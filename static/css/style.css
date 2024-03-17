@@ -45,6 +45,15 @@ img{
     text-align: center;
 }
 
+.game-info i {
+    padding: 5px;
+}
+
+.game-summary {
+    text-align: center;
+    padding: 20px;
+}
+
 .trophy-heading {
     padding-left: 4px;
 

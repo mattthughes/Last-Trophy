@@ -23,6 +23,7 @@ class Game(models.Model):
     trophy_count = models.CharField(max_length=4)
     hours = models.CharField(max_length=4)
     game_score = models.IntegerField(default=1000)
+    rating = models.FloatField(default=4.99)
 
     def __str__(self):
         return f" {self.title}"

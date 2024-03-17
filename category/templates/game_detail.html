@@ -10,7 +10,7 @@
   </div>
   <div class="border col-md-4 col-lg-4">
     {% if "placeholder" in game.featured_image.url %}
-    <img class="img-thumbnail"  src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="placeholder">
+    <img class="img-thumbnail" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="placeholder">
     {% else %}
     <img class="img-thumbnail" src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
     {% endif %}
@@ -18,10 +18,15 @@
       <p>
         <i class="fa fa-solid fa-trophy"></i>{{game.trophy_count}}
         <i class="fa fa-solid fa-clock"></i>{{game.hours}}
-        <i class="fa fa-solid fa-g"></i>{{game.game_score}}
+        <i class="fa fa-solid fa-star"></i>{{game.rating}}
       </p>
     </div>
-
+  </div>
+  <div class="game-summary">
+    <p>
+      Welcome to the {{game.title}} home page down below you will see all the trophies from this game below, to view more
+      information about a specific trophy just click the trophy title.
+    </p>
   </div>
 </div>
 
@@ -31,7 +36,7 @@
     <hr>
     {% for trophy in trophies %}
     <div class="trophy-name">
-        <a href="{% url 'trophy-detail' trophy.slug %}" class="trophy-title"><strong>{{trophy.title}}</strong></a>
+      <a href="{% url 'trophy-detail' trophy.slug %}" class="trophy-title"><strong>{{trophy.title}}</strong></a>
     </div>
     <div class="col-md-4 col-lg-3 trophy-images">
       {% if "placeholder" in trophy.featured_image.url %}
