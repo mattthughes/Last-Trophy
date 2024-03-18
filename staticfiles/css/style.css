@@ -62,7 +62,9 @@ img{
 .trophy-name {
     margin-left: 5px;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
+
 
 .trophy-description {
     margin-left: 2px;
@@ -71,6 +73,7 @@ img{
 
 .trophy-description i {
     padding: 5px;
+    
 }
 
 .trophy-images {

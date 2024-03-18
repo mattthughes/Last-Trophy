@@ -24,39 +24,37 @@
   </div>
   <div class="game-summary">
     <p>
-      Welcome to the {{game.title}} home page down below you will see all the trophies from this game below, to view more
+      Welcome to the {{game.title}} home page down below you will see all the trophies from this game below, to view
+      more
       information about a specific trophy just click the trophy title.
     </p>
   </div>
 </div>
 
 <div class="row">
-  <div class="trophy-section">
-    <h3 class="trophy-heading">Trophies</h3>
-    <hr>
-    {% for trophy in trophies %}
+  <h3 class="d-flex flex-column align-items-lg-center">Trophies</h3>
+  <hr>
+  {% for trophy in trophies %}
+  <div class="d-flex flex-column align-items-lg-center trophy-section">
     <div class="trophy-name">
       <a href="{% url 'trophy-detail' trophy.slug %}" class="trophy-title"><strong>{{trophy.title}}</strong></a>
     </div>
-    <div class="col-md-4 col-lg-3 trophy-images">
+    <div class="col-md-4 col-lg-6 trophy-images">
       {% if "placeholder" in trophy.featured_image.url %}
       <img class="image-size" width="20%" src="{% static 'static/images/elden-ring-cover.jpg' %}"
         alt="placeholder image">
       {% else %}
       <img class="img-thumbnail" width="20%" alt="Responsive image" src=" {{ trophy.featured_image.url }}"
         alt="{{ trophy.title }}">
-      <p class="trophy-description">{{trophy.description}}
+      <p class="trophy-description">{{trophy.description}}</p>
+      <p class="d-none d-sm-block">
         <i class="fa fa-solid fa-trophy"></i>{{trophy.rarity}}
-
       </p>
-        
+
     </div>
   </div>
   {% endif %}
   {% endfor %}
-  <div>
-
-  </div>
 </div>
 
 {% endblock %}

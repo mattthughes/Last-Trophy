@@ -62,22 +62,22 @@ img{
 .trophy-name {
     margin-left: 5px;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
+
 
 .trophy-description {
-    margin-left: 8px;
+    margin-left: 2px;
 
 }
 
-.trophy-rarity {
-    margin-right: 2px;
+.trophy-description i {
+    padding: 5px;
+    
 }
-
-
 
 .trophy-images {
     display: flex;
-    align-self: flex-start;
 }
 
 .social-icons {

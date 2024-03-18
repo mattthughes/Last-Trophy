@@ -2,9 +2,17 @@
 {% load static %}
 {% block content %}
 {% for guide in game_guide %}
-{{guide.title}}
-{{guide.body}}
-{{guide.author}}
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-flex flex-column align-items-center guide-info">
+            <h3>{{guide.title}}</h3>
+            <p>{{guide.body}}</p>
+            <a href="#">by {{guide.author}}</a>
+        </div>
+
+    </div>
+</div>
+
 
 {% endfor %}
 {% endblock %}
