@@ -45,8 +45,11 @@
       {% else %}
       <img class="img-thumbnail" width="20%" alt="Responsive image" src=" {{ trophy.featured_image.url }}"
         alt="{{ trophy.title }}">
-      <p class="trophy-description">{{trophy.description}}</p>
+      <p class="trophy-description">{{trophy.description}}
+        <i class="fa fa-solid fa-trophy"></i>{{trophy.rarity}}
 
+      </p>
+        
     </div>
   </div>
   {% endif %}

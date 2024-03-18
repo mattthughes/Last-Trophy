@@ -37,7 +37,7 @@ class Trophies(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     description = models.CharField(max_length=200)
     difficulty = models.CharField(max_length=200)
-    rarity = models.CharField(max_length=10)
+    rarity = models.FloatField(default=55.13)
 
     class Meta:
         ordering = ["-rarity"]

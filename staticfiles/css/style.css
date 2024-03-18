@@ -60,14 +60,21 @@ img{
 }
 
 .trophy-name {
-    padding-left: 5px;
+    margin-left: 5px;
     padding-top: 10px;
 }
 
+.trophy-description {
+    margin-left: 2px;
+
+}
+
+.trophy-description i {
+    padding: 5px;
+}
 
 .trophy-images {
     display: flex;
-    align-self: flex-start;
 }
 
 .social-icons {
