@@ -73,7 +73,10 @@ img{
 
 .trophy-description i {
     padding: 5px;
-    
+}
+
+.trophy-rarity {
+    margin-left: 10px;
 }
 
 .trophy-images {

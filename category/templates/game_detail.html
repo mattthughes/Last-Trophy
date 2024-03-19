@@ -32,10 +32,10 @@
 </div>
 
 <div class="row">
-  <h3 class="d-flex flex-column align-items-lg-center">Trophies</h3>
+  <h3 class="d-flex flex-column align-items-md-center">Trophies</h3>
   <hr>
   {% for trophy in trophies %}
-  <div class="d-flex flex-column align-items-lg-center trophy-section">
+  <div class="d-flex flex-column align-items-md-center trophy-section">
     <div class="trophy-name">
       <a href="{% url 'trophy-detail' trophy.slug %}" class="trophy-title"><strong>{{trophy.title}}</strong></a>
     </div>
@@ -47,7 +47,7 @@
       <img class="img-thumbnail" width="20%" alt="Responsive image" src=" {{ trophy.featured_image.url }}"
         alt="{{ trophy.title }}">
       <p class="trophy-description">{{trophy.description}}</p>
-      <p class="d-none d-sm-block">
+      <p class="d-none d-sm-block trophy-rarity">
         <i class="fa fa-solid fa-trophy"></i>{{trophy.rarity}}
       </p>
 
