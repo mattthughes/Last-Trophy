@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load crispy_forms_tags %}
 
 <h1>Add Guide</h1>
 
+<div class="form-group">
+    <form id="guideForm" method="post" style="margin-top: 1.3em;">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

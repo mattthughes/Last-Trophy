@@ -11,14 +11,7 @@
             <p>{{guide.body}}</p>
             <p>{{guide.trophy}}</p>
             <a href="#">by {{guide.author}}</a>
-            <a href="">Create guide</a>
-            <div class="form-group">
-                <form id="guideForm" method="post" style="margin-top: 1.3em;">
-                    {{ guide_form }}
-                    {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-            </div>
+            <a href="{% url 'create-view' trophies.pk %}">Create guide</a>
         </div>
 
     </div>

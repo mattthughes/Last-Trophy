@@ -10,4 +10,4 @@ class GuideForm(forms.ModelForm):
         Specify the django model and order of the fields
         """
         model = Guide
-        fields = ('body',)
+        fields = ('title','body','author')
