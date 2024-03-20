@@ -48,9 +48,6 @@ class Trophies(models.Model):
 
 class Guide(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    game = models.ForeignKey(
-        Game, on_delete=models.CASCADE, related_name="game_guide"
-    )
     author = models.ForeignKey(
         User, on_delete=models.CASCADE)
     trophy = models.ForeignKey(
