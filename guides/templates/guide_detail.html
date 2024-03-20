@@ -1,13 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
+
 {% for guide in game_guide %}
 <div class="container-fluid">
     <div class="row">
         <div class="d-flex flex-column align-items-center guide-info">
             <h3>{{guide.title}}</h3>
             <p>{{guide.body}}</p>
+            <p>{{guide.trophy}}</p>
             <a href="#">by {{guide.author}}</a>
+            <a href="">Create guide</a>
+            <div class="form-group">
+                <form id="guideForm" method="post" style="margin-top: 1.3em;">
+                    {{ guide_form }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+            </div>
         </div>
 
     </div>

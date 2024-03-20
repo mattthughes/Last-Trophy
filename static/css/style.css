@@ -75,13 +75,16 @@ img{
     padding: 5px;
 }
 
+
 .trophy-rarity {
     margin-left: 10px;
 }
 
+
 .trophy-images {
     display: flex;
 }
+
 
 .social-icons {
     list-style: none;
