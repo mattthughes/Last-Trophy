@@ -19,7 +19,8 @@
             <p>{{guide.body}}</p>
             <p>{{guide.trophy}}</p>
             <a href="#">by {{guide.author}}</a>
-            <a href="{% url 'create-view' trophies.pk %}">Create guide</a>
+            <a href="{% url 'create-guide' trophies.pk %}">Create guide</a>
+            <a href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
         </div>
 
     </div>
