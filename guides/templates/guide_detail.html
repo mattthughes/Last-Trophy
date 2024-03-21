@@ -4,28 +4,30 @@
 {% block content %}
 
 {% if messages %}
-     {% for message in messages %}
-         <div class="text-center alert alert-{{ message.tags }}">
-             {{ message|safe }}
-         </div>
-     {% endfor %}
- {% endif %}
+{% for message in messages %}
+<div class="text-center alert alert-{{ message.tags }}">
+    {{ message|safe }}
+</div>
+{% endfor %}
+{% endif %}
 
 {% for guide in game_guide %}
 <div class="container-fluid">
     <div class="row">
         <div class="d-flex flex-column align-items-center guide-info">
-            <h3>{{guide.title}}</h3>
+            <h3>{{guide.trophy}}</h3>
             <p>{{guide.body}}</p>
-            <p>{{guide.trophy}}</p>
             <a href="#">by {{guide.author}}</a>
-            <a href="{% url 'create-guide' trophies.pk %}">Create guide</a>
-            <a href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
+            <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
         </div>
 
     </div>
 </div>
 
-
 {% endfor %}
+
+<div>
+    <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
+</div>
+
 {% endblock %}

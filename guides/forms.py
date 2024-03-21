@@ -3,7 +3,7 @@ from trophy_hunter.models import Guide
 
 class GuideForm(forms.ModelForm):
     """
-    Form class for users to comment on a post 
+    Form class for users to comment on a guide
     """
     class Meta:
         """
