@@ -1,4 +1,5 @@
 from django.shortcuts import render,get_object_or_404, reverse
+from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from trophy_hunter.models import Trophies,Guide
@@ -26,14 +27,17 @@ def guide_detail_view(request,slug):
     )
 
 
-class AddGuideView(CreateView):
+class AddGuideView(SuccessMessageMixin,CreateView):
     model = Guide
     form_class = GuideForm
+    success_message = 'Guide created'
     template_name = 'add_guide.html'
-
+    
     def get_success_url(self):
         return reverse('trophy-detail', kwargs={'slug': self.object.trophy.slug})
+        
 
     def form_valid(self,form):
         form.instance.trophy_id = self.kwargs['pk']
         return super().form_valid(form)
+

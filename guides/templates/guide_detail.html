@@ -3,6 +3,14 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
+{% if messages %}
+     {% for message in messages %}
+         <div class="text-center alert alert-{{ message.tags }}">
+             {{ message|safe }}
+         </div>
+     {% endfor %}
+ {% endif %}
+
 {% for guide in game_guide %}
 <div class="container-fluid">
     <div class="row">
