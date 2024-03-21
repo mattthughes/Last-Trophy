@@ -30,7 +30,9 @@ class AddGuideView(CreateView):
     model = Guide
     form_class = GuideForm
     template_name = 'add_guide.html'
-    success_url = reverse_lazy('game')
+
+    def get_success_url(self):
+        return reverse('trophy-detail', kwargs={'slug': self.object.trophy.slug})
 
     def form_valid(self,form):
         form.instance.trophy_id = self.kwargs['pk']
