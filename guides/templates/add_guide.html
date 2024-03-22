@@ -5,9 +5,9 @@
 <h1>Add Guide</h1>
 
 <div class="form-group">
-    <form id="guideForm" method="post" style="margin-top: 1.3em;">
-        {{ form.as_p }}
+    <form id="guideForm" method="post">
         {% csrf_token %}
+        {{ form.as_p }}
         <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
     </form>
 </div>

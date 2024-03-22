@@ -15,10 +15,21 @@
 <div class="container-fluid">
     <div class="row">
         <div class="d-flex flex-column align-items-center guide-info">
-            <h3>{{guide.trophy}}</h3>
-            <p>{{guide.body}}</p>
-            <a href="#">by {{guide.author}}</a>
-            <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
+            <h3 class="text-center">{{guide.trophy}}</h3>
+            <div class="col-12 col-md-8 border">
+                <p class="text-break p-3">{{guide.body}}</p>
+                <a href="#" class="pb-2 d-flex justify-content-center">{{guide.author}}</a>
+                
+                <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
+                    <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
+                    <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
+                </div>
+                <hr>
+                <div class="rate-buttons ps-2">
+                    <button class="btn btn-primary">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -27,7 +38,7 @@
 {% endfor %}
 
 <div>
-    <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
+
 </div>
 
 {% endblock %}
