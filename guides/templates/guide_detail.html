@@ -11,18 +11,27 @@
 {% endfor %}
 {% endif %}
 
-{% for guide in game_guide %}
 <div class="container-fluid">
     <div class="row">
+        {% if not trophies.guides.all %}
+        <div class="col-12 pt-3 d-flex flex-column align-items-center">
+            <p class="text-center">
+                Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and take your next step
+                in joining our ever growing community. 
+            </p>
+            <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
+            
+        </div>
+        {% else %}
+        {% for guide in game_guide %}
         <div class="d-flex flex-column align-items-center guide-info">
             <h3 class="text-center pt-3">{{guide.trophy}}</h3>
             <div class="col-12 col-md-8 border">
                 <p class="text-break p-3">{{guide.body}}</p>
                 <a href="#" class="pb-2 d-flex justify-content-center">{{guide.author}}</a>
-                
                 <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
                     <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
-                    <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
+
                 </div>
                 <hr>
                 <div class="rate-buttons ps-2">
@@ -31,11 +40,25 @@
                 </div>
             </div>
         </div>
+        {% endfor %}
+        {% endif %}
+
+        {% if trophies.guides.all %}
+        <div class="col-12 pt-3 d-flex flex-column align-items-center">
+            <p class="text-center">
+                Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and take your next step
+                in joining our ever growing community. 
+            </p>
+            <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
+        </div>
+        {% endif %}
+
+        
 
     </div>
 </div>
 
-{% endfor %}
+
 
 <div>
 
