@@ -138,11 +138,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 #Email Configuration
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-ACCOUNT_EMAIL_REQUIRED = True
-
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_EMAIL_VERIFICATION = "none"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

@@ -3,19 +3,38 @@
 
 {% block content %}
 <div class="container-fluid text-bg-warning p-3 heading-text">
-    <div class="row">
-        <p class="heading-paragraph">Are you an aspiring trophy hunter and are fed up of keeping track of your progress
-            yourself then look no further and become a trophy hunter today and join our ever growing community. It's very
-            simple just click the button below to become a trophy hunter and join us in unlocking that one last trophy!</p>
-    </div>
     <div class="container text-center">
+        {% if user.is_authenticated %}
         <div class="row">
-            <div class="col-12">
-                <button type="button" class="btn btn-success">Become a Trophy Hunter</button>
+            <p class="logged-in-open">Welcome to Last Trophy to get started click the game option in the navigation bar to view all the games
+                we have to offer
+                if you would like to create a guide for a specific trophy just click the trophy title to load all the
+                exisiting guides or create your own!
+            </p>
+            {% else %}
+            <div class="row">
+                <p class="heading-paragraph">Are you an aspiring trophy hunter and are fed up of keeping track of your
+                    progress
+                    yourself then look no further and become a trophy hunter today and join our ever growing community.
+                    It's
+                    very
+                    simple just click the button below to become a trophy hunter and join us in unlocking that one last
+                    trophy!
+                </p>
+
             </div>
             <div class="col-12">
-                <button type="button" class="btn btn-success">Login Here</button>
+                <a class="btn btn-success {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                    href="{% url 'account_signup' %}">Become a Trophy Hunter</a>
+
             </div>
+
+            <div class="col-12">
+                <a class="btn btn-success {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                    href="{% url 'account_login' %}">Login</a>
+            </div>
+
+            {% endif %}
         </div>
 
     </div>
