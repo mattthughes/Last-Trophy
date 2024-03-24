@@ -39,6 +39,7 @@ class AddGuideView(SuccessMessageMixin,CreateView):
 
     def form_valid(self,form):
         form.instance.trophy_id = self.kwargs['pk']
+        form.instance.author = self.request.user
         return super().form_valid(form)
 
 

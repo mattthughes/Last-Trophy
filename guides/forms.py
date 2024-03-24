@@ -10,10 +10,9 @@ class GuideForm(forms.ModelForm):
         Specify the django model and order of the fields
         """
         model = Guide
-        fields = ('title','body','author')
+        fields = ('title','body')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
-            'author': forms.Select(attrs={'class': 'form-control'}),
         }
