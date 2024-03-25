@@ -1,8 +1,22 @@
 /* Generic styles */
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+  }
+  
+
+main {
+    flex-grow: 1;
+}
+
+
 h1,h2,h3 {
     font-size: 20px;
 }
+
 
 .heading-text {
     height: 73vh;
@@ -98,8 +112,4 @@ img{
     padding-left: 0;
     padding-right: 20px;
 }
-
-
-
-
 
