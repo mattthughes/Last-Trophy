@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="text-center text-lg-start ps-3">Delete Guide</h3>
+<div class="container-fluid">
+    <div class="row col-12">
+        <div class="form-group">
+            <form id="guideForm" method="post">
+                {% csrf_token %}
+                <p>Are you sure you want to delete guide {{guide.title}} this action can't be undone or press back to
+                    return to the game list.</p>
+                <button id="submitButton" type="submit" class="btn btn-danger btn-lg">Delete</button>
+                <a href="{% url 'game' %}" class="btn btn-primary btn-lg">Back</a>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

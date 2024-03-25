@@ -1,6 +1,6 @@
 from django.shortcuts import render,get_object_or_404, reverse
 from django.contrib.messages.views import SuccessMessageMixin
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Trophies,Guide
 from .forms import GuideForm
 
@@ -56,3 +56,11 @@ class EditGuideView(SuccessMessageMixin, UpdateView):
     def form_valid(self,form):
         form.instance.guide_id = self.kwargs['pk']
         return super().form_valid(form)
+
+class DeleteGuideView(SuccessMessageMixin, DeleteView):
+    model = Guide
+    success_message = "Guide Deleted"
+    template_name = 'delete_guide.html'
+
+    def get_success_url(self):
+        return reverse('trophy-detail', kwargs={'slug': self.object.trophy.slug})

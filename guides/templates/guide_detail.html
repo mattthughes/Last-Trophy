@@ -32,7 +32,7 @@
                 {% if user.is_authenticated and guide.author == user %}
                 <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
                     <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
-                    <a class="btn btn-danger" href="#">Delete Guide</a>
+                    <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
                 </div>
                 {% endif %}
                 <hr>
