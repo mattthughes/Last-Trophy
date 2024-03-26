@@ -16,16 +16,21 @@
         {% if not trophies.guides.all and not user.is_authenticated %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
             <p class="text-center">
-                Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and take your next step
-                in joining our ever growing community then just login to create a guide. 
+                Do you want to help out other fellow trophy hunters like yourself? Then simply login or create an
+                account with us to join our ever growing community!
             </p>
-            <a class="btn btn-success" href="{% url 'account_login' %}">Login</a>
+            <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a>
+            <a class="btn btn-primary" href="{% url 'account_signup' %}">Register</a>
             {% elif not trophies.guides.all and user.is_authenticated %}
             <p class="text-center">
-                Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and take your next step
+                Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and
+                take your next step
                 in joining our ever growing community
             </p>
-            <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create</a>
+            <div class="col-12 pt-3 d-flex flex-column align-items-center">
+                <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create</a>
+            </div>
+
         </div>
         {% endif %}
         {% if trophies.guides.all %}
@@ -54,30 +59,32 @@
         {% if trophies.guides.all and user.is_authenticated %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
             <p class="text-center">
-                Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and take your next step
-                in joining our ever growing community. 
+                Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and
+                take your next step
+                in joining our ever growing community.
             </p>
             <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
-        {% endif %}
+            {% endif %}
 
-        {% if trophies.guides.all and not user.is_authenticated %}
-        <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <p class="text-center">
-                To create your own excellent guides like the ones above just simply login in below to help out other trophy hunters!
-            </p>
-            <a class="btn btn-success" href="{% url 'account_login' %}">Login</a>
-        {% endif %}
-
-
-        
-
-    </div>
-</div>
+            {% if trophies.guides.all and not user.is_authenticated %}
+            <div class="col-12 pt-3 d-flex flex-column align-items-center">
+                <p class="text-center">
+                    To create your own excellent guides like the ones above just simply login in below to help out other
+                    trophy hunters!
+                </p>
+                <a class="btn btn-success" href="{% url 'account_login' %}">Login</a>
+                {% endif %}
 
 
 
-<div>
 
-</div>
+            </div>
+        </div>
 
-{% endblock %}
+
+
+        <div>
+
+        </div>
+
+        {% endblock %}
