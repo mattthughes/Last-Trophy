@@ -130,6 +130,7 @@ This is the desktop wireframes for the key features of the Last Trophy applicati
 - Fixed update view error when I was trying to edit the current guide again the url was trying to access the same pathway. To fix this I changed the form pk from the trophy pk to the guide pk which fixed this issue.
 - Fixed an error where the styling for the guide form was not stying with bootstrap or css. To fix this I went back to the forms.py file for the guide form, created a widgets dictionary for all the form fields. I also used the class form-control which loaded the bootstrap styling for the form fixing this issue.
 - Fixed guide if statement by starting the if statement before the for loop, before this the intended behavoiour was not working placing the if statement before the for loop and placing the for loop inside the if statement as part of the else condition fixed this error.
+- Fixed create guide bugs the user could click create guide without being signed in with an error appearing stating no user defined in order to fix this I added two if statements to first determine if there were any guides created if there were the first if statment checked if there were no guides and the user was not logged in if that was the case a login below button 
 ## Deployment
 
 ## Credits
