@@ -1,9 +1,9 @@
-from django.shortcuts import render,get_object_or_404, reverse
-   
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic.detail import DetailView
-from trophy_hunter.models import Game,Trophies
+from trophy_hunter.models import Game, Trophies
 from .filters import GameFilter
 # Create your views here.
+
 
 def game_list(request):
     game_filter = GameFilter(request.GET, queryset=Game.objects.all())
@@ -14,7 +14,7 @@ def game_list(request):
     return render(request, 'category.html', context)
 
 
-def game_detail_view(request,slug):
+def game_detail_view(request, slug):
     # specify the model to use
     queryset = Game.objects.filter()
     game = get_object_or_404(queryset, slug=slug)
@@ -26,7 +26,5 @@ def game_detail_view(request,slug):
         {
             "game": game,
             "trophies": trophies,
-            
         },
     )
-

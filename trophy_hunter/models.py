@@ -13,7 +13,7 @@ class Game(models.Model):
         FIGHTING = 'F'
         PLATFORMER = 'P'
         STEALTH = 'S'
-        
+
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -28,7 +28,7 @@ class Game(models.Model):
 
     def __str__(self):
         return f" {self.title}"
-    
+
 
 class Trophies(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -60,6 +60,3 @@ class Guide(models.Model):
 
     def __str__(self):
         return f" {self.body} {self.author}"
-    
-
-

@@ -1,18 +1,18 @@
-from django.shortcuts import render,get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from trophy_hunter.models import Trophies,Guide
+from trophy_hunter.models import Trophies, Guide
 from .forms import GuideForm
 
 # Create your views here.
 
-def guide_detail_view(request,slug):
+
+def guide_detail_view(request, slug):
     # specify the model to use
     queryset = Trophies.objects.filter()
     trophies = get_object_or_404(queryset, slug=slug)
     game_guide = trophies.guides.all()
     guide_form = GuideForm()
-    
 
     return render(
         request,
@@ -21,23 +21,22 @@ def guide_detail_view(request,slug):
             "trophies": trophies,
             "game_guide": game_guide,
             "guide_form": guide_form
-            
         },
     )
 
 
-class AddGuideView(SuccessMessageMixin,CreateView):
+class AddGuideView(SuccessMessageMixin, CreateView):
     model = Guide
     form_class = GuideForm
     success_message = 'Guide created'
     template_name = 'add_guide.html'
-    
-    
-    def get_success_url(self):
-        return reverse('trophy-detail', kwargs={'slug': self.object.trophy.slug})
-        
 
-    def form_valid(self,form):
+    def get_success_url(self):
+        return reverse(
+            'trophy-detail', kwargs={'slug': self.object.trophy.slug}
+            )
+
+    def form_valid(self, form):
         form.instance.trophy_id = self.kwargs['pk']
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -50,17 +49,21 @@ class EditGuideView(SuccessMessageMixin, UpdateView):
     template_name = 'edit_guide.html'
 
     def get_success_url(self):
-        return reverse('trophy-detail', kwargs={'slug': self.object.trophy.slug})
-        
+        return reverse(
+            'trophy-detail', kwargs={'slug': self.object.trophy.slug}
+            )
 
-    def form_valid(self,form):
+    def form_valid(self, form):
         form.instance.guide_id = self.kwargs['pk']
         return super().form_valid(form)
 
-class DeleteGuideView(SuccessMessageMixin, DeleteView):
+
+class DeleteGuide(SuccessMessageMixin, DeleteView):
     model = Guide
     success_message = "Guide Deleted"
     template_name = 'delete_guide.html'
 
     def get_success_url(self):
-        return reverse('trophy-detail', kwargs={'slug': self.object.trophy.slug})
+        return reverse(
+            'trophy-detail', kwargs={'slug': self.object.trophy.slug}
+            )
