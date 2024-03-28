@@ -11,7 +11,7 @@ def index(request):
 
 def error_400(request,  exception):
         data = {}
-        return render(request,'trophy_hunter/403_csrf.html', data)
+        return render(request,'trophy_hunter/400_csrf.html', data)
 
 
 def error_403(request, exception):
@@ -21,7 +21,12 @@ def error_403(request, exception):
 
 def error_404(request,  exception):
         data = {}
-        return render(request,'trophy_hunter/403_csrf.html', data)
+        return render(request,'trophy_hunter/404_csrf.html', data)
+
+
+def error_500(request):
+        data = {}
+        return render(request,'trophy_hunter/500_csrf.html', data)
 
 
 

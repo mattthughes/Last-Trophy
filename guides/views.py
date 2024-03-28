@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Trophies, Guide
@@ -27,14 +28,11 @@ def guide_detail_view(request, slug):
     )
 
 
-class AddGuideView(UserPassesTestMixin, SuccessMessageMixin, CreateView):
+class AddGuideView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Guide
     form_class = GuideForm
     success_message = 'Guide created'
     template_name = 'add_guide.html'
-
-    def test_func(self):
-           return self.request.user == self.get_object().author
 
     def get_success_url(self):
         return reverse(

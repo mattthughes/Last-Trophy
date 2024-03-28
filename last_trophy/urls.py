@@ -20,6 +20,7 @@ from django.urls import path, include
 handler404 = 'trophy_hunter.views.error_404'
 handler403 = 'trophy_hunter.views.error_403'
 handler400 = 'trophy_hunter.views.error_400'
+handler500 = 'trophy_hunter.views.error_500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
