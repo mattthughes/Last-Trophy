@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+handler404 = 'trophy_hunter.views.error_404'
+handler403 = 'trophy_hunter.views.error_403'
+handler400 = 'trophy_hunter.views.error_400'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
