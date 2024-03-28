@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
+
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Trophies, Guide
 from .forms import GuideForm
@@ -25,11 +27,14 @@ def guide_detail_view(request, slug):
     )
 
 
-class AddGuideView(SuccessMessageMixin, CreateView):
+class AddGuideView(UserPassesTestMixin, SuccessMessageMixin, CreateView):
     model = Guide
     form_class = GuideForm
     success_message = 'Guide created'
     template_name = 'add_guide.html'
+
+    def test_func(self):
+           return self.request.user == self.get_object().author
 
     def get_success_url(self):
         return reverse(
@@ -40,14 +45,19 @@ class AddGuideView(SuccessMessageMixin, CreateView):
         form.instance.trophy_id = self.kwargs['pk']
         form.instance.author = self.request.user
         return super().form_valid(form)
+    
 
 
-class EditGuideView(SuccessMessageMixin, UpdateView):
+class EditGuideView(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     model = Guide
     form_class = GuideForm
     success_message = 'Guide edited'
     template_name = 'edit_guide.html'
 
+    def test_func(self):
+        return self.request.user == self.get_object().author
+
+    
     def get_success_url(self):
         return reverse(
             'trophy-detail', kwargs={'slug': self.object.trophy.slug}
@@ -56,9 +66,10 @@ class EditGuideView(SuccessMessageMixin, UpdateView):
     def form_valid(self, form):
         form.instance.guide_id = self.kwargs['pk']
         return super().form_valid(form)
+    
 
 
-class DeleteGuide(SuccessMessageMixin, DeleteView):
+class DeleteGuide(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     model = Guide
     success_message = "Guide Deleted"
     template_name = 'delete_guide.html'
@@ -67,3 +78,6 @@ class DeleteGuide(SuccessMessageMixin, DeleteView):
         return reverse(
             'trophy-detail', kwargs={'slug': self.object.trophy.slug}
             )
+        
+    def test_func(self):
+        return self.request.user == self.get_object().author
