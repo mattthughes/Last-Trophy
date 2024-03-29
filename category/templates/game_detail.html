@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!--Game Detail Element-->
 <div class="row">
   <div class="col-md-4">
     <div class="game-heading">
@@ -34,6 +35,7 @@
 <div class="row">
   <h3 class="d-flex flex-column align-items-md-center">Trophies</h3>
   <hr>
+  <!--For each trophy of this game list all the trophies which was specified in the view-->
   {% for trophy in trophies %}
   <div class="d-flex flex-column align-items-md-center trophy-section">
     <div class="trophy-name">
