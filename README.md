@@ -135,7 +135,7 @@ This is the desktop wireframes for the key features of the Last Trophy applicati
 - Fixed python structure bugs by changing how many characters a specific line of code was, adding extra space and removing empty white lines etc which fixed these errors.
 - Fixed 500 error which was not displaying correctly because  there were to many arguments in the function, to fix this I removed the exception argument which fixed this issue.
 - Fixed create view error when trying to use user permission mixin. The logic I was using was trying to get the author of the guide and match that with the logged in user, when there wasn't one. To fix this I added the login required mixin which redirected the user to the login page, once logged in the users was  then able to create a guide.
-- Fixed guide bugs I was unable to reference the specific trophy in the guide view to fix this I changed the trophy.title to trophies which referenced the spelling in the view which loaded the specific trophy to the web page.
+- Fixed guide bugs I was unable to reference the specific trophy in the guide view, to fix this I changed the trophy.title to trophies which referenced the spelling in the view which loaded the specific trophy to the web page.
 ## Deployment
 
 ## Credits
