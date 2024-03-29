@@ -6,6 +6,14 @@ from .filters import GameFilter
 
 
 def game_list(request):
+    """
+    This function is taking a request which is
+    get and is quereing the game data model,
+    setting the form as the game filter form
+    and the game as the filtered querey set
+    then returing the request, the template
+    category which is the template and the context.
+    """
     game_filter = GameFilter(request.GET, queryset=Game.objects.all())
     context = {
         'form': game_filter.form,
@@ -15,6 +23,14 @@ def game_list(request):
 
 
 def game_detail_view(request, slug):
+    """
+    This function is getting the request,
+    the slug the queryset is the game model
+    which will show the fields of the game
+    model. The function is returing the game
+    model and the trophies which is a foreign
+    key of the game model.
+    """
     # specify the model to use
     queryset = Game.objects.filter()
     game = get_object_or_404(queryset, slug=slug)

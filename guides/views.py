@@ -11,7 +11,13 @@ from .forms import GuideForm
 
 
 def guide_detail_view(request, slug):
-    # specify the model to use
+    """
+    This function is getting the user
+    request and the trophy slug from the
+    trophy model and is then returning this
+    render showing the trophies and the guides
+    of that trophy.
+    """
     queryset = Trophies.objects.filter()
     trophies = get_object_or_404(queryset, slug=slug)
     game_guide = trophies.guides.all()
@@ -29,53 +35,117 @@ def guide_detail_view(request, slug):
 
 
 class AddGuideView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """
+    This class is using the create view to use
+    the guide form created and put this on the
+    webpage once the guide has been created a
+    success message stating guide created is
+    shown to give that feedback to the user.
+    """
     model = Guide
     form_class = GuideForm
     success_message = 'Guide created'
     template_name = 'add_guide.html'
 
+    """
+    This function is redirecting the user to
+    the trophy detail view, to determine which
+    trophy the user was looking at the argument
+    will be the trophy slug redirecting the user
+    to the correct page.
+    """
+
     def get_success_url(self):
         return reverse(
             'trophy-detail', kwargs={'slug': self.object.trophy.slug}
             )
 
+    """
+    This function is checking to see if the
+    form is valid by getting the trophy id
+    as the primary key and the author as the
+
+    """
     def form_valid(self, form):
         form.instance.trophy_id = self.kwargs['pk']
         form.instance.author = self.request.user
         return super().form_valid(form)
-    
 
 
 class EditGuideView(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
+    """
+    This class is using the edit view to use
+    the guide form created and put this on the
+    webpage once the guide has been edited a
+    success message stating guide edited is
+    shown to give that feedback to the user.
+    """
     model = Guide
     form_class = GuideForm
     success_message = 'Guide edited'
     template_name = 'edit_guide.html'
 
+    """
+    This function is making sure the
+    user making the request is the user
+    logged in otherwise show a 403 error
+    """
     def test_func(self):
         return self.request.user == self.get_object().author
 
-    
+    """
+    This function is redirecting the user to
+    the trophy detail view, to determine which
+    trophy the user was looking at the argument
+    will be the trophy slug redirecting the user
+    to the correct page.
+    """
     def get_success_url(self):
         return reverse(
             'trophy-detail', kwargs={'slug': self.object.trophy.slug}
             )
+    """
+    This function is checking to see if the
+    form is valid by getting the trophy id
+    as the primary key and the author as the
+
+    """
 
     def form_valid(self, form):
         form.instance.guide_id = self.kwargs['pk']
         return super().form_valid(form)
-    
 
 
 class DeleteGuide(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
+    """
+    This class is using the guide model
+    with the template delete guide which
+    will pop up when the user clicks delete
+    guide after the guide has been deleted
+    a pop up message stating guide deleted
+    will appear on the page providing the
+    user feedback.
+    """
     model = Guide
     success_message = "Guide Deleted"
     template_name = 'delete_guide.html'
+
+    """
+    This function is redirecting the user to
+    the trophy detail view, to determine which
+    trophy the user was looking at the argument
+    will be the trophy slug redirecting the user
+    to the correct page.
+    """
 
     def get_success_url(self):
         return reverse(
             'trophy-detail', kwargs={'slug': self.object.trophy.slug}
             )
-        
+    """
+    This function is making sure the
+    user making the request is the user
+    logged in otherwise show a 403 error
+    """
     def test_func(self):
         return self.request.user == self.get_object().author
