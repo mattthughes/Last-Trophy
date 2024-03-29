@@ -20,7 +20,7 @@ def guide_detail_view(request, slug):
     """
     queryset = Trophies.objects.filter()
     trophies = get_object_or_404(queryset, slug=slug)
-    game_guide = trophies.guides.all()
+    game_guide = trophies.guides.all().filter(approved=True)
     guide_form = GuideForm()
 
     return render(
@@ -44,7 +44,7 @@ class AddGuideView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     """
     model = Guide
     form_class = GuideForm
-    success_message = 'Guide created'
+    success_message = 'Guide created awaiting approval'
     template_name = 'add_guide.html'
 
     """
@@ -124,7 +124,7 @@ class DeleteGuide(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     guide after the guide has been deleted
     a pop up message stating guide deleted
     will appear on the page providing the
-    user feedback.
+    user
     """
     model = Guide
     success_message = "Guide Deleted"
