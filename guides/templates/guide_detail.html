@@ -10,6 +10,27 @@
 </div>
 {% endfor %}
 {% endif %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="pt-4 pb-2 d-flex flex-column align-items-md-center">
+            <div class="border col-md-4 col-lg-8">
+                <h3 class="pt-2 ps-1">Trophy title: {{trophies.title}}</h3>
+                {% if "placeholder" in trophies.featured_image.url %}
+                <img class="img-thumbnail" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="placeholder">
+                {% else %}
+                <img class="img-thumbnail" src=" {{ trophies.featured_image.url }}" alt="{{ trophies.title }}">
+                {% endif %}
+                <div class="col-md-4 col-lg-12 ps-2">
+                    <p class="trophy-description">Trophy Description: {{trophies.description}}</p>
+                    <p class="d-none d-sm-block trophy-rarity">
+                        <i class="fa fa-solid fa-trophy"></i>{{trophies.rarity}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--Guide Detail Element-->
 <div class="container-fluid">
     <div class="row">
@@ -39,7 +60,7 @@
         {% if trophies.guides.all %}
         {% for guide in game_guide %}
         <div class="d-flex flex-column align-items-center guide-info">
-            <h3 class="text-center pt-3">{{guide.trophy}}</h3>
+            <h3 class="text-center pt-3">{{guide.title}}</h3>
             <div class="col-12 col-md-8 border">
                 <p class="text-break p-3">{{guide.body}}</p>
                 <a href="#" class="pb-2 d-flex justify-content-center">{{guide.author}}</a>
