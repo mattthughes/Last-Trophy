@@ -10,9 +10,10 @@
 </div>
 {% endfor %}
 {% endif %}
-
+<!--Guide Detail Element-->
 <div class="container-fluid">
     <div class="row">
+        <!--Checking if user is not logged in and there being no guides-->
         {% if not trophies.guides.all and not user.is_authenticated %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
             <p class="text-center">
@@ -21,6 +22,7 @@
             </p>
             <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a>
             <a class="btn btn-primary" href="{% url 'account_signup' %}">Register</a>
+            <!--checking if user is logged in and there not being any guides-->
             {% elif not trophies.guides.all and user.is_authenticated %}
             <p class="text-center">
                 Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and
@@ -33,6 +35,7 @@
 
         </div>
         {% endif %}
+        <!--Checking if there any guides if there are guides loop through this in a for loop-->
         {% if trophies.guides.all %}
         {% for guide in game_guide %}
         <div class="d-flex flex-column align-items-center guide-info">
@@ -40,6 +43,7 @@
             <div class="col-12 col-md-8 border">
                 <p class="text-break p-3">{{guide.body}}</p>
                 <a href="#" class="pb-2 d-flex justify-content-center">{{guide.author}}</a>
+                <!--If the user is the guide author they can edit or delete there own-->
                 {% if user.is_authenticated and guide.author == user %}
                 <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
                     <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
@@ -55,7 +59,7 @@
         </div>
         {% endfor %}
         {% endif %}
-
+        <!--Checking if the user is logged in and there is guides-->
         {% if trophies.guides.all and user.is_authenticated %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
             <p class="text-center">
@@ -65,7 +69,7 @@
             </p>
             <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
             {% endif %}
-
+            <!--Checking if there are guides and the user is not logged in-->
             {% if trophies.guides.all and not user.is_authenticated %}
             <div class="col-12 pt-3 d-flex flex-column align-items-center">
                 <p class="text-center">
