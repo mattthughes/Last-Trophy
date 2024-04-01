@@ -6,6 +6,8 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
 
 ## CONTENTS
 
+[To view the deployed project click here](https://last-trophy-f32c1bd6dcec.herokuapp.com/)
+
 ## UX
 
 ### The Strategy Plane
@@ -37,6 +39,10 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
 ## Design Plane
 
 ### Color Palette
+
+This is the Color Palette I decided to go with, there are five colours of choice red will be used for the errors on the application and delete buttons, while the green will be used for any login or sign up buttons. There will also be a blue colour that is used for upvoting other user guides. While the white will be used for the background the application has a very simplistic look to not take away any attention from the content on the application.
+
+![Color Palette](static/images/colors-last-trophy.png)
 
 ## Typography
 
@@ -143,10 +149,13 @@ This page will allow the user to view the exisiting guides, create a new guide, 
 
 ### Favicon
 
+This will be shown when the user is on the webpage the design is very simple a trophy symbolising what the application is about.
+
 #### Mobile view
 
 #### Desktop view
 
+![Desktop Favicon view](static/images/favicon-last-trophy.png)
 
 ## Technology 
 
