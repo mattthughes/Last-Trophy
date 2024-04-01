@@ -20,7 +20,7 @@ def guide_detail_view(request, slug):
     """
     queryset = Trophies.objects.filter()
     trophies = get_object_or_404(queryset, slug=slug)
-    game_guide = trophies.guides.all().filter(approved=True)
+    game_guide = trophies.guides.filter(approved=True)
     guide_form = GuideForm()
 
     return render(

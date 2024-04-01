@@ -44,45 +44,87 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
 
 ### Body
 
-## Wireframes
-
-### Mobile Wireframes
-
-This is the mobile wireframes for the key features of the last trophy application such as register an account, login to an existing account, view other guides and create guides just to name a few.
-
-### Desktop Wireframes
-
-This is the desktop wireframes for the key features of the Last Trophy application as stated above.
-
 ## Key Features
 
 ### Navigation Bar
 
+This feature will collapse on mobiles and stretch on desktops, allowing users to click on the the game title leading them to the categories, clicking register to create an account or click login to login to an exisiting account.
+
 #### Mobile view
 
+![Navigation mobile](static/images/navigation-bar-mobile.png)
+
 #### Desktop view
+
+![Navigation Desktop](static/images/navigation-bar-desktop.png)
 
 ### Games List
 
+This element will be shown to the user once they have clicked on a game showing the games rating the amount of trophies and how long it could take to unlock every trophy. Underneath this information the games trophies will be listed below showing a brief description how to unlock this trophy.
+
+#### Wireframes
+
+![Mobile Wireframe Game List](static/images/game-list-mobile.png)
+
+![Desktop wireframe Game List](static/images/game-achievement-desktop.png)
+
+
 #### Mobile view
 
+![Mobile Game List](static/images/game-list-mobile-view.png)
+
 #### Desktop view
+
+![Desktop Game List](static/images/desktop-game-list.png)
 
 ### Sign up page
+The sign up page will be showcased to the user allowing them to create an account to gain access to the features of the last trophy site such as creating guides, editing there own guides and deleting there own guides. They will also be able to provide feedback to other users such as adding comments and liking and disliking guides.
+
+#### Wireframes
+
+![Sign up Wireframe Mobile](static/images/mobile-sign-up.png)
+
+![Sign up Wireframe Desktop](static/images/sign-up-desktop.png)
 
 #### Mobile view
 
+![Sign up Mobile view](static/images/sign-up-mobile-view.png)
+
 #### Desktop view
+
+![Sign up Desktop view](static/images/sign-up-desktop-view.png)
+
 
 ### Login in Page
 
+The login page will be showcased to the user, allowing them to login to an existing account to review the guides they have created, create other guides or respond to feedback.
+
+#### Wireframes
+
+![Login Wireframe Mobile](static/images/login-mobile.png)
+
+![Desktop Wireframe Desktop](static/images/login-desktop.png)
+
 #### Mobile view
+
+![Login Mobile](static/images/login-mobile-view.png)
 
 #### Desktop view
 
+![Desktop Mobile](static/images/login-desktop-view.png)
+
 ### User Guides
 
+This page will allow the user to view the exisiting guides, create a new guide, delete there guides if logged in or edit there guides if logged in.
+
+#### Wireframes
+
+![Mobile user guides wireframe](static/images/guide-page-mobile.png)
+
+![Desktop user guides wireframe](static/images/guide-page-desktop.png)
+
 #### Mobile view
+
 
 #### Desktop view
 
