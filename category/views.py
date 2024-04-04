@@ -51,7 +51,7 @@ def game_detail_view(request, slug):
     )
 
 
-class AddGameView(SuccessMessageMixin, CreateView):
+class AddGameView(LoginRequiredMixin,SuccessMessageMixin, CreateView):
     """
     This class is using the create view to use
     the game form created and put this on the
@@ -72,6 +72,9 @@ class AddGameView(SuccessMessageMixin, CreateView):
         return reverse(
             'game'
             )
+
+    def test_func(self):
+        return self.request.user == self.get_object().author
 
     """
     This function is checking to see if the

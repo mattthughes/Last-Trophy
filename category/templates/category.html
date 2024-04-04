@@ -40,8 +40,11 @@
     </table>
 
 </div>
+
 {% if user.is_superuser %}
-<a href="{% url 'add-game' %}">Create Game</a>
+<div class="d-flex flex-column align-items-center pb-2">
+    <a class="btn btn-primary" href="{% url 'add-game' %}">Create Game</a>
+  </div>
 {% endif %}
 
 {% endblock %}
