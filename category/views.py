@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic.detail import DetailView
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Game, Trophies
 from .forms import GameForm
@@ -53,24 +54,24 @@ def game_detail_view(request, slug):
 class AddGameView(SuccessMessageMixin, CreateView):
     """
     This class is using the create view to use
-    the guide form created and put this on the
-    webpage once the guide has been created a
-    success message stating guide created is
+    the game form created and put this on the
+    webpage once the game has been created a
+    success message stating game created is
     shown to give that feedback to the user.
     """
     model = Game
     form_class = GameForm
     success_message = 'Game Created'
     template_name = 'add_game.html'
-    success_url = 'game'
 
     """
     This function is redirecting the user to
-    the trophy detail view, to determine which
-    trophy the user was looking at the argument
-    will be the trophy slug redirecting the user
-    to the correct page.
+    the game view.
     """
+    def get_success_url(self):
+        return reverse(
+            'game'
+            )
 
     """
     This function is checking to see if the
@@ -80,3 +81,72 @@ class AddGameView(SuccessMessageMixin, CreateView):
     """
     def form_valid(self, form):
         return super().form_valid(form)
+
+
+class EditGameView(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
+    """
+    This class is using the edit view to use
+    the game form created and put this on the
+    webpage once the game has been edited a
+    success message stating game edited is
+    shown to give that feedback to the user.
+    """
+    model = Game
+    form_class = GameForm
+    success_message = 'Game edited'
+    template_name = 'edit_game.html'
+
+    """
+    This function is making sure the
+    user making the request is the user
+    logged in otherwise show a 403 error
+    """
+    def test_func(self):
+        return self.request.user == self.get_object().author
+
+    """
+    This function is redirecting the user to
+    the game view.
+    """
+    def get_success_url(self):
+        return reverse(
+            'game'
+            )
+    """
+    This function is checking to see if the
+    form is valid.
+    """
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+class DeleteGame(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
+    """
+    This class is using the game model
+    with the template delete game which
+    will pop up when the user clicks delete
+    game after the game has been deleted
+    a pop up message stating guide deleted
+    will appear on the page providing the
+    user with this feedback.
+    """
+    model = Game
+    success_message = "Game Deleted"
+    template_name = 'delete_game.html'
+    success_message = 'Game Deleted'
+
+    """
+    This function is redirecting the user to
+    the game view
+    """
+    def get_success_url(self):
+        return reverse(
+            'game'
+            )
+    """
+    This function is making sure the
+    user making the request is the user
+    logged in otherwise show a 403 error
+    """
+    def test_func(self):
+        return self.request.user == self.get_object().author

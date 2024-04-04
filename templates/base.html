@@ -14,7 +14,8 @@
     <!--Font Awesome link-->
     <meta name="description"
         content="Last Trophy is a Trophy hunting application that allows users to create guides, edit guides and offer feedback to other users">
-    <meta name="keyword" content="Trophies, guides, games, achievements, video games, action, horror, fighting, platformers, racing, stealth">
+    <meta name="keyword"
+        content="Trophies, guides, games, achievements, video games, action, horror, fighting, platformers, racing, stealth">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <!--Bootstrap link-->
@@ -28,6 +29,13 @@
 </head>
 
 <body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="text-center alert alert-{{ message.tags }}">
+        {{ message|safe }}
+    </div>
+    {% endfor %}
+    {% endif %}
     <header>
         <!--Navigation bar-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">

@@ -2,13 +2,6 @@
 {% load static %}
 
 {% block content %}
-{% if messages %}
-{% for message in messages %}
-<div class="text-center alert alert-{{ message.tags }}">
-    {{ message|safe }}
-</div>
-{% endfor %}
-{% endif %}
 <!--Home Page Element-->
 <div class="container-fluid text-bg-warning p-3 heading-text">
     <div class="container text-center">
