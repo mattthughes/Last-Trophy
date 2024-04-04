@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic.detail import DetailView
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Game, Trophies
@@ -50,8 +52,7 @@ def game_detail_view(request, slug):
         },
     )
 
-
-class AddGameView(LoginRequiredMixin,SuccessMessageMixin, CreateView):
+class AddGameView(PermissionRequiredMixin,SuccessMessageMixin, CreateView):
     """
     This class is using the create view to use
     the game form created and put this on the
@@ -63,6 +64,7 @@ class AddGameView(LoginRequiredMixin,SuccessMessageMixin, CreateView):
     form_class = GameForm
     success_message = 'Game Created'
     template_name = 'add_game.html'
+    permission_required = "add_game"
 
     """
     This function is redirecting the user to
