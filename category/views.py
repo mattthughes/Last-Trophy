@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic.detail import DetailView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Game, Trophies
+from .forms import GameForm
 from .filters import GameFilter
 # Create your views here.
 
@@ -45,3 +48,35 @@ def game_detail_view(request, slug):
             "trophies": trophies,
         },
     )
+
+
+class AddGameView(SuccessMessageMixin, CreateView):
+    """
+    This class is using the create view to use
+    the guide form created and put this on the
+    webpage once the guide has been created a
+    success message stating guide created is
+    shown to give that feedback to the user.
+    """
+    model = Game
+    form_class = GameForm
+    success_message = 'Game Created'
+    template_name = 'add_game.html'
+    success_url = 'game'
+
+    """
+    This function is redirecting the user to
+    the trophy detail view, to determine which
+    trophy the user was looking at the argument
+    will be the trophy slug redirecting the user
+    to the correct page.
+    """
+
+    """
+    This function is checking to see if the
+    form is valid by getting the trophy id
+    as the primary key and the author as the
+
+    """
+    def form_valid(self, form):
+        return super().form_valid(form)

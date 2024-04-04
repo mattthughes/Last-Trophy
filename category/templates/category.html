@@ -40,5 +40,8 @@
     </table>
 
 </div>
+{% if user.is_superuser %}
+<a href="{% url 'add-game' %}">Create Game</a>
+{% endif %}
 
 {% endblock %}
