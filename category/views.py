@@ -41,7 +41,6 @@ def game_detail_view(request, slug):
     queryset = Game.objects.filter()
     game = get_object_or_404(queryset, slug=slug)
     trophies = game.trophies.all().order_by("-rarity")
-    
 
     return render(
         request,
@@ -52,7 +51,8 @@ def game_detail_view(request, slug):
         },
     )
 
-class AddGameView(PermissionRequiredMixin,SuccessMessageMixin, CreateView):
+
+class AddGameView(PermissionRequiredMixin, SuccessMessageMixin, CreateView):
     """
     This class is using the create view to use
     the game form created and put this on the
