@@ -6,7 +6,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Game, Trophies
-from .forms import GameForm
+from .forms import GameForm, TrophiesForm
 from .filters import GameFilter
 # Create your views here.
 
@@ -85,6 +85,7 @@ class AddGameView(PermissionRequiredMixin, SuccessMessageMixin, CreateView):
 
     """
     def form_valid(self, form):
+        form.instance.author = self.request.user
         return super().form_valid(form)
 
 
@@ -122,6 +123,7 @@ class EditGameView(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     form is valid.
     """
     def form_valid(self, form):
+        form.instance.author = self.request.user
         return super().form_valid(form)
 
 
@@ -155,3 +157,39 @@ class DeleteGame(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     """
     def test_func(self):
         return self.request.user == self.get_object().author
+
+
+class AddTrophyView(PermissionRequiredMixin, SuccessMessageMixin, CreateView):
+    """
+    This class is using the create view to use
+    the trophies form created and put this on the
+    webpage once the trophy has been created a
+    success message stating trophy created is
+    shown to give that feedback to the user.
+    """
+    model = Trophies
+    form_class = TrophiesForm
+    success_message = 'Trophy Created'
+    template_name = 'add_trophy.html'
+    permission_required = "add_trophies"
+
+    """
+    This function is redirecting the user to
+    the game view.
+    """
+    def get_success_url(self):
+        return reverse(
+            'game-detail', kwargs={'slug': self.object.game.slug}
+            )
+
+    def test_func(self):
+        return self.request.user == self.get_object().author
+
+    """
+    This function is checking to see if the
+    form is valid by setting the author
+    to the user that clicked on the create button.
+    """
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
