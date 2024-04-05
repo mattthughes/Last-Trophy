@@ -175,7 +175,7 @@ class AddTrophyView(PermissionRequiredMixin, SuccessMessageMixin, CreateView):
 
     """
     This function is redirecting the user to
-    the game view.
+    the game detail view.
     """
     def get_success_url(self):
         return reverse(
@@ -192,4 +192,35 @@ class AddTrophyView(PermissionRequiredMixin, SuccessMessageMixin, CreateView):
     """
     def form_valid(self, form):
         form.instance.author = self.request.user
+        return super().form_valid(form)
+
+
+class EditTrophyView(PermissionRequiredMixin, SuccessMessageMixin, UpdateView):
+    """
+    This class is using the edit view to use
+    the game form created and put this on the
+    webpage once the game has been edited a
+    success message stating game edited is
+    shown to give that feedback to the user.
+    """
+    model = Trophies
+    form_class = TrophiesForm
+    success_message = 'Trophy edited'
+    template_name = 'edit_trophy.html'
+    permission_required = "edit_trophies"
+
+
+    """
+    This function is redirecting the user to
+    the game detail view.
+    """
+    def get_success_url(self):
+        return reverse(
+            'game-detail', kwargs={'slug': self.object.game.slug}
+            )
+    """
+    This function is checking to see if the
+    form is valid.
+    """
+    def form_valid(self, form):
         return super().form_valid(form)
