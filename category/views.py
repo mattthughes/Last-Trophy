@@ -224,3 +224,29 @@ class EditTrophyView(PermissionRequiredMixin, SuccessMessageMixin, UpdateView):
     """
     def form_valid(self, form):
         return super().form_valid(form)
+
+
+class DeleteTrophyView(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
+    """
+    This class is using the game model
+    with the template delete game which
+    will pop up when the user clicks delete
+    game after the game has been deleted
+    a pop up message stating guide deleted
+    will appear on the page providing the
+    user with this feedback.
+    """
+    model = Trophies
+    success_message = "Trophy Deleted"
+    template_name = 'delete_trophy.html'
+    permission_required = "delete_trophies"
+
+
+    """
+    This function is redirecting the user to
+    the game detail view
+    """
+    def get_success_url(self):
+        return reverse(
+            'game-detail', kwargs={'slug': self.object.game.slug}
+            )

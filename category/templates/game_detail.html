@@ -64,6 +64,7 @@
       {% if user.is_superuser %}
       <div class="d-flex flex-column align-items-center pb-2">
         <a href="{% url 'edit-trophy' trophy.slug %}">Edit Trophy</a>
+        <a href="{% url 'delete-trophy' trophy.slug %}">Delete Trophy</a>
       </div>
 
       {% endif %}
