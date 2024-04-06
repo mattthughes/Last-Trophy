@@ -43,7 +43,6 @@ class TrophiesForm(forms.ModelForm):
         fields = (
             'title',
             'slug',
-            'game',
             'featured_image',
             'description',
             'difficulty',
@@ -52,7 +51,6 @@ class TrophiesForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
-            'game': forms.Select(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control'}),
             'difficulty': forms.TextInput(attrs={'class': 'form-control'}),
             'rarity': forms.NumberInput(attrs={'class': 'form-control'}),

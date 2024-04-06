@@ -191,6 +191,7 @@ class AddTrophyView(PermissionRequiredMixin, SuccessMessageMixin, CreateView):
     to the user that clicked on the create button.
     """
     def form_valid(self, form):
+        form.instance.game_id = self.kwargs['pk']
         form.instance.author = self.request.user
         return super().form_valid(form)
 
