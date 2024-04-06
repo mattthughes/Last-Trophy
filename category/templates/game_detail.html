@@ -36,7 +36,7 @@
 <div class="d-flex flex-column align-items-center pb-2">
   <a class="btn btn-primary" href="{% url 'edit-game' game.slug %}">Edit Game</a>
   <a class="btn btn-danger" href="{% url 'delete-game' game.slug %}">Delete Game</a>
-  <a href="{% url 'add-trophy' game.pk %}">Add Trophy</a>
+  <a class="btn btn-primary" href="{% url 'add-trophy' game.pk %}">Add Trophy</a>
 </div>
 
 {% endif %}
@@ -61,16 +61,16 @@
       <p class="d-none d-sm-block trophy-rarity">
         <i class="fa fa-solid fa-trophy"></i>{{trophy.rarity}}
       </p>
-      {% if user.is_superuser %}
-      <div class="d-flex flex-column align-items-center pb-2">
-        <a href="{% url 'edit-trophy' trophy.slug %}">Edit Trophy</a>
-        <a href="{% url 'delete-trophy' trophy.slug %}">Delete Trophy</a>
-      </div>
-
-      {% endif %}
 
     </div>
   </div>
+  {% if user.is_superuser %}
+      <div class="d-flex flex-column align-items-center pt-2 pb-2">
+        <a class="btn btn-primary" href="{% url 'edit-trophy' trophy.slug %}">Edit Trophy</a>
+        <a class="btn btn-danger" href="{% url 'delete-trophy' trophy.slug %}">Delete Trophy</a>
+      </div>
+
+      {% endif %}
   {% endif %}
   {% endfor %}
 </div>
