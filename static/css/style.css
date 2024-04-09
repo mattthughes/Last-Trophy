@@ -15,6 +15,12 @@ h1,h2,h3 {
     font-size: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
 .heading-text {
     height: 73vh;
     text-align: center;
@@ -63,6 +69,10 @@ img{
 .game-summary {
     text-align: center;
     padding: 20px;
+}
+
+.trophy-title {
+    text-decoration: none;
 }
 
 .trophy-heading {

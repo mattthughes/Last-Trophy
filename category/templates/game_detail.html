@@ -42,23 +42,23 @@
 {% endif %}
 
 <div class="row">
-  <h3 class="d-flex flex-column align-items-md-center">Trophies</h3>
+  <h3 class="d-flex flex-column align-items-md-center ms-1">Trophies</h3>
   <hr>
   <!--For each trophy of this game list all the trophies which was specified in the view-->
   {% for trophy in trophies %}
-  <div class="d-flex flex-column align-items-md-center trophy-section">
+  <div class="d-flex flex-column align-items-md-center trophy-section pb-1">
     <div class="trophy-name">
       <a href="{% url 'trophy-detail' trophy.slug %}" class="trophy-title"><strong>{{trophy.title}}</strong></a>
     </div>
-    <div class="col-11 col-md-4 col-lg-3 trophy-images border">
+    <div class="col-11 col-md-4 col-lg-6 trophy-images border m-1">
       {% if "placeholder" in trophy.featured_image.url %}
-      <img class="image-size" width="20%" src="{% static 'static/images/elden-ring-cover.jpg' %}"
+      <img class="image-size" src="{% static 'static/images/elden-ring-cover.jpg' %}"
         alt="placeholder image">
       {% else %}
-      <img class="img-thumbnail" width="20%" alt="Responsive image" src=" {{ trophy.featured_image.url }}"
+      <img class="img-thumbnail" src=" {{ trophy.featured_image.url }}"
         alt="{{ trophy.title }}">
-      <p class="trophy-description">{{trophy.description}}</p>
-      <p class="d-none d-sm-block trophy-rarity">
+      <p class="trophy-description p-1">{{trophy.description}}</p>
+      <p class="d-none d-sm-block trophy-rarity p-1">
         <i class="fa fa-solid fa-trophy"></i>{{trophy.rarity}}
       </p>
 

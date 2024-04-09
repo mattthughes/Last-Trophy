@@ -17,6 +17,11 @@ h1,h2,h3 {
     font-size: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 .heading-text {
     height: 73vh;
@@ -68,15 +73,18 @@ img{
     padding: 20px;
 }
 
+
 .trophy-heading {
     padding-left: 4px;
 
 }
 
+
 .trophy-name {
     margin-left: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: black;
 }
 
 
