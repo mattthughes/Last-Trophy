@@ -11,11 +11,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='game',
-            name='game_score',
-            field=models.IntegerField(default=1000),
-        ),
+
         migrations.AlterField(
             model_name='guide',
             name='game',

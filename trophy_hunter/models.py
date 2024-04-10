@@ -24,7 +24,6 @@ class Game(models.Model):
     genre = models.CharField(max_length=1, choices=GenreChoices.choices)
     trophy_count = models.CharField(max_length=4)
     hours = models.CharField(max_length=4)
-    game_score = models.IntegerField(default=1000)
     rating = models.FloatField(default=4.99)
 
     def __str__(self):
