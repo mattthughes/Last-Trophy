@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
-
+from django.views.generic.list import ListView 
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Trophies, Guide
-from .forms import GuideForm
+from .forms import GuideForm, ApproveGuideForm
 
 # Create your views here.
 
@@ -149,3 +149,33 @@ class DeleteGuide(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     """
     def test_func(self):
         return self.request.user == self.get_object().author
+
+
+class GuideNotApproved(PermissionRequiredMixin, ListView):
+    model = Guide
+    template_name = 'guides_not_approved.html'
+    permission_required = "approve_guide"
+
+    def get_queryset(self, *args, **kwargs): 
+        qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs) 
+        qs = qs.filter(approved=False)
+        return qs
+    
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+class GuideApproved(PermissionRequiredMixin, UpdateView):
+    model = Guide
+    form_class = ApproveGuideForm
+    template_name = 'approve_guides.html'
+    permission_required = "approve_guide"
+
+    
+    def get_success_url(self):
+        return reverse(
+            'not-approved-guide'
+            )
+    
+    def form_valid(self, form):
+        return super().form_valid(form)

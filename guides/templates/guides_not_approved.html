@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<ul> 
+    <!-- Iterate over guides not approved -->
+    {% for guide in object_list %} 
+    <!-- Display guides awaiting approval -->
+    <li><a href="{% url 'approve-guide' guide.pk %}">{{ guide.title }}</a></li> 
+    <hr/> 
+    <!-- if all guides approved-->
+    {% empty %} 
+    <li>No Guides to approve.</li>
+    <a href="{% url 'game' %}">Back</a> 
+    {% endfor %} 
+</ul>
+
+{% endblock %}

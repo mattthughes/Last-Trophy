@@ -17,3 +17,13 @@ class GuideForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
+
+class ApproveGuideForm(forms.ModelForm):
+    class Meta:
+        model = Guide
+        fields = ('title', 'body', 'author', 'approved')
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+            'author': forms.Select(attrs={'class': 'form-control'}),
+            }

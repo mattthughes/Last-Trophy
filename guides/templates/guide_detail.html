@@ -74,7 +74,7 @@
                 </div>
                 {% endif %}
                 <div class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
-                    <a href="#" class="">Guide Written by {{guide.author}}</a>
+                    <a href="#">Guide Written by {{guide.author}}</a>
                     <p>Added {{guide.created_on}}</p>
                 </div>
                 <div class="rate-buttons ps-2">
@@ -83,7 +83,11 @@
                 </div>
             </div>
         </div>
+        
         {% endfor %}
+        {% endif %}
+        {% if not guide.approved and user.is_superuser %}
+        <a href="{% url 'not-approved-guide' %}">Approve Guides</a>
         {% endif %}
         <!--Checking if the user is logged in and there is guides-->
         {% if trophies.guides.all and user.is_authenticated %}
