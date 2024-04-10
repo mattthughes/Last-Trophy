@@ -63,9 +63,9 @@
         {% for guide in game_guide %}
         <div class="d-flex flex-column align-items-center guide-info">
             <h3 class="text-center pt-3">{{guide.title}}</h3>
+            
             <div class="col-12 col-md-8 border">
                 <p class="text-break p-3">{{guide.body}}</p>
-                <a href="#" class="pb-2 d-flex justify-content-center">{{guide.author}}</a>
                 <!--If the user is the guide author they can edit or delete there own-->
                 {% if user.is_authenticated and guide.author == user %}
                 <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
@@ -73,7 +73,10 @@
                     <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
                 </div>
                 {% endif %}
-                <hr>
+                <div class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
+                    <a href="#" class="">Guide Written by {{guide.author}}</a>
+                    <p>Added {{guide.created_on}}</p>
+                </div>
                 <div class="rate-buttons ps-2">
                     <button class="btn btn-primary">Like</button>
                     <button class="btn btn-danger">Dislike</button>
