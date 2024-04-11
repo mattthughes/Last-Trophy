@@ -11,7 +11,7 @@
             
             {% for guide in object_list %} 
             <!-- Display guides awaiting approval -->
-            <li><a href="{% url 'approve-guide' guide.pk %}">{{ guide.title }}</a></li> 
+            <li><a href="{% url 'approve-guide' guide.pk %}">Title: {{ guide.title }}</a></li> 
             <hr/> 
             <!-- if all guides approved-->
             {% empty %} 

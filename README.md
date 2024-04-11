@@ -1,10 +1,11 @@
 # Last Trophy 
 
-
 Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and Django the main premise of this project is to help users with Trophy hunting this application will allow users to view achievement guides, create an account, comment, rate other guides and more more features that will be showcased down below.
 
 
 ## CONTENTS
+
+
 
 [To view the deployed project click here](https://last-trophy-f32c1bd6dcec.herokuapp.com/)
 
@@ -131,21 +132,43 @@ This page will allow the user to view the exisiting guides, create a new guide, 
 
 #### Mobile view
 
+When there is a guide created this view will be shown if the user is not logged in
+
+When there is a guide created this view will be shown if the user is logged in
+
+When there isnt a guide created this view will be shown if the user is not logged in
+
+When there isnt a guide created this view will be shown if the user is logged in
+
+If the site user is the admin user this view will be shown
 
 #### Desktop view
 
-### Detailed Guides
+When there is a guide created this view will be shown if the user is not logged in
 
-#### Mobile view
+When there is a guide created this view will be shown if the user is logged in
 
-#### Desktop view
+When there isnt a guide created this view will be shown if the user is not logged in
+
+When there isnt a guide created this view will be shown if the user is logged in
+
+If the site user is the admin user this view will be shown
+
 
 ### Categories 
 
 #### Mobile view
+This is the form and form results view on mobile.
+
+![Mobile view Category form](static/images/category-form-mobile.png)
+
+![Mobile view category results ](static/images/category-results-mobile.png)
 
 #### Desktop view
 
+This is the form and form results view on desktop
+
+![Desktop view category form](static/images/category-desktop.png)
 
 ### Favicon
 
