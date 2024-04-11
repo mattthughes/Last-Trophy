@@ -16,6 +16,7 @@ class GameForm(forms.ModelForm):
             'trophy_count',
             'hours',
             'rating')
+        
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
@@ -27,6 +28,7 @@ class GameForm(forms.ModelForm):
             'rating': forms.NumberInput(attrs={'class': 'form-control'}),
         }
 
+        
 class TrophiesForm(forms.ModelForm):
     """
     Form class for users to create a trophy

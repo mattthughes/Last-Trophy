@@ -87,7 +87,10 @@
         {% endfor %}
         {% endif %}
         {% if not guide.approved and user.is_superuser %}
-        <a href="{% url 'not-approved-guide' %}">Approve Guides</a>
+        <div class="col-12 pt-3 d-flex flex-column align-items-center">
+            <a class="btn btn-success" href="{% url 'not-approved-guide' %}">Approve Guides</a>
+        </div>
+        
         {% endif %}
         <!--Checking if the user is logged in and there is guides-->
         {% if trophies.guides.all and user.is_authenticated %}
