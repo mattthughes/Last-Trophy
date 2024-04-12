@@ -60,3 +60,24 @@ class Guide(models.Model):
 
     def __str__(self):
         return f" {self.body} {self.author}"
+
+
+class Comment(models.Model):
+    trophy = models.ForeignKey(
+        Trophies, on_delete=models.CASCADE, related_name='trophy_comments', default='1'
+    )
+    guide = models.ForeignKey(
+        Guide, on_delete=models.CASCADE, related_name='comments'
+    )
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='commenter'
+    )
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_on"]
+    
+    def __str__(self):
+        return f"comment {self.body} by {self.author} "

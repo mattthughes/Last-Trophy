@@ -4,7 +4,7 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views.generic.list import ListView 
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from trophy_hunter.models import Trophies, Guide
+from trophy_hunter.models import Trophies, Guide, Comment
 from .forms import GuideForm, ApproveGuideForm
 
 # Create your views here.
@@ -21,6 +21,7 @@ def guide_detail_view(request, slug):
     queryset = Trophies.objects.filter()
     trophies = get_object_or_404(queryset, slug=slug)
     game_guide = trophies.guides.filter(approved=True)
+    comment = trophies.trophy_comments.filter(approved=True)
     guide_form = GuideForm()
 
     return render(
@@ -29,7 +30,8 @@ def guide_detail_view(request, slug):
         {
             "trophies": trophies,
             "game_guide": game_guide,
-            "guide_form": guide_form
+            "guide_form": guide_form,
+            "comment": comment
         },
     )
 
