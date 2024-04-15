@@ -4,14 +4,27 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views.generic.list import ListView 
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.detail import DetailView
 from trophy_hunter.models import Trophies, Guide, Comment
 from .forms import GuideForm, ApproveGuideForm
 from django.http import HttpResponseRedirect
 
 # Create your views here.
 
+class GuideView(DetailView):
+    model = Guide
+    template_name = 'guide_detail_view.html'
 
-def guide_detail_view(request, slug):
+    def get_context_data(self, **kwargs):
+        context = super(GuideView, self).get_context_data(**kwargs)
+        like = get_object_or_404(Guide, id=self.kwargs['pk'])
+        total_likes = like.total_likes()
+        context['total_likes'] = total_likes
+        return context
+
+
+
+def trophy_detail_view(request, slug):
     """
     This function is getting the user
     request and the trophy slug from the
@@ -24,10 +37,9 @@ def guide_detail_view(request, slug):
     game_guide = trophies.guides.filter(approved=True)
     comment = trophies.trophy_comments.filter(approved=True)
     guide_form = GuideForm()
-
     return render(
         request,
-        "guide_detail.html",
+        "trophy_detail.html",
         {
             "trophies": trophies,
             "game_guide": game_guide,
@@ -37,7 +49,6 @@ def guide_detail_view(request, slug):
     )
 
     
-
 
 class AddGuideView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     """
@@ -186,11 +197,10 @@ class GuideApproved(PermissionRequiredMixin, UpdateView):
         return super().form_valid(form)
 
 
-def LikeView(request, slug):
+def LikeView(request, pk):
     guide = get_object_or_404(Guide, id=request.POST.get('guide_id'))
     if request.user.is_authenticated:
         guide.likes.add(request.user)
-        
     else:
         return HttpResponseRedirect(reverse('account_login'))
-    return HttpResponseRedirect(reverse('trophy-detail', args=[str(slug)]))
+    return HttpResponseRedirect(reverse('guide-view', args=[str(pk)]))

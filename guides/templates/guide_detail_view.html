@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="d-flex flex-column align-items-center guide-info">
+    <a href="{% url 'guide-view' guide.pk %}" class="text-center pt-3">{{guide.title}}</a>
+    <div class="col-12 col-md-8 border">
+        <p class="text-break p-3">{{guide.body}}</p>
+        <!--If the user is the guide author they can edit or delete there own-->
+        {% if user.is_authenticated and guide.author == user %}
+        <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
+            <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
+            <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
+        </div>
+        {% endif %}
+        <div class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
+            <a href="#">Guide Written by {{guide.author}}</a>
+            <p>Added {{guide.created_on}}</p>
+        </div>
+        <div class="rate-buttons ps-2">
+            <form action="{% url 'like_guide' guide.pk %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary">Like</button> {{ total_likes }} - Likes
+            </form> 
+            <button class="btn btn-danger">Dislike</button>
+            {% if user.is_authenticated %}
+            <a href="" class="btn btn-success">Comment</a>
+            {% endif %}
+            {{comment.body}}
+        </div>
+    </div>
+</div>
+{% endblock %}

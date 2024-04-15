@@ -18,10 +18,14 @@
                     <p class="trophy-description">Trophy Description: {{trophies.description}}</p>
                     <p class="d-none d-sm-block trophy-rarity">
                         <i class="fa fa-solid fa-trophy"></i>{{trophies.rarity}}
+                        <p class="text-center p-2">To view more information for any guide related to trophy:
+                            {{trophies.title}} just click on the guide title to help out other trophy hunters like
+                            yourself!</p>
                     </p>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -52,10 +56,10 @@
         {% endif %}
         <!--Checking if there any guides if there are guides loop through this in a for loop-->
         {% if trophies.guides.all %}
+        <h3 class="text-center">Guides:</h3>
         {% for guide in game_guide %}
         <div class="d-flex flex-column align-items-center guide-info">
-            <h3 class="text-center pt-3">{{guide.title}}</h3>
-            
+            <a href="{% url 'guide-view' guide.pk %}" class="text-center pt-3">{{guide.title}}</a>
             <div class="col-12 col-md-8 border">
                 <p class="text-break p-3">{{guide.body}}</p>
                 <!--If the user is the guide author they can edit or delete there own-->
@@ -65,31 +69,20 @@
                     <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
                 </div>
                 {% endif %}
-                <div class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
+                <div
+                    class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
                     <a href="#">Guide Written by {{guide.author}}</a>
                     <p>Added {{guide.created_on}}</p>
                 </div>
-                <div class="rate-buttons ps-2">
-                    <form action="{% url 'like_guide' trophies.slug %}" method="POST">
-                        {% csrf_token %}
-                        <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary">Like</button>
-                    </form>
-                    <button class="btn btn-primary">Like</button> - {{ likes_count }}
-                    <button class="btn btn-danger">Dislike</button>
-                    {% if user.is_authenticated %}
-                    <a href="" class="btn btn-success">Comment</a>
-                    {% endif %}
-                </div>
             </div>
         </div>
-        
         {% endfor %}
         {% endif %}
         {% if not guide.approved and user.is_superuser %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
             <a class="btn btn-success" href="{% url 'not-approved-guide' %}">Approve Guides</a>
         </div>
-        
+
         {% endif %}
         <!--Checking if the user is logged in and there is guides-->
         {% if trophies.guides.all and user.is_authenticated %}
