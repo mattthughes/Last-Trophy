@@ -6,6 +6,7 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Trophies, Guide, Comment
 from .forms import GuideForm, ApproveGuideForm
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -31,9 +32,11 @@ def guide_detail_view(request, slug):
             "trophies": trophies,
             "game_guide": game_guide,
             "guide_form": guide_form,
-            "comment": comment
+            "comment": comment,
         },
     )
+
+    
 
 
 class AddGuideView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
@@ -181,3 +184,13 @@ class GuideApproved(PermissionRequiredMixin, UpdateView):
     
     def form_valid(self, form):
         return super().form_valid(form)
+
+
+def LikeView(request, slug):
+    guide = get_object_or_404(Guide, id=request.POST.get('guide_id'))
+    if request.user.is_authenticated:
+        guide.likes.add(request.user)
+        
+    else:
+        return HttpResponseRedirect(reverse('account_login'))
+    return HttpResponseRedirect(reverse('trophy-detail', args=[str(slug)]))

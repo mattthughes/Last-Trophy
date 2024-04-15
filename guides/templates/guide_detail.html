@@ -70,8 +70,15 @@
                     <p>Added {{guide.created_on}}</p>
                 </div>
                 <div class="rate-buttons ps-2">
-                    <button class="btn btn-primary">Like</button>
+                    <form action="{% url 'like_guide' trophies.slug %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary">Like</button>
+                    </form>
+                    <button class="btn btn-primary">Like</button> - {{ likes_count }}
                     <button class="btn btn-danger">Dislike</button>
+                    {% if user.is_authenticated %}
+                    <a href="" class="btn btn-success">Comment</a>
+                    {% endif %}
                 </div>
             </div>
         </div>

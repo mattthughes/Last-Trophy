@@ -1,5 +1,5 @@
 from django import forms
-from trophy_hunter.models import Guide
+from trophy_hunter.models import Guide, Comment
 
 
 class GuideForm(forms.ModelForm):
