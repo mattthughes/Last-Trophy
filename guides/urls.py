@@ -10,7 +10,9 @@ from .views import (
     LikeView,
     DislikeView,
     GuideView,
-    AddComment 
+    AddComment,
+    EditComment,
+    DeleteComment 
     )
 
 urlpatterns = [
@@ -23,7 +25,9 @@ urlpatterns = [
     path('<int:pk>/guides', GuideView.as_view(), name='guide-view'),
     path('like/<int:pk>', views.LikeView, name='like-guide'),
     path('dislike/<int:pk>', views.DislikeView, name='dislike-guide'),
-    path('<int:pk>/Add/Comment', AddComment.as_view(), name='add-comment')
+    path('<int:pk>/Add/Comment/', AddComment.as_view(), name='add-comment'),
+    path('<int:pk>/Edit/', EditComment.as_view(), name='edit-comment'),
+    path('<int:pk>/Delete/Comment/', DeleteComment.as_view(), name='delete-comment')
 
 
 ]

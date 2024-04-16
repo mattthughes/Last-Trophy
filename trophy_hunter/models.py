@@ -71,7 +71,6 @@ class Guide(models.Model):
 
 
 class Comment(models.Model):
-    title = models.CharField(max_length=200, unique=True, default='placeholder')
     guide = models.ForeignKey(
         Guide, on_delete=models.CASCADE, related_name='comments'
     )

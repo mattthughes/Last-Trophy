@@ -25,6 +25,7 @@ class GuideView(DetailView):
         context['total_dislikes'] = total_dislikes
         return context
 
+
 class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Comment
     form_class = CommentForm
@@ -47,7 +48,83 @@ class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
+class EditComment(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
+    """
+    This class is using the edit view to use
+    the guide form created and put this on the
+    webpage once the guide has been edited a
+    success message stating guide edited is
+    shown to give that feedback to the user.
+    """
+    model = Comment
+    form_class = CommentForm
+    success_message = 'Comment edited'
+    template_name = 'edit_comment.html'
 
+    """
+    This function is making sure the
+    user making the request is the user
+    logged in otherwise show a 403 error
+    """
+    def test_func(self):
+        return self.request.user == self.get_object().author
+
+    """
+    This function is redirecting the user to
+    the trophy detail view, to determine which
+    trophy the user was looking at the argument
+    will be the trophy slug redirecting the user
+    to the correct page.
+    """
+    def get_success_url(self):
+        return reverse(
+            'guide-view', kwargs={'pk': self.object.guide.pk}
+            )
+    """
+    This function is checking to see if the
+    form is valid by getting the trophy id
+    as the primary key and the author as the
+
+    """
+
+    def form_valid(self, form):
+        form.instance.comment_id = self.kwargs['pk']
+        return super().form_valid(form)
+
+
+class DeleteComment(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
+    """
+    This class is using the guide model
+    with the template delete guide which
+    will pop up when the user clicks delete
+    guide after the guide has been deleted
+    a pop up message stating guide deleted
+    will appear on the page providing the
+    user
+    """
+    model = Comment
+    success_message = "Comment Deleted"
+    template_name = 'delete_comment.html'
+
+    """
+    This function is redirecting the user to
+    the trophy detail view, to determine which
+    trophy the user was looking at the argument
+    will be the trophy slug redirecting the user
+    to the correct page.
+    """
+
+    def get_success_url(self):
+        return reverse(
+            'guide-view', kwargs={'pk': self.object.guide.pk}
+            )
+    """
+    This function is making sure the
+    user making the request is the user
+    logged in otherwise show a 403 error
+    """
+    def test_func(self):
+        return self.request.user == self.get_object().author
 
 def trophy_detail_view(request, slug):
     """

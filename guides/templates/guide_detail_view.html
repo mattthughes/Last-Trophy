@@ -41,8 +41,13 @@
         {% else %}
         {% for comment in guide.comments.all %}
         <div class="border">
-            <h4>{{comment.title}}</h4>
             <p>{{comment.body}}</p>
+            {% if user.is_authenticated and comment.author == user %}
+            <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
+                <a class="btn btn-success" href="{% url 'edit-comment' comment.pk %}">Edit Comment</a>
+                <a class="btn btn-danger" href="{% url 'delete-comment' comment.pk %}">Delete Comment</a>
+            </div>
+            {% endif %}
         </div>
 
         {% endfor %}

@@ -32,7 +32,7 @@ class ApproveGuideForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('title', 'body',)
+        fields = ('body',)
         widgets = {
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
