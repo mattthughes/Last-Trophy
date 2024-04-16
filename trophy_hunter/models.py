@@ -71,9 +71,6 @@ class Guide(models.Model):
 
 
 class Comment(models.Model):
-    trophy = models.ForeignKey(
-        Trophies, on_delete=models.CASCADE, related_name='trophy_comments', default='1'
-    )
     guide = models.ForeignKey(
         Guide, on_delete=models.CASCADE, related_name='comments'
     )

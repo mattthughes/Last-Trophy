@@ -7,8 +7,10 @@ from .views import (
     DeleteGuide, 
     GuideNotApproved, 
     GuideApproved, 
-    LikeView,GuideView, 
-    DislikeView)
+    LikeView,
+    DislikeView,
+    GuideView, 
+    )
 
 urlpatterns = [
     path('<slug:slug>/', views.trophy_detail_view, name='trophy-detail'),
@@ -18,8 +20,8 @@ urlpatterns = [
     path('<int:pk>/edit/', EditGuideView.as_view(), name='edit-guide'),
     path('<int:pk>/delete/', DeleteGuide.as_view(), name='delete-guide'),
     path('<int:pk>/guides', GuideView.as_view(), name='guide-view'),
-    path('like/<int:pk>', LikeView, name='like_guide'),
-    path('dislike/<int:pk>', DislikeView, name='dislike_guide')
+    path('like/<int:pk>', views.LikeView, name='like_guide'),
+    path('dislike/<int:pk>', views.DislikeView, name='dislike-guide')
 
 
 ]

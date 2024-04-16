@@ -21,16 +21,32 @@
         <div class="rate-buttons ps-2">
             <form action="{% url 'like_guide' guide.pk %}" method="POST">
                 {% csrf_token %}
-                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary">Like</button> {{ total_likes }} - Likes
-            </form> 
-            <form action="{% url 'dislike_guide' guide.pk %}" method="POST">
+                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary">Like</button>
+                {{ total_likes }} - Likes
+            </form>
+            <form action="{% url 'dislike-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
-                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-danger">Dislike</button> {{ total_dislikes }} - Dislikes
-            </form> 
-            {% if user.is_authenticated %}
-            <a href="" class="btn btn-success">Comment</a>
-            {% endif %}
+                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-danger">Dislike</button>
+                {{ total_dislikes }} - Dislikes
+            </form>
         </div>
+    </div>
+</div>
+
+<div class="d-flex flex-column align-items-center">
+    <h3 class="pt-2">Comments</h3>
+    <div class="col-12 col-md-8 border">
+        {% if not guide.comments.all %}
+        <p>No comment yet <a class="btn btn-success" href="">Add</a> </p>
+        {% else %}
+        {% for comment in guide.comments.all %}
+        <p>{{comment.body}}</p>
+        {% endfor %}
+        {% endif %}
+        
+
+        <a class="btn btn-success ms-1" href="">Add Comment</a>
+
     </div>
 </div>
 {% endblock %}

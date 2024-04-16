@@ -38,7 +38,6 @@ def trophy_detail_view(request, slug):
     queryset = Trophies.objects.filter()
     trophies = get_object_or_404(queryset, slug=slug)
     game_guide = trophies.guides.filter(approved=True)
-    comment = trophies.trophy_comments.filter(approved=True)
     guide_form = GuideForm()
     return render(
         request,
@@ -47,7 +46,6 @@ def trophy_detail_view(request, slug):
             "trophies": trophies,
             "game_guide": game_guide,
             "guide_form": guide_form,
-            "comment": comment,
         },
     )
 
@@ -202,8 +200,10 @@ class GuideApproved(PermissionRequiredMixin, UpdateView):
 
 def LikeView(request, pk):
     guide = get_object_or_404(Guide, id=request.POST.get('guide_id'))
-    if request.user.is_authenticated:
+    if request.user.is_authenticated and guide.likes:
         guide.likes.add(request.user)
+    elif request.user.is_authenticated and guide.dislikes:
+        guide.dislikes.add(request.user)
     else:
         return HttpResponseRedirect(reverse('account_login'))
     return HttpResponseRedirect(reverse('guide-view', args=[str(pk)]))
@@ -216,3 +216,8 @@ def DislikeView(request, pk):
     else:
         return HttpResponseRedirect(reverse('account_login'))
     return HttpResponseRedirect(reverse('guide-view', args=[str(pk)]))
+    
+
+
+
+
