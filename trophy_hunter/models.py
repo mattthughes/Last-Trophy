@@ -57,10 +57,14 @@ class Guide(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    likes = models.ManyToManyField(User, related_name='guide_posts')
+    likes = models.ManyToManyField(User, related_name='guide_likes')
+    dislikes = models.ManyToManyField(User, related_name='guide_dislikes')
 
     def total_likes(self):
         return self.likes.count()
+    
+    def total_dislikes(self):
+        return self.dislikes.count()
 
     def __str__(self):
         return f" {self.body} {self.author}"

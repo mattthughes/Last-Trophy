@@ -1,6 +1,14 @@
 from django.urls import path
 from . import views
-from .views import trophy_detail_view, AddGuideView, EditGuideView, DeleteGuide, GuideNotApproved, GuideApproved, LikeView,GuideView
+from .views import (
+    trophy_detail_view, 
+    AddGuideView, 
+    EditGuideView, 
+    DeleteGuide, 
+    GuideNotApproved, 
+    GuideApproved, 
+    LikeView,GuideView, 
+    DislikeView)
 
 urlpatterns = [
     path('<slug:slug>/', views.trophy_detail_view, name='trophy-detail'),
@@ -10,7 +18,8 @@ urlpatterns = [
     path('<int:pk>/edit/', EditGuideView.as_view(), name='edit-guide'),
     path('<int:pk>/delete/', DeleteGuide.as_view(), name='delete-guide'),
     path('<int:pk>/guides', GuideView.as_view(), name='guide-view'),
-    path('like/<int:pk>', LikeView, name='like_guide')
+    path('like/<int:pk>', LikeView, name='like_guide'),
+    path('dislike/<int:pk>', DislikeView, name='dislike_guide')
 
 
 ]
