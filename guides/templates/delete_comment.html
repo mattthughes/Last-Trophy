@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--Delete Comment Element-->
+<div class="container-fluid">
+    <h3 class="text-center">Delete Comment</h3>
+    <p class="text-center">Are you sure you want to delete guide {{comment.title}} this action can't be undone
+        or press back to
+        return to the game list.</p>
+    <div class="row">
+        <div class="form-group">
+            <form id="commentForm" method="post">
+                {% csrf_token %}
+                <div class="d-flex flex-column align-items-center">
+                    <a href="{% url 'game' %}" class="btn btn-primary btn-lg">Back</a>
+                    <button id="submitButton" type="submit" class="btn btn-danger btn-lg">Delete</button> 
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
