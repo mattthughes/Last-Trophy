@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from trophy_hunter.models import Trophies, Guide, Comment
-from .forms import GuideForm, ApproveGuideForm
+from .forms import GuideForm, ApproveGuideForm, CommentForm
 from django.http import HttpResponseRedirect
 
 # Create your views here.
@@ -24,6 +24,28 @@ class GuideView(DetailView):
         context['total_likes'] = total_likes
         context['total_dislikes'] = total_dislikes
         return context
+
+class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = 'add_comment.html'
+    success_message = 'Comment created awaiting approval'
+
+    def get_success_url(self):
+        return reverse(
+            'guide-view', kwargs={'pk': self.object.guide.pk}
+            )
+
+    """
+    This function is checking to see if the
+    form is valid by getting the trophy id
+    as the primary key and the author as the
+
+    """
+    def form_valid(self, form):
+        form.instance.guide_id = self.kwargs['pk']
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 

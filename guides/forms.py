@@ -27,3 +27,12 @@ class ApproveGuideForm(forms.ModelForm):
             'body': forms.Textarea(attrs={'class': 'form-control'}),
             'author': forms.Select(attrs={'class': 'form-control'}),
             }
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('title', 'body',)
+        widgets = {
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }

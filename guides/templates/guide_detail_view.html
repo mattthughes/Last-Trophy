@@ -19,7 +19,7 @@
             <p>Added {{guide.created_on}}</p>
         </div>
         <div class="rate-buttons ps-2">
-            <form action="{% url 'like_guide' guide.pk %}" method="POST">
+            <form action="{% url 'like-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
                 <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary">Like</button>
                 {{ total_likes }} - Likes
@@ -37,15 +37,17 @@
     <h3 class="pt-2">Comments</h3>
     <div class="col-12 col-md-8 border">
         {% if not guide.comments.all %}
-        <p>No comment yet <a class="btn btn-success" href="">Add</a> </p>
+        <p>No comment yet <a class="btn btn-success" href="{% url 'add-comment' guide.pk %}">Add</a> </p>
         {% else %}
         {% for comment in guide.comments.all %}
-        <p>{{comment.body}}</p>
-        {% endfor %}
-        {% endif %}
-        
+        <div class="border">
+            <h4>{{comment.title}}</h4>
+            <p>{{comment.body}}</p>
+        </div>
 
-        <a class="btn btn-success ms-1" href="">Add Comment</a>
+        {% endfor %}
+        <a class="btn btn-success ms-1" href="{% url 'add-comment' guide.pk %}">Add Comment</a>
+        {% endif %}
 
     </div>
 </div>

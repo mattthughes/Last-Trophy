@@ -9,7 +9,8 @@ from .views import (
     GuideApproved, 
     LikeView,
     DislikeView,
-    GuideView, 
+    GuideView,
+    AddComment 
     )
 
 urlpatterns = [
@@ -20,8 +21,9 @@ urlpatterns = [
     path('<int:pk>/edit/', EditGuideView.as_view(), name='edit-guide'),
     path('<int:pk>/delete/', DeleteGuide.as_view(), name='delete-guide'),
     path('<int:pk>/guides', GuideView.as_view(), name='guide-view'),
-    path('like/<int:pk>', views.LikeView, name='like_guide'),
-    path('dislike/<int:pk>', views.DislikeView, name='dislike-guide')
+    path('like/<int:pk>', views.LikeView, name='like-guide'),
+    path('dislike/<int:pk>', views.DislikeView, name='dislike-guide'),
+    path('<int:pk>/Add/Comment', AddComment.as_view(), name='add-comment')
 
 
 ]
