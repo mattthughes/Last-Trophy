@@ -210,7 +210,6 @@ class EditTrophyView(PermissionRequiredMixin, SuccessMessageMixin, UpdateView):
     template_name = 'edit_trophy.html'
     permission_required = "edit_trophies"
 
-
     """
     This function is redirecting the user to
     the game detail view.
@@ -227,7 +226,9 @@ class EditTrophyView(PermissionRequiredMixin, SuccessMessageMixin, UpdateView):
         return super().form_valid(form)
 
 
-class DeleteTrophyView(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
+class DeleteTrophyView(
+    PermissionRequiredMixin, SuccessMessageMixin, DeleteView
+        ):
     """
     This class is using the game model
     with the template delete game which
@@ -242,7 +243,6 @@ class DeleteTrophyView(PermissionRequiredMixin, SuccessMessageMixin, DeleteView)
     template_name = 'delete_trophy.html'
     permission_required = "delete_trophies"
 
-
     """
     This function is redirecting the user to
     the game detail view
@@ -251,3 +251,4 @@ class DeleteTrophyView(PermissionRequiredMixin, SuccessMessageMixin, DeleteView)
         return reverse(
             'game-detail', kwargs={'slug': self.object.game.slug}
             )
+            

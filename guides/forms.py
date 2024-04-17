@@ -18,6 +18,7 @@ class GuideForm(forms.ModelForm):
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
+
 class ApproveGuideForm(forms.ModelForm):
     """
     Form class for admin to approve guides in the frontend.

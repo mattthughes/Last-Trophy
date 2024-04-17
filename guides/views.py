@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
-from django.views.generic.list import ListView 
+from django.views.generic.list import ListView
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
@@ -10,6 +10,7 @@ from .forms import GuideForm, ApproveGuideForm, CommentForm
 from django.http import HttpResponseRedirect
 
 # Create your views here.
+
 
 class GuideView(DetailView):
     """
@@ -53,6 +54,7 @@ class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         form.instance.guide_id = self.kwargs['pk']
         form.instance.author = self.request.user
         return super().form_valid(form)
+
 
 class EditComment(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     """
@@ -155,7 +157,6 @@ def trophy_detail_view(request, slug):
         },
     )
 
-    
 
 class AddGuideView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     """
@@ -284,11 +285,11 @@ class GuideNotApproved(PermissionRequiredMixin, ListView):
     template_name = 'guides_not_approved.html'
     permission_required = "approve_guide"
 
-    def get_queryset(self, *args, **kwargs): 
-        qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs) 
+    def get_queryset(self, *args, **kwargs):
+        qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
         qs = qs.filter(approved=False)
         return qs
-    
+
     def form_valid(self, form):
         return super().form_valid(form)
 
@@ -307,12 +308,11 @@ class GuideApproved(PermissionRequiredMixin, UpdateView):
     template_name = 'approve_guides.html'
     permission_required = "approve_guide"
 
-    
     def get_success_url(self):
         return reverse(
             'not-approved-guide'
             )
-    
+
     def form_valid(self, form):
         return super().form_valid(form)
 
@@ -345,8 +345,3 @@ def DislikeView(request, pk):
     else:
         return HttpResponseRedirect(reverse('account_login'))
     return HttpResponseRedirect(reverse('guide-view', args=[str(pk)]))
-    
-
-
-
-

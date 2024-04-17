@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-
 # Create your models here.
 class Game(models.Model):
     class GenreChoices(models.TextChoices):
@@ -62,7 +61,7 @@ class Guide(models.Model):
 
     def total_likes(self):
         return self.likes.count()
-    
+
     def total_dislikes(self):
         return self.dislikes.count()
 
@@ -83,6 +82,6 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
-    
+
     def __str__(self):
         return f"comment {self.body} by {self.author} "
