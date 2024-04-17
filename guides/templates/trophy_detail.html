@@ -78,6 +78,7 @@
         </div>
         {% endfor %}
         {% endif %}
+        <!--If the guide is not approved and the admin user is logged in-->
         {% if not guide.approved and user.is_superuser %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
             <a class="btn btn-success" href="{% url 'not-approved-guide' %}">Approve Guides</a>
