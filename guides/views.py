@@ -12,6 +12,12 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 
 class GuideView(DetailView):
+    """
+    This class is using the detail view to show
+    one guide per page where the user can
+    add likes and dislikes to a specific
+    guide.
+    """
     model = Guide
     template_name = 'guide_detail_view.html'
 
@@ -51,9 +57,9 @@ class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 class EditComment(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     """
     This class is using the edit view to use
-    the guide form created and put this on the
-    webpage once the guide has been edited a
-    success message stating guide edited is
+    the Comment form created and put this on the
+    webpage once the Comment has been edited a
+    success message stating Comment edited is
     shown to give that feedback to the user.
     """
     model = Comment
@@ -71,9 +77,9 @@ class EditComment(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
 
     """
     This function is redirecting the user to
-    the trophy detail view, to determine which
-    trophy the user was looking at the argument
-    will be the trophy slug redirecting the user
+    the guide view, to determine which
+    guide the user was looking at the argument
+    will be the guide pk redirecting the user
     to the correct page.
     """
     def get_success_url(self):
@@ -82,8 +88,8 @@ class EditComment(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
             )
     """
     This function is checking to see if the
-    form is valid by getting the trophy id
-    as the primary key and the author as the
+    form is valid by getting the comment id
+    as the primary key.
 
     """
 
@@ -94,11 +100,11 @@ class EditComment(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
 
 class DeleteComment(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     """
-    This class is using the guide model
-    with the template delete guide which
+    This class is using the Comment model
+    with the template delete Comment which
     will pop up when the user clicks delete
-    guide after the guide has been deleted
-    a pop up message stating guide deleted
+    Comment after the Comment has been deleted
+    a pop up message stating Comment deleted
     will appear on the page providing the
     user
     """
@@ -108,9 +114,9 @@ class DeleteComment(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
 
     """
     This function is redirecting the user to
-    the trophy detail view, to determine which
-    trophy the user was looking at the argument
-    will be the trophy slug redirecting the user
+    the guide view, to determine which
+    guide the user was looking at the argument
+    will be the guide pk redirecting the user
     to the correct page.
     """
 
@@ -125,6 +131,7 @@ class DeleteComment(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     """
     def test_func(self):
         return self.request.user == self.get_object().author
+
 
 def trophy_detail_view(request, slug):
     """
@@ -268,6 +275,11 @@ class DeleteGuide(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
 
 
 class GuideNotApproved(PermissionRequiredMixin, ListView):
+    """
+    This class is showcasing the guides which are not approved
+    in a list only the admin user will be able to view this page
+    which will be controlled by the permission required mixin.
+    """
     model = Guide
     template_name = 'guides_not_approved.html'
     permission_required = "approve_guide"
@@ -282,6 +294,14 @@ class GuideNotApproved(PermissionRequiredMixin, ListView):
 
 
 class GuideApproved(PermissionRequiredMixin, UpdateView):
+    """
+    This class is using the form approve guide form to
+    allow the admin user to approve guides which are
+    awaiting approval this will be controlled by the
+    permission required mixin once the guide has been
+    approved the success url will return the guides
+    awaiting approval page.
+    """
     model = Guide
     form_class = ApproveGuideForm
     template_name = 'approve_guides.html'
@@ -298,17 +318,27 @@ class GuideApproved(PermissionRequiredMixin, UpdateView):
 
 
 def LikeView(request, pk):
+    """
+    This function is getting the guides id and is then checking if
+    the user is authenticated if they are to add on the likes attribute
+    to this specific guide. if the user is not logged in to redirect the
+    user to the login page.
+    """
     guide = get_object_or_404(Guide, id=request.POST.get('guide_id'))
-    if request.user.is_authenticated and guide.likes:
+    if request.user.is_authenticated:
         guide.likes.add(request.user)
-    elif request.user.is_authenticated and guide.dislikes:
-        guide.dislikes.add(request.user)
     else:
         return HttpResponseRedirect(reverse('account_login'))
     return HttpResponseRedirect(reverse('guide-view', args=[str(pk)]))
 
 
 def DislikeView(request, pk):
+    """
+    This function is getting the guides id and is then checking if
+    the user is authenticated if they are to add on the dislikes attribute
+    to this specific guide. if the user is not logged in to redirect the
+    user to the login page.
+    """
     guide = get_object_or_404(Guide, id=request.POST.get('guide_id'))
     if request.user.is_authenticated:
         guide.dislikes.add(request.user)

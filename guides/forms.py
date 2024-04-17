@@ -19,6 +19,9 @@ class GuideForm(forms.ModelForm):
         }
 
 class ApproveGuideForm(forms.ModelForm):
+    """
+    Form class for admin to approve guides in the frontend.
+    """
     class Meta:
         model = Guide
         fields = ('title', 'body', 'author', 'approved')
@@ -30,6 +33,9 @@ class ApproveGuideForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+    """
+    Form class for users to create comments for specific guides.
+    """
     class Meta:
         model = Comment
         fields = ('body',)
