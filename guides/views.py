@@ -341,20 +341,16 @@ class AdminDeleteGuide(PermissionRequiredMixin, SuccessMessageMixin, DeleteView)
     will pop up when the user clicks delete
     guide after the guide has been deleted
     a pop up message stating guide deleted
-    will appear on the page providing the
-    user
+    will appear on the page.
     """
     model = Guide
     success_message = "Guide Deleted"
-    template_name = 'admin_delete_guides.html'
+    template_name = 'delete_guide.html'
     permission_required = "delete_guide"
 
     """
-    This function is redirecting the user to
-    the trophy detail view, to determine which
-    trophy the user was looking at the argument
-    will be the trophy slug redirecting the user
-    to the correct page.
+    This function is redirecting the admin user to
+    the guide list.
     """
 
     def get_success_url(self):
