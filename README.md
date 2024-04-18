@@ -95,38 +95,38 @@ I created seven epics which were then developed into User stories, every detail 
 
 1. Inital Django setup
 
-* UserStory [[#21](https://github.com/mattthughes/Last-Trophy/issues/21)]
+* UserStory [[#21](https://github.com/mattthughes/Last-Trophy/issues/21)] - As a **Developer **I want to deploy the app to Heroku so that I can confirm everything works on the deployed site before distribution of the app
 
 2. User Profile
 
-* UserStory [[#19](https://github.com/mattthughes/Last-Trophy/issues/19)]
-* UserStory [[#3](https://github.com/mattthughes/Last-Trophy/issues/3)]
+* UserStory [[#19](https://github.com/mattthughes/Last-Trophy/issues/19)] - As a site user I can Create an account so that I canCreate update or delete my own guides or comment on other user guides
+* UserStory [[#3](https://github.com/mattthughes/Last-Trophy/issues/3)] - As a site user I can create an account so that I can comment on a guide
 
 3. User Sign in or Out
 
-* UserStory [[#22](https://github.com/mattthughes/Last-Trophy/issues/22)]
+* UserStory [[#22](https://github.com/mattthughes/Last-Trophy/issues/22)] - As a site user I can login or logout of my account so that I can keep my account secure
 
 4. User Guides 
 
-* UserStory [[#4](https://github.com/mattthughes/Last-Trophy/issues/4)]
-* UserStory [[#7](https://github.com/mattthughes/Last-Trophy/issues/7)]
-* UserStory [[#23](https://github.com/mattthughes/Last-Trophy/issues/23)]
+* UserStory [[#4](https://github.com/mattthughes/Last-Trophy/issues/4)] - As a registered user I can create my own trophy hunting guides so that I can help other users
+* UserStory [[#7](https://github.com/mattthughes/Last-Trophy/issues/7)] - As a site user I can click on a guide so that I can read the full text
+* UserStory [[#23](https://github.com/mattthughes/Last-Trophy/issues/23)] - As a site user I can delete a guide I have created so that I can remove this from the site
 
 5. Games Searching
 
-* UserStory [[#10](https://github.com/mattthughes/Last-Trophy/issues/10)]
+* UserStory [[#10](https://github.com/mattthughes/Last-Trophy/issues/10)] - As a site user I can click on the games tab so that can pick a game genre and view all the games of that genre
 
 6. Guides Interaction 
 
-* UserStory [[#1](https://github.com/mattthughes/Last-Trophy/issues/1)]
-* UserStory [[#23](https://github.com/mattthughes/Last-Trophy/issues/23)]
-* UserStory [[#2](https://github.com/mattthughes/Last-Trophy/issues/2)]
-* UserStory [[#6](https://github.com/mattthughes/Last-Trophy/issues/6)]
-* UserStory [[#5](https://github.com/mattthughes/Last-Trophy/issues/5)]
+* UserStory [[#1](https://github.com/mattthughes/Last-Trophy/issues/1)] - As a site user I can view a list of guides so that I can pick the achievement guide I am looking for
+* UserStory [[#23](https://github.com/mattthughes/Last-Trophy/issues/23)] - As a site user I can delete a guide I have created so that I can remove this from the site
+* UserStory [[#2](https://github.com/mattthughes/Last-Trophy/issues/2)] - As a site user/Admin user I can view comments so that I can read the conversation
+* UserStory [[#6](https://github.com/mattthughes/Last-Trophy/issues/6)] - As a site Admin I can approve or disapprove comments so that I can filter out objectionable comments
+* UserStory [[#5](https://github.com/mattthughes/Last-Trophy/issues/5)] - As a site user I can modify or delete my comment on a guide so that I can be involved in the conversation
 
 7. Rate Guides Interaction
 
-* UserStory [[#20](https://github.com/mattthughes/Last-Trophy/issues/20)]
+* UserStory [[#20](https://github.com/mattthughes/Last-Trophy/issues/20)] - As a site user I can receive notifications on guides I have written so that I can respond to comments or view the likes and dislikes
 
 
 ### The Scope Plane
