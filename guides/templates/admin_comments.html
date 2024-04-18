@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h3 class="text-center text-lg-start ps-3">Delete Comments</h3>
+<div class="container-fluid">
+    <div class="row col-12 col-md-10 mt-3 offset-md-2 ms-2">
+        <ul> 
+            <!-- Iterate over guides not approved -->
+            
+            {% for comment in object_list %} 
+            <!-- Display guides awaiting approval -->
+            <li><a href="{% url 'delete-comment-list' comment.pk %}">Comment: {{ comment.body }}</a></li> 
+            <hr/> 
+            <!-- if all guides approved-->
+            {% empty %} 
+            <li>No comments avaliable.</li>
+            {% endfor %}
+            <a class="btn btn-primary pb-2" href="{% url 'game' %}">Back</a> 
+        </ul>
+
+    </div>
+</div>
+
+
+{% endblock %}

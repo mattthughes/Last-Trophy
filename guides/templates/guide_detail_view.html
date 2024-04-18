@@ -46,6 +46,10 @@
             {% if user.is_authenticated and comment.author == user %}
             <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
                 <a class="btn btn-success" href="{% url 'edit-comment' comment.pk %}">Edit Comment</a>
+            </div>
+            {% endif %}
+            {% if user.is_authenticated and comment.author == user or user.is_superuser %}
+            <div class="d-flex align-items-center justify-content-between flex-column">
                 <a class="btn btn-danger" href="{% url 'delete-comment' comment.pk %}">Delete Comment</a>
             </div>
             {% endif %}
@@ -56,5 +60,14 @@
         {% endif %}
 
     </div>
+
+        <div class="col-12 pt-3 d-flex flex-column align-items-center">
+            <a class="btn btn-success" href="">Approve Comments</a>
+        </div>
+        {% if user.is_superuser %}
+        <div class="col-12 pt-3 d-flex flex-column align-items-center">
+            <a class="btn btn-danger" href="{% url 'comments-list' %}">Delete Comments</a>
+        </div>
+        {% endif %}
 </div>
 {% endblock %}

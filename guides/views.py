@@ -132,7 +132,10 @@ class DeleteComment(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     logged in otherwise show a 403 error
     """
     def test_func(self):
-        return self.request.user == self.get_object().author
+        if self.request.user.is_superuser:
+            return self.get_object().author
+        else:
+            return self.request.user == self.get_object().author
 
 
 def trophy_detail_view(request, slug):
@@ -357,6 +360,47 @@ class AdminDeleteGuide(PermissionRequiredMixin, SuccessMessageMixin, DeleteView)
         return reverse(
             'guides-list'
             )
+
+
+class AdminCommentList(PermissionRequiredMixin, ListView):
+    """
+    This class is showcasing the guides which are not approved
+    in a list only the admin user will be able to view this page
+    which will be controlled by the permission required mixin.
+    """
+    model = Comment
+    template_name = 'admin_comments.html'
+    permission_required = "delete_comment"
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+class AdminCommentDelete(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
+    """
+    This class is using the guide model
+    with the template delete guide which
+    will pop up when the user clicks delete
+    guide after the guide has been deleted
+    a pop up message stating guide deleted
+    will appear on the page.
+    """
+    model = Comment
+    success_message = "Comment Deleted"
+    template_name = 'delete_comment.html'
+    permission_required = "delete_comment"
+
+    """
+    This function is redirecting the admin user to
+    the guide list.
+    """
+
+    def get_success_url(self):
+        return reverse(
+            'comments-list'
+            )
+
+
 
 
 def LikeView(request, pk):
