@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <!--Guide Detail Element-->
-<div class="d-flex flex-column align-items-center guide-info">
+<div class="d-flex flex-column align-items-center guide-info p-3">
     <a href="" class="text-center pt-3">{{guide.title}}</a>
     <div class="col-12 col-md-8 border">
         <p class="text-break p-3">{{guide.body}}</p>
@@ -14,11 +14,11 @@
             <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
         </div>
         {% endif %}
-        <div class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
+        <div class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start p-4">
             <a href="#">Guide Written by {{guide.author}}</a>
             <p>Added {{guide.created_on}}</p>
         </div>
-        <div class="rate-buttons ps-2">
+        <div class="rate-buttons">
             <form action="{% url 'like-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
                 <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary">Like</button>
@@ -33,15 +33,15 @@
     </div>
 </div>
 <!--Comment Element-->
-<div class="d-flex flex-column align-items-center">
+<div class="d-flex flex-column align-items-center p-3">
     <h3 class="pt-2">Comments</h3>
     <div class="col-12 col-md-8 border">
         {% if not guide.comments.all %}
         <p>No comment yet <a class="btn btn-success" href="{% url 'add-comment' guide.pk %}">Add</a> </p>
         {% else %}
         {% for comment in guide.comments.all %}
-        <div class="border">
-            <p>{{comment.body}}</p>
+        <div class="border mb-3">
+            <p class="ms-1">{{comment.body}}</p>
             <!--Checking to see if the user is logged in and the author they can then edit and delete there comments-->
             {% if user.is_authenticated and comment.author == user %}
             <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
