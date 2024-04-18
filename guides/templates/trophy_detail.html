@@ -66,8 +66,14 @@
                 {% if user.is_authenticated and guide.author == user %}
                 <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
                     <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
+                </div>
+                    {% endif %}
+                {% if user.is_authenticated and guide.author == user or user.is_superuser %}
+                <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
                     <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
                 </div>
+                   
+                
                 {% endif %}
                 <div
                     class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
