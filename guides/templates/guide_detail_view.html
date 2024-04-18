@@ -60,10 +60,6 @@
         {% endif %}
 
     </div>
-
-        <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <a class="btn btn-success" href="">Approve Comments</a>
-        </div>
         {% if user.is_superuser %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
             <a class="btn btn-danger" href="{% url 'comments-list' %}">Delete Comments</a>

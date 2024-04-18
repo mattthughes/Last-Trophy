@@ -32,6 +32,142 @@ class GuideView(DetailView):
         context['total_dislikes'] = total_dislikes
         return context
 
+class GuideNotApproved(PermissionRequiredMixin, ListView):
+    """
+    This class is showcasing the guides which are not approved
+    in a list only the admin user will be able to view this page
+    which will be controlled by the permission required mixin.
+    """
+    model = Guide
+    template_name = 'guides_not_approved.html'
+    permission_required = "approve_guide"
+
+    def get_queryset(self, *args, **kwargs):
+        qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
+        qs = qs.filter(approved=False)
+        return qs
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+class GuideApproved(PermissionRequiredMixin, UpdateView):
+    """
+    This class is using the form approve guide form to
+    allow the admin user to approve guides which are
+    awaiting approval this will be controlled by the
+    permission required mixin once the guide has been
+    approved the success url will return the guides
+    awaiting approval page.
+    """
+    model = Guide
+    form_class = ApproveGuideForm
+    template_name = 'approve_guides.html'
+    permission_required = "approve_guide"
+
+    def get_success_url(self):
+        return reverse(
+            'not-approved-guide'
+            )
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+class AdminListGuides(PermissionRequiredMixin, ListView):
+    """
+    This class is showcasing the guides which are not approved
+    in a list only the admin user will be able to view this page
+    which will be controlled by the permission required mixin.
+    """
+    model = Guide
+    template_name = 'admin_guides.html'
+    permission_required = "delete_guide"
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+class AdminDeleteGuide(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
+    """
+    This class is using the guide model
+    with the template delete guide which
+    will pop up when the user clicks delete
+    guide after the guide has been deleted
+    a pop up message stating guide deleted
+    will appear on the page.
+    """
+    model = Guide
+    success_message = "Guide Deleted"
+    template_name = 'delete_guide.html'
+    permission_required = "delete_guide"
+
+    """
+    This function is redirecting the admin user to
+    the guide list.
+    """
+
+    def get_success_url(self):
+        return reverse(
+            'guides-list'
+            )
+
+class GuideNotApproved(PermissionRequiredMixin, ListView):
+    """
+    This class is showcasing the guides which are not approved
+    in a list only the admin user will be able to view this page
+    which will be controlled by the permission required mixin.
+    """
+    model = Guide
+    template_name = 'guides_not_approved.html'
+    permission_required = "approve_guide"
+
+    def get_queryset(self, *args, **kwargs):
+        qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
+        qs = qs.filter(approved=False)
+        return qs
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+class AdminCommentList(PermissionRequiredMixin, ListView):
+    """
+    This class is showcasing the guides which are not approved
+    in a list only the admin user will be able to view this page
+    which will be controlled by the permission required mixin.
+    """
+    model = Comment
+    template_name = 'admin_comments.html'
+    permission_required = "delete_comment"
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+class AdminCommentDelete(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
+    """
+    This class is using the comment model
+    with the template delete comment which
+    will pop up when the user clicks delete
+    comment after the comment has been deleted
+    a pop up message stating comment deleted
+    will appear on the page.
+    """
+    model = Comment
+    success_message = "Comment Deleted"
+    template_name = 'delete_comment.html'
+    permission_required = "delete_comment"
+
+    """
+    This function is redirecting the admin user to
+    the guide list.
+    """
+
+    def get_success_url(self):
+        return reverse(
+            'comments-list'
+            )
+
 
 class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Comment
@@ -75,7 +211,10 @@ class EditComment(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     logged in otherwise show a 403 error
     """
     def test_func(self):
-        return self.request.user == self.get_object().author
+        if self.request.user.is_superuser:
+            return self.get_object().author
+        else:
+            return self.request.user == self.get_object().author
 
     """
     This function is redirecting the user to
@@ -281,25 +420,6 @@ class DeleteGuide(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
             return self.request.user == self.get_object().author
 
 
-class GuideNotApproved(PermissionRequiredMixin, ListView):
-    """
-    This class is showcasing the guides which are not approved
-    in a list only the admin user will be able to view this page
-    which will be controlled by the permission required mixin.
-    """
-    model = Guide
-    template_name = 'guides_not_approved.html'
-    permission_required = "approve_guide"
-
-    def get_queryset(self, *args, **kwargs):
-        qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
-        qs = qs.filter(approved=False)
-        return qs
-
-    def form_valid(self, form):
-        return super().form_valid(form)
-
-
 class GuideApproved(PermissionRequiredMixin, UpdateView):
     """
     This class is using the form approve guide form to
@@ -321,86 +441,6 @@ class GuideApproved(PermissionRequiredMixin, UpdateView):
 
     def form_valid(self, form):
         return super().form_valid(form)
-
-
-class AdminListGuides(PermissionRequiredMixin, ListView):
-    """
-    This class is showcasing the guides which are not approved
-    in a list only the admin user will be able to view this page
-    which will be controlled by the permission required mixin.
-    """
-    model = Guide
-    template_name = 'admin_guides.html'
-    permission_required = "delete_guide"
-
-    def form_valid(self, form):
-        return super().form_valid(form)
-
-
-class AdminDeleteGuide(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
-    """
-    This class is using the guide model
-    with the template delete guide which
-    will pop up when the user clicks delete
-    guide after the guide has been deleted
-    a pop up message stating guide deleted
-    will appear on the page.
-    """
-    model = Guide
-    success_message = "Guide Deleted"
-    template_name = 'delete_guide.html'
-    permission_required = "delete_guide"
-
-    """
-    This function is redirecting the admin user to
-    the guide list.
-    """
-
-    def get_success_url(self):
-        return reverse(
-            'guides-list'
-            )
-
-
-class AdminCommentList(PermissionRequiredMixin, ListView):
-    """
-    This class is showcasing the guides which are not approved
-    in a list only the admin user will be able to view this page
-    which will be controlled by the permission required mixin.
-    """
-    model = Comment
-    template_name = 'admin_comments.html'
-    permission_required = "delete_comment"
-
-    def form_valid(self, form):
-        return super().form_valid(form)
-
-
-class AdminCommentDelete(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
-    """
-    This class is using the guide model
-    with the template delete guide which
-    will pop up when the user clicks delete
-    guide after the guide has been deleted
-    a pop up message stating guide deleted
-    will appear on the page.
-    """
-    model = Comment
-    success_message = "Comment Deleted"
-    template_name = 'delete_comment.html'
-    permission_required = "delete_comment"
-
-    """
-    This function is redirecting the admin user to
-    the guide list.
-    """
-
-    def get_success_url(self):
-        return reverse(
-            'comments-list'
-            )
-
-
 
 
 def LikeView(request, pk):

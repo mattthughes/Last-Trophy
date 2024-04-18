@@ -10,7 +10,6 @@ from .forms import GameForm, TrophiesForm
 from .filters import GameFilter
 # Create your views here.
 
-
 def game_list(request):
     """
     This function is taking a request which is

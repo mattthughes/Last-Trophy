@@ -2,21 +2,21 @@ from django.urls import path
 from . import views
 from .views import (
     trophy_detail_view,
+    GuideNotApproved,
+    GuideApproved,
+    AdminListGuides,
+    AdminDeleteGuide,
+    AdminCommentList,
+    AdminCommentDelete,
     AddGuideView,
     EditGuideView,
     DeleteGuide,
-    GuideNotApproved,
-    GuideApproved,
     LikeView,
     DislikeView,
     GuideView,
     AddComment,
     EditComment,
     DeleteComment,
-    AdminListGuides,
-    AdminDeleteGuide,
-    AdminCommentList,
-    AdminCommentDelete
     )
 
 urlpatterns = [
