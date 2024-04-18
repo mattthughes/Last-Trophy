@@ -83,6 +83,11 @@
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
             <a class="btn btn-success" href="{% url 'not-approved-guide' %}">Approve Guides</a>
         </div>
+        {% if user.is_superuser %}
+        <div class="col-12 pt-3 d-flex flex-column align-items-center">
+            <a class="btn btn-danger" href="{% url 'guides-list' %}">Delete Guides</a>
+        </div>
+        {% endif %}
 
         {% endif %}
         <!--Checking if the user is logged in and there is guides-->

@@ -272,7 +272,10 @@ class DeleteGuide(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     logged in otherwise show a 403 error
     """
     def test_func(self):
-        return self.request.user == self.get_object().author
+        if self.request.user.is_superuser:
+            return self.get_object().author
+        else:
+            return self.request.user == self.get_object().author
 
 
 class GuideNotApproved(PermissionRequiredMixin, ListView):
@@ -315,6 +318,49 @@ class GuideApproved(PermissionRequiredMixin, UpdateView):
 
     def form_valid(self, form):
         return super().form_valid(form)
+
+
+class AdminListGuides(PermissionRequiredMixin, ListView):
+    """
+    This class is showcasing the guides which are not approved
+    in a list only the admin user will be able to view this page
+    which will be controlled by the permission required mixin.
+    """
+    model = Guide
+    template_name = 'admin_guides.html'
+    permission_required = "delete_guide"
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+class AdminDeleteGuide(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
+    """
+    This class is using the guide model
+    with the template delete guide which
+    will pop up when the user clicks delete
+    guide after the guide has been deleted
+    a pop up message stating guide deleted
+    will appear on the page providing the
+    user
+    """
+    model = Guide
+    success_message = "Guide Deleted"
+    template_name = 'admin_delete_guides.html'
+    permission_required = "delete_guide"
+
+    """
+    This function is redirecting the user to
+    the trophy detail view, to determine which
+    trophy the user was looking at the argument
+    will be the trophy slug redirecting the user
+    to the correct page.
+    """
+
+    def get_success_url(self):
+        return reverse(
+            'guides-list'
+            )
 
 
 def LikeView(request, pk):

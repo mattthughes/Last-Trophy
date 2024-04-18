@@ -12,7 +12,9 @@ from .views import (
     GuideView,
     AddComment,
     EditComment,
-    DeleteComment
+    DeleteComment,
+    AdminListGuides,
+    AdminDeleteGuide
     )
 
 urlpatterns = [
@@ -22,6 +24,8 @@ urlpatterns = [
         GuideNotApproved.as_view(), name='not-approved-guide'
         ),
     path('/<int:pk>/approve', GuideApproved.as_view(), name='approve-guide'),
+    path('/guides/list', AdminListGuides.as_view(), name='guides-list'),
+    path('<int:pk>/guides/list/delete/', AdminDeleteGuide.as_view(), name='delete-guide-list'),
     path('<int:pk>/create/', AddGuideView.as_view(), name='create-guide'),
     path('<int:pk>/edit/', EditGuideView.as_view(), name='edit-guide'),
     path('<int:pk>/delete/', DeleteGuide.as_view(), name='delete-guide'),
