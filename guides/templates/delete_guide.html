@@ -3,15 +3,25 @@
 <!--Delete Guide Element-->
 <div class="container-fluid">
     <h3 class="text-center">Delete Guide</h3>
+    {% if user.is_superuser %}
     <p class="text-center">Are you sure you want to delete guide {{guide.title}} this action can't be undone
         or press back to
-        return to the game list.</p>
+        return to the guides list.</p>
+        {% else %}
+        <p class="text-center">Are you sure you want to delete guide {{guide.title}} this action can't be undone
+            or press back to
+            return to the games list.</p>
+            {% endif %}
     <div class="row">
         <div class="form-group">
             <form id="guideForm" method="post">
                 {% csrf_token %}
                 <div class="d-flex flex-column align-items-center">
+                    {% if user.is_superuser %}
+                    <a href="{% url 'guides-list' %}" class="btn btn-primary btn-lg">Back</a>
+                    {% else %}
                     <a href="{% url 'game' %}" class="btn btn-primary btn-lg">Back</a>
+                    {% endif %}
                     <button id="submitButton" type="submit" class="btn btn-danger btn-lg">Delete</button> 
                 </div>
             </form>

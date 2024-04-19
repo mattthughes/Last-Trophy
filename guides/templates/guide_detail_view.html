@@ -56,8 +56,8 @@
         </div>
 
         {% endfor %}
-        <a class="btn btn-success ms-1" href="{% url 'add-comment' guide.pk %}">Add Comment</a>
         {% endif %}
+        <a class="btn btn-success ms-1" href="{% url 'add-comment' guide.pk %}">Add Comment</a>
 
     </div>
         {% if user.is_superuser %}
