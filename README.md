@@ -131,7 +131,16 @@ I created seven epics which were then developed into User stories, every detail 
 
 ### The Scope Plane
 
-#### Opportunities
+#### Features List
+
+* Games - Users can read and view all the games there is.
+* Trophies - Users can read and click on specific trophies to gain more information.
+* Guides - Users can create edit and delete there own guides using full CRUD functionality.
+* Likes and Dislikes - Users can update the database by adding likes and dislikes.
+* Comments - Users can Create, edit and delete there own comments and leave comments under other user guides, using full CRUD functionality.
+* Account Registration - Users can create and update the database by creating an account.
+* Login and Logout - Users can login and logout to keep there information secure.
+* Responsive Design - This application needs to have good UX and make sure the application is responsive for all screen sizes.
 
 ### The Skeleton Plane
 
