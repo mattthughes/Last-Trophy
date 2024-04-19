@@ -11,7 +11,13 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 
-
+class LastTrophyPermissions(LoginRequiredMixin, UserPassesTestMixin):
+    
+    def test_func(self):
+        if self.request.user.is_superuser:
+            return self.get_object().author
+        else:
+            return self.request.user == self.get_object().author
 class GuideView(DetailView):
     """
     This class is using the detail view to show
@@ -211,10 +217,7 @@ class EditComment(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     logged in otherwise show a 403 error
     """
     def test_func(self):
-        if self.request.user.is_superuser:
-            return self.get_object().author
-        else:
-            return self.request.user == self.get_object().author
+        return self.request.user == self.get_object().author
 
     """
     This function is redirecting the user to
@@ -239,7 +242,7 @@ class EditComment(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
         return super().form_valid(form)
 
 
-class DeleteComment(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
+class DeleteComment(LastTrophyPermissions, SuccessMessageMixin, DeleteView):
     """
     This class is using the Comment model
     with the template delete Comment which
@@ -270,11 +273,6 @@ class DeleteComment(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     user making the request is the user
     logged in otherwise show a 403 error
     """
-    def test_func(self):
-        if self.request.user.is_superuser:
-            return self.get_object().author
-        else:
-            return self.request.user == self.get_object().author
 
 
 def trophy_detail_view(request, slug):
@@ -382,7 +380,7 @@ class EditGuideView(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
         return super().form_valid(form)
 
 
-class DeleteGuide(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
+class DeleteGuide(LastTrophyPermissions, SuccessMessageMixin, DeleteView):
     """
     This class is using the guide model
     with the template delete guide which
@@ -413,11 +411,6 @@ class DeleteGuide(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     user making the request is the user
     logged in otherwise show a 403 error
     """
-    def test_func(self):
-        if self.request.user.is_superuser:
-            return self.get_object().author
-        else:
-            return self.request.user == self.get_object().author
 
 
 class GuideApproved(PermissionRequiredMixin, UpdateView):
