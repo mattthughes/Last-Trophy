@@ -176,6 +176,10 @@ I created seven epics which were then developed into User stories, every detail 
 
 ### Database Schema
 
+The Database Schema for this application is using the Game model as the primary model, which will contain the Trophies model, which will then contain the Guides model, and the guides model will contain the comment model. Each model will have full CRUD functionality, the games and trophies model will only have this for the admin user whereas the comments and guides model will have full crud for the user. Each model is referenced by it's primary key the id of the actual model, to allow other models to use the primary model this will be done by using Foreign keys to gain access to the trophies, comments and guides models all of these models are children from the main game model. 
+
+![Database Schema](static/images/database-schema.png)
+
 ### Games Model
 
 This model will be the primary model containing the trophies, with the trophies then containing the guides as well, which will lead to the user being able to create, update, read and delete there own guides while also being able to like and dislike other guides as well. The games model takes its Id as the primary key which will be used when the game is referenced the game has a slug field which will be used in the view and url to determine which game to load. The game has different attributes such as the amount of hours it will take to unlock every trophy, the trophy count, the featured image which will be shown on the game profile, the author which is the admin user, which will be the only user that can create games on the backend and front end, the rating and finally the genre which will placed in a genre form to control which games are shown when selecting a specific genre.

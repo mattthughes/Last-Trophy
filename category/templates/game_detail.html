@@ -21,8 +21,8 @@
           </p>
         </div>
       </div>
-      <div class="game-summary">
-        <p class="text-break">
+      <div class="game-summary col-md-6 col-lg-4">
+        <p class="text-center">
           Welcome to the {{game.title}} home page down below you will see all the trophies from this game below, to view
           more
           information about a specific trophy just click the trophy title.
@@ -43,7 +43,6 @@
 
 <div class="row">
   <h3 class="d-flex flex-column align-items-md-center ms-1">Trophies</h3>
-  <hr>
   <!--For each trophy of this game list all the trophies which was specified in the view-->
   {% for trophy in trophies %}
   <div class="d-flex flex-column align-items-md-center trophy-section pb-1">
