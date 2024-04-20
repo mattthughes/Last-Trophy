@@ -136,6 +136,7 @@ class GuideNotApproved(PermissionRequiredMixin, ListView):
     def form_valid(self, form):
         return super().form_valid(form)
 
+
 class AdminCommentList(PermissionRequiredMixin, ListView):
     """
     This class is showcasing the guides which are not approved

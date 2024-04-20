@@ -322,10 +322,54 @@ This will be shown when the user is on the webpage the design is very simple a t
 ### Languages
 
 #### Frameworks & Tools
+* Python
+
+    * The following python modules and libraries were used for this application
+        * asgiref==3.7.2
+        * cloudinary==1.36.0
+        * crispy-bootstrap5==0.7
+        * dj-database-url==0.5.0
+        * dj3-cloudinary-storage==0.0.6
+        * Django==4.2.11
+        * django-allauth==0.57.2
+        * django-crispy-forms==2.1
+        * django-filter==24.1
+        * gunicorn==20.1.0
+        * oauthlib==3.2.2
+        * psycopg2==2.9.9
+        * PyJWT==2.8.0
+        * python3-openid==3.2.0
+        * requests-oauthlib==2.0.0
+        * sqlparse==0.4.4
+        * urllib3==1.26.18
+        * whitenoise==5.3.0
+
+* Django
+    * Django was used as the main python full stackframe work for the development of this application
+    * Django allauth was used to improve the security of the application to prevent unauthorised users viewing content they shouldnt
+
+* Heroku
+    * Heroku was used as the cloud based platform which the project was deployed on any change that was made on the development site was deployed on Heroku to ensure the application worked as intended.
+* Heroku PostgreSQL
+    * Heroku PostgreSQL was used as the database for this project.
+* Bootstap 5.13
+    * Bootstrap 5.13 was used for the layout of this application along with generic styling
+* Font Awesome
+    * Font Awesome was used for many icons such as the Game detail view which specifies the hours as a clock rather than the word hours.
+* CSS
+    * Custom CSS was included in the site to give the site an orginal design.
+* Django/Templating
+    * Django templating was used to insert data from the database onto the front end, this was also used for adding extra logic if certain users were logged in to display specific information.
+* HTML'
+    * HTML was used as the base language for the templates on this site.
+
 
 
 ## Deployment
 
 ## Credits
+
+* Creating and filtering genre form inspired and customised to project needs [Django genre form](https://www.youtube.com/watch?v=FTUxl5ZCMb8)
+* Displaying query set in generic display view inspired and customised to project needs [Django list view query set](https://www.geeksforgeeks.org/listview-class-based-views-django/)
 
 ## Acknowledgements
