@@ -14,19 +14,19 @@
             <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
         </div>
         {% endif %}
-        <div class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start p-4">
+        <div class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start p-3">
             <a href="#">Guide Written by {{guide.author}}</a>
             <p>Added {{guide.created_on}}</p>
         </div>
         <div class="rate-buttons">
             <form action="{% url 'like-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
-                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary">Like</button>
+                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary ms-2">Like</button>
                 {{ total_likes }} - Likes
             </form>
             <form action="{% url 'dislike-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
-                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-danger">Dislike</button>
+                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-danger ms-2">Dislike</button>
                 {{ total_dislikes }} - Dislikes
             </form>
         </div>
@@ -39,6 +39,7 @@
         {% for comment in guide.comments.all %}
         <div class="border mb-3 comment-info">
             <p class="ms-1">{{comment.body}}</p>
+            <p class="ms-1">Comment by: {{comment.author}}</p>
             <!--Checking to see if the user is logged in and the author they can then edit and delete there comments-->
             {% if user.is_authenticated and comment.author == user %}
             <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
