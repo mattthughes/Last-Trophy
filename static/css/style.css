@@ -50,6 +50,10 @@ a {
     margin-left: 8px;
 }
 
+.genre-table {
+    background-color: #DCDCDC;
+}
+
 img{
     float:left;
     margin-left: 2px;
@@ -106,6 +110,26 @@ img{
 .trophy-images {
     display: flex;
     background-color: #DCDCDC;
+}
+
+.trophy-info {
+    background-color: #DCDCDC;
+}
+
+.guide-list {
+    background-color: #ffffff;
+}
+
+.guide-detail {
+    background-color: #ffffff;
+}
+
+.comment-section {
+    background-color: #ffffff;
+}
+
+.comment-info {
+    background-color: #fffaf0;
 }
 
 .social-icons {

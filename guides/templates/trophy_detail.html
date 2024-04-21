@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="pt-4 pb-2 d-flex flex-column align-items-md-center">
-            <div class="border col-12 col-md-8 col-lg-8">
+            <div class="border col-12 col-md-8 col-lg-8 trophy-info">
                 <h3 class="pt-2 ps-1">Trophy title: {{trophies.title}}</h3>
                 {% if "placeholder" in trophies.featured_image.url %}
                 <img class="img-thumbnail" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="placeholder">
@@ -58,9 +58,9 @@
         {% if trophies.guides.all %}
         <h3 class="text-center">Guides:</h3>
         {% for guide in game_guide %}
-        <div class="d-flex flex-column align-items-center guide-info">
+        <div class="d-flex flex-column align-items-center guide-section">
             <a href="{% url 'guide-view' guide.pk %}" class="text-center pt-3">{{guide.title}}</a>
-            <div class="col-12 col-md-8 border">
+            <div class="col-12 col-md-8 border guide-list">
                 <p class="text-break p-3">{{guide.body}}</p>
                 <!--If the user is the guide author they can edit or delete there own-->
                 {% if user.is_authenticated and guide.author == user %}
