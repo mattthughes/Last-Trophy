@@ -4,10 +4,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-bottom: 70px;
   }
   
+
 main {
     flex-grow: 1;
+    background-color: #F8F8FF
 }
 
 
@@ -19,8 +22,6 @@ a {
     text-decoration: none;
     color: black;
 }
-
-
 
 .heading-text {
     height: 73vh;
@@ -72,19 +73,18 @@ img{
     padding: 20px;
 }
 
-.trophy-title {
-    text-decoration: none;
-}
 
 .trophy-heading {
     padding-left: 4px;
 
 }
 
+
 .trophy-name {
     margin-left: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: black;
 }
 
 
@@ -95,23 +95,18 @@ img{
 
 .trophy-description i {
     padding: 5px;
+    margin-left: 10px;
+    
 }
-
 
 .trophy-rarity {
     margin-left: 10px;
 }
 
-
 .trophy-images {
     display: flex;
+    background-color: #DCDCDC;
 }
-
-
-.guide-description {
-    text-align: center;
-}
-
 
 .social-icons {
     list-style: none;
@@ -126,9 +121,4 @@ img{
     padding-left: 0;
     padding-right: 20px;
 }
-
-.footer {
-    margin-top: auto;
-}
-
 

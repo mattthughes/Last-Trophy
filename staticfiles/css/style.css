@@ -10,6 +10,7 @@ body {
 
 main {
     flex-grow: 1;
+    background-color: #F8F8FF
 }
 
 
@@ -104,6 +105,7 @@ img{
 
 .trophy-images {
     display: flex;
+    background-color: #DCDCDC;
 }
 
 .social-icons {
