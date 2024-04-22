@@ -232,9 +232,24 @@ This element will be shown to the user once they have clicked on a game showing 
 
 ![Mobile Game List](static/images/mobile-game-user-view.png)
 
+
+![Mobile Games Trophies](static/images/trophies-mobile-user-view.png)
+
+
+
 #### Desktop Games view
 
 ![Desktop Game List](static/images/desktop-game-user-view.png)
+
+##### Admin Games view
+
+This is what the admin user will see when logged in allowing them to either delete the game edit the game or add further trophies 
+
+![Admin Game](static/images/admin-game-detail.png)
+
+The admin user will be able to edit or delete trophies if they wish
+
+![Admin Game Trophies](static/images/trophy-detail-admin.png)
 
 ### Sign up page
 The sign up page will be showcased to the user allowing them to create an account to gain access to the features of the last trophy site such as creating guides, editing there own guides and deleting there own guides. They will also be able to provide feedback to other users such as adding comments and liking and disliking guides.
@@ -289,6 +304,18 @@ If the site user is the admin user this view will be shown
 
 ![Admin user logged in](static/images/admin-logged-in-guide.png)
 
+This is the view to edit a guide
+
+![Mobile Edit guide](static/images/edit-guide-mobile.png)
+
+This is the view to delete a guide
+
+![Mobile Delete guide](static/images/delete-guide-user.png)
+
+This is the view for the admin user to delete a guide
+
+![Mobile Delete guide admin user](static/images/delete-guide-admin-mobile.png)
+
 #### Desktop User Guides view
 
 When there is a guide created this view will be shown if the user is not logged in
@@ -308,24 +335,74 @@ When there isnt a guide created this view will be shown if the user is logged in
 
 ![Desktop user zero guides not logged in](static/images/logged-in-user-zero-guide-desktop.png)
 
+This is the view to edit a guide
+
+![Desktop Edit guide](static/images/edit-guide-desktop.png)
+
+This is the view to delete a guide
+
+![Desktop Delete guide](static/images/delete-guide-desktop-user.png)
+
 If the site user is the admin user this view will be shown
 
 ![Desktop guide admin user](static/images/admin-logged-in-guide.png)
+
+
+This is the view for the admin user to delete a guide
+
+![Desktop Delete guide admin user](static/images/delete-guide-admin.png)
 
 ### Categories 
 
 #### Mobile Category view
 This is the form and form results view on mobile.
 
-![Mobile view Category form](static/images/category-form-mobile.png)
+![Mobile view Category form](static/images/form-mobile.png)
 
-![Mobile view category results ](static/images/category-results-mobile.png)
+![Mobile view category results ](static/images/form-results-mobile.png)
 
 #### Desktop Category view
 
 This is the form and form results view on desktop
 
-![Desktop view category form](static/images/category-desktop.png)
+![Desktop view category form](static/images/form-desktop.png)
+
+### Comments
+
+This element will allow users to leave comments on user guides whether there own or other user guides if logged in.
+
+#### Mobile view Comment
+
+![Mobile view comments](static/images/comment-mobile.png)
+
+This is the edit view for Mobile if the user is logged in
+
+![Mobile edit comment](static/images/edit-comment-mobile.png)
+
+This the delete view for Mobile  if the user is logged in
+
+![Mobile delete comment](static/images/delete-comment-mobile-user.png)
+
+This is the delete view if the user is the Admin user.
+
+![Mobile delete comment admin user](static/images/delete-comment-admin.png)
+
+#### Desktop view Comment
+
+![Desktop view comments](static/images/comment-desktop.png)
+
+This is the edit view for Desktop if the user is logged in
+
+![Desktop edit comment](static/images/edit-comment-desktop.png)
+
+This the delete view for Desktop  if the user is logged in
+
+![Desktop delete comment user](static/images/delete-comment-desktop-user.png)
+
+This is the delete view if the user is the Admin user.
+
+![Desktop delete comment admin user](static/images/admin-user-delete-comment.png)
+
 
 ### Favicon
 
