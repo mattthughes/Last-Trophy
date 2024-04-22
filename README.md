@@ -404,6 +404,58 @@ This is the delete view if the user is the Admin user.
 ![Desktop delete comment admin user](static/images/admin-user-delete-comment.png)
 
 
+### Guides and Comments List
+
+This view will allow the admin user to specify which Guides to approve, which guides to delete and which Comments to delete which allows the admin user to have full control over the site.
+
+#### Mobile view Guides and Comments List
+
+This is the view of guides awaiting approval 
+
+![Mobile Guides awaiting approval](static/images/approve-guide-mobile.png)
+
+This is the approval form
+
+![Mobile Guides approval form](static/images/approve-guide-form-mobile.png)
+
+This is the delete Guide list
+
+![Mobile Guides list](static/images/guide-list-mobile.png)
+
+This is the delete Comments list
+
+![Mobile Comments list](static/images/comment-list-mobile.png)
+
+This is the view if all guides are approved
+
+![Mobile Guides all approved](static/images/guide-approval-mobile.png)
+
+
+
+#### Desktop view Guides and Comments List
+
+This is the view of guides awaiting approval 
+
+![Desktop Guides awaiting approval](static/images/approve-guide-desktop.png)
+
+This is the approval form
+
+![Desktop Guides approval form](static/images/approve-guide-form-desktop.png)
+
+
+This is the delete Guide list
+
+![Desktop Guides list](static/images/guide-list-admin.png)
+
+This is the delete Comments list
+
+![Desktop Comments list](static/images/comment-list-admin.png)
+
+This is the view if all guides are approved
+
+![Desktop Guides all approved](static/images/guides-approved.png)
+
+
 ### Favicon
 
 This will be shown when the user is on the webpage the design is very simple a trophy symbolising what the application is about.
