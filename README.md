@@ -236,6 +236,33 @@ This element will be shown to the user once they have clicked on a game showing 
 ![Mobile Games Trophies](static/images/trophies-mobile-user-view.png)
 
 
+### Trophies view
+
+#### Mobile Trophies view
+
+This is the Trophy title and its description
+
+![Mobile Trophy](static/images/trophy-detail-mobile.png)
+
+This is the Guides Associated with this trophy
+
+![Mobile Guide](static/images/guide-detail-mobile.png)
+
+
+#### Desktop Trophies view
+
+This is the Trophy title and its description
+
+![Desktop Trophy](static/images/trophy-detail-desktop.png)
+
+This is the Guides Associated with this trophy
+
+![Desktop Guide](static/images/guide-detail-desktop.png)
+
+#### Admin Trophies view
+
+![Admin Trophy view](static/images/trophy-detail-admin.png)
+
 
 #### Desktop Games view
 
@@ -249,7 +276,7 @@ This is what the admin user will see when logged in allowing them to either dele
 
 The admin user will be able to edit or delete trophies if they wish
 
-![Admin Game Trophies](static/images/trophy-detail-admin.png)
+![Admin Game Trophies](static/images/trophies-admin-view.png)
 
 ### Sign up page
 The sign up page will be showcased to the user allowing them to create an account to gain access to the features of the last trophy site such as creating guides, editing there own guides and deleting there own guides. They will also be able to provide feedback to other users such as adding comments and liking and disliking guides.
