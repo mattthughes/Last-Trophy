@@ -35,7 +35,7 @@
         <!--Checking if user is not logged in and there being no guides-->
         {% if not trophies.guides.all and not user.is_authenticated %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <p class="text-center col-md-8">
+            <p class="text-center col-6">
                 Do you want to help out other fellow trophy hunters like yourself? Then simply login or create an
                 account with us to join our ever growing community!
             </p>
@@ -43,7 +43,7 @@
             <a class="btn btn-primary" href="{% url 'account_signup' %}">Register</a>
             <!--checking if user is logged in and there not being any guides-->
             {% elif not trophies.guides.all and user.is_authenticated %}
-            <p class="text-center col-md-8">
+            <p class="text-center pt-2">
                 Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and
                 take your next step
                 in joining our ever growing community

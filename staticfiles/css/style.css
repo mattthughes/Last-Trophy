@@ -59,6 +59,9 @@ img{
     margin-left: 2px;
 }
 
+.game-section {
+    background-color: #ffffff;
+}
 
 .game-heading {
     padding-left: 4px;
@@ -146,3 +149,11 @@ img{
     padding-right: 20px;
 }
 
+
+/* Media Query larger desktop */
+
+@media screen and (min-width: 768px) {
+    .heading-text {
+        height: 40vh;
+    }
+}

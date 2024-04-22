@@ -230,11 +230,11 @@ This element will be shown to the user once they have clicked on a game showing 
 
 #### Mobile Games view
 
-![Mobile Game List](static/images/game-list-mobile-view.png)
+![Mobile Game List](static/images/mobile-game-user-view.png)
 
 #### Desktop Games view
 
-![Desktop Game List](static/images/desktop-game-list.png)
+![Desktop Game List](static/images/desktop-game-user-view.png)
 
 ### Sign up page
 The sign up page will be showcased to the user allowing them to create an account to gain access to the features of the last trophy site such as creating guides, editing there own guides and deleting there own guides. They will also be able to provide feedback to other users such as adding comments and liking and disliking guides.
@@ -242,7 +242,7 @@ The sign up page will be showcased to the user allowing them to create an accoun
 
 #### Mobile Sign up view
 
-![Sign up Mobile view](static/images/sign-up-mobile-view.png)
+![Sign up Mobile view](static/images/register-sign-up-mobile.png)
 
 #### Desktop Sign up view
 
@@ -260,7 +260,7 @@ The login page will be showcased to the user, allowing them to login to an exist
 
 #### Desktop Sign in view
 
-![Desktop Mobile](static/images/login-desktop-view.png)
+![Desktop Login](static/images/login-desktop-view.png)
 
 ### User Guides
 
@@ -271,26 +271,46 @@ This page will allow the user to view the exisiting guides, create a new guide, 
 
 When there is a guide created this view will be shown if the user is not logged in
 
+![Mobile user not logged in](static/images/mobile-desktop-guide-not-logged-in-guides.png)
+
 When there is a guide created this view will be shown if the user is logged in
+
+![Mobile user logged in](static/images/mobile-guides-created-logged-in.png)
 
 When there isnt a guide created this view will be shown if the user is not logged in
 
+![Mobile user not logged in zero guides](static/images/zero-guides-mobile-not-logged-in.png)
+
 When there isnt a guide created this view will be shown if the user is logged in
 
+![Mobile user logged in zero guides](static/images/logged-in-user-zero-guide-mobile.png)
+
 If the site user is the admin user this view will be shown
+
+![Admin user logged in](static/images/admin-logged-in-guide.png)
 
 #### Desktop User Guides view
 
 When there is a guide created this view will be shown if the user is not logged in
 
+![Desktop user logged in guides created](static/images/logged-in-user-guide.png)
+
+
 When there is a guide created this view will be shown if the user is logged in
+
+![Desktop user not logged in guides created](static/images/desktop-guide-not-logged-in.png)
 
 When there isnt a guide created this view will be shown if the user is not logged in
 
+![Desktop user zero guides not logged in](static/images/zero-guides-desktop-not-logged-in.png)
+
 When there isnt a guide created this view will be shown if the user is logged in
+
+![Desktop user zero guides not logged in](static/images/logged-in-user-zero-guide-desktop.png)
 
 If the site user is the admin user this view will be shown
 
+![Desktop guide admin user](static/images/admin-logged-in-guide.png)
 
 ### Categories 
 
