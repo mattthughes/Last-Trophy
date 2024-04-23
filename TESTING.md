@@ -1,4 +1,14 @@
-## Testing
+# Testing
+
+
+
+## Testing Content 
+
+### HTML Validation
+
+### Python Validation
+
+### Solved Bugs
 
 - Fixed function attribute error by going back into the trophy model and adjusting some key values such as the related name component and the trophy field name on the game model.
 - Fixed an error where the trophies were not appearing, after completing the migrations for the model changes this fixed this issue.
@@ -29,3 +39,19 @@
 - Fixed Likes bug by seperating the guide view into another view orginally I was targeting the trophy model which would not let show the specific likes for that guide, to fix this I created a new view using the detail view of that specific guide. To see all the information regarding this guide, such as leaving likes and comments. I did this by using the get context data method overriding the default behaviour of the detail view to show more content in this view which fixed this issue.
 - Fixed comment error, originally the comments were being shown under every guide of that specific trophy, to fix this I removed the field trophy from the comment model. After this I then targeted the comment by using dot notation to find the comment model. If there was not a comment created the user could create a comment. By using dot notation to find the comment model and removing the trophy field section from the comment model fixed this issue.
 - Fixed Admin Guide deletion error. Orginally one of the user stories was to allow the admin user to delete guides on the front end if they needed to. Originally this didnt work with the test function I was using. In order to fix this I added an if statement checking if the admin user was making the request, if they were to return the objects author allowing the admin user to access this view. To make sure I also allowed the orginal guide user to still delete there own guides, I added an else statement to return this view if the author was making this request which fixed these issues.
+
+### Known Bugs
+
+### Lighthouse Testing
+
+#### Mobile Lighthouse Testing
+
+#### Desktop Lighthouse Testing
+
+### Wave Report
+
+### Manual Testing
+
+### Testing Results
+
+### Automated Testing
