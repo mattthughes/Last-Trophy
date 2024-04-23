@@ -57,10 +57,6 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
 
                     
 
-
-
-
-
 [To view the deployed project click here](https://last-trophy-f32c1bd6dcec.herokuapp.com/)
 
 ## UX
@@ -199,9 +195,9 @@ This model uses its Id as the primary key which will be used when editing and de
 
 ### Color Palette
 
-This is the Color Palette I decided to go with, there are five colours of choice red will be used for the errors on the application and delete buttons, while the green will be used for any login or sign up buttons. There will also be a blue colour that is used for upvoting other user guides. While the white will be used for the background the application has a very simplistic look to not take away any attention from the content on the application.
+This is the Color Palette I decided to go with, The red will be used for the errors on the application and delete buttons, while the green will be used for any login or sign up buttons on the home page. There will also be a blue colour that is used for upvoting other user guides and for the sign in and sign up views. While the floral white will be used for the background, the color grey will be used for the trophies detail to make the trophies stand out. The application has a very simplistic look to not take away any attention from the content on the application.
 
-![Color Palette](static/images/colors-last-trophy.png)
+![Color Palette](static/images/colors-last-trophy-color-palette.png)
 
 ## Typography
 
