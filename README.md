@@ -244,7 +244,7 @@ This is the Trophy title and its description
 
 ![Mobile Trophy](static/images/trophy-detail-mobile.png)
 
-This is the Guides Associated with this trophy
+This is the Guide detail view Associated with this trophy
 
 ![Mobile Guide](static/images/guide-detail-mobile.png)
 
@@ -255,7 +255,7 @@ This is the Trophy title and its description
 
 ![Desktop Trophy](static/images/trophy-detail-desktop.png)
 
-This is the Guides Associated with this trophy
+This is the Guide detail view Associated with this trophy
 
 ![Desktop Guide](static/images/guide-detail-desktop.png)
 
