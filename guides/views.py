@@ -48,6 +48,7 @@ class GuideNotApproved(PermissionRequiredMixin, ListView):
     template_name = 'guides_not_approved.html'
     permission_required = "approve_guide"
 
+
     def get_queryset(self, *args, **kwargs):
         qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
         qs = qs.filter(approved=False)
@@ -57,7 +58,7 @@ class GuideNotApproved(PermissionRequiredMixin, ListView):
         return super().form_valid(form)
 
 
-class GuideApproved(PermissionRequiredMixin, UpdateView):
+class GuideApproved(PermissionRequiredMixin, SuccessMessageMixin, UpdateView):
     """
     This class is using the form approve guide form to
     allow the admin user to approve guides which are
@@ -68,8 +69,11 @@ class GuideApproved(PermissionRequiredMixin, UpdateView):
     """
     model = Guide
     form_class = ApproveGuideForm
+    success_message = 'Approved'
     template_name = 'approve_guides.html'
     permission_required = "approve_guide"
+    
+    
 
     def get_success_url(self):
         return reverse(
@@ -118,7 +122,7 @@ class AdminDeleteGuide(PermissionRequiredMixin, SuccessMessageMixin, DeleteView)
             'guides-list'
             )
 
-class GuideNotApproved(PermissionRequiredMixin, ListView):
+class GuideNotApproved(PermissionRequiredMixin, SuccessMessageMixin, ListView):
     """
     This class is showcasing the guides which are not approved
     in a list only the admin user will be able to view this page
@@ -126,7 +130,8 @@ class GuideNotApproved(PermissionRequiredMixin, ListView):
     """
     model = Guide
     template_name = 'guides_not_approved.html'
-    permission_required = "approve_guide"
+    permission_required = "approve_guides"
+    success_message = 'Guide Approved'
 
     def get_queryset(self, *args, **kwargs):
         qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
@@ -180,7 +185,7 @@ class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'
-    success_message = 'Comment created awaiting approval'
+    success_message = 'Comment created'
 
     def get_success_url(self):
         return reverse(
