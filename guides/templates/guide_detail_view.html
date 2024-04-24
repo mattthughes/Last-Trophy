@@ -21,7 +21,11 @@
         <div class="rate-buttons">
             <form action="{% url 'like-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
+                {% if liked %}
+                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-secondary text-white ms-2">Unlike</button>
+                {% else %}
                 <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary ms-2">Like</button>
+                {% endif %}
                 {{ total_likes }} - Likes
             </form>
             <form action="{% url 'dislike-guide' guide.pk %}" method="POST">

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Dancing+Script:wght@400..700&family=Lugrasimo&family=Shadows+Into+Light&display=swap');
+
+
 /* Generic styles */
 
 body {
@@ -16,6 +19,7 @@ main {
 
 h1,h2,h3 {
     font-size: 20px;
+    font-family: "Arimo", sans-serif
 }
 
 a {

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Lugrasimo&display=swap');
+
 /* Generic styles */
 
 body {
@@ -16,6 +18,7 @@ main {
 
 h1,h2,h3 {
     font-size: 20px;
+    font-family: "Lugrasimo", sans-serif;
 }
 
 a {
