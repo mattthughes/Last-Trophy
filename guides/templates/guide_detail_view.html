@@ -30,7 +30,11 @@
             </form>
             <form action="{% url 'dislike-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
+                {% if disliked %}
+                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-secondary text-white ms-2">Remove Dislike</button>
+                {% else %}
                 <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-danger ms-2">Dislike</button>
+                {% endif %}
                 {{ total_dislikes }} - Dislikes
             </form>
         </div>

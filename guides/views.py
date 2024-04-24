@@ -33,13 +33,17 @@ class GuideView(DetailView):
         like = get_object_or_404(Guide, id=self.kwargs['pk'])
         dislike = get_object_or_404(Guide, id=self.kwargs['pk'])
         liked = False
+        disliked = False
         if like.likes.filter(id=self.request.user.id).exists():
             liked = True
+        if dislike.dislikes.filter(id=self.request.user.id).exists():
+            disliked = True
         total_likes = like.total_likes()
         total_dislikes = dislike.total_dislikes()
         context['total_likes'] = total_likes
         context['total_dislikes'] = total_dislikes
         context["liked"] = liked
+        context["disliked"] = disliked
         return context
 
 class GuideNotApproved(PermissionRequiredMixin, ListView):
@@ -474,8 +478,13 @@ def DislikeView(request, pk):
     user to the login page.
     """
     guide = get_object_or_404(Guide, id=request.POST.get('guide_id'))
-    if request.user.is_authenticated:
+    disliked = False
+    if guide.dislikes.filter(id=request.user.id).exists():
+        guide.dislikes.remove(request.user)
+        disliked = False
+    elif request.user.is_authenticated:
         guide.dislikes.add(request.user)
+        disliked = True
     else:
         return HttpResponseRedirect(reverse('account_login'))
     return HttpResponseRedirect(reverse('guide-view', args=[str(pk)]))
