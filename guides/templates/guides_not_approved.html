@@ -11,11 +11,11 @@
             
             {% for guide in object_list %} 
             <!-- Display guides awaiting approval -->
-            <li><a href="{% url 'approve-guide' guide.pk %}">Title: {{ guide.title }}</a></li> 
+            <li class="pb-2"><a href="{% url 'approve-guide' guide.pk %}">Title: {{ guide.title }}</a></li> 
             <hr/> 
             <!-- if all guides approved-->
             {% empty %} 
-            <li>No Guides to approve.</li>
+            <li class="pb-2">No Guides to approve.</li>
             {% endfor %}
             <a class="btn btn-primary pb-2" href="{% url 'game' %}">Back</a> 
         </ul>
