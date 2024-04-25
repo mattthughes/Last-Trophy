@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Dancing+Script:wght@400..700&family=Lugrasimo&family=Shadows+Into+Light&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sedan:ital@0;1&display=swap');
 /* Generic styles */
 
 body {
@@ -8,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 70px;
+    font-family: "Raleway", sans-serif;
   }
   
 
@@ -102,6 +101,10 @@ img{
 .trophy-description {
     margin-left: 2px;
 
+}
+
+.trophy-title {
+    font-family: "Sedan", "sans-serif";
 }
 
 .trophy-description i {
