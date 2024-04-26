@@ -100,6 +100,7 @@ img{
 
 .trophy-description {
     margin-left: 2px;
+    font-size: 12px;
 
 }
 
@@ -162,5 +163,11 @@ img{
 @media screen and (min-width: 768px) {
     .heading-text {
         height: 40vh;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .trophy-description {
+        font-size: 16px;
     }
 }
