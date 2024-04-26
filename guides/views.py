@@ -18,6 +18,8 @@ class LastTrophyPermissions(LoginRequiredMixin, UserPassesTestMixin):
             return self.get_object().author
         else:
             return self.request.user == self.get_object().author
+
+
 class GuideView(DetailView):
     """
     This class is using the detail view to show

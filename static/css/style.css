@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Lugrasimo&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sedan:ital@0;1&display=swap');
 /* Generic styles */
 
 body {
@@ -7,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 70px;
+    font-family: "Raleway", sans-serif;
   }
   
 
@@ -18,7 +18,7 @@ main {
 
 h1,h2,h3 {
     font-size: 20px;
-    font-family: "Lugrasimo", sans-serif;
+    font-family: "Arimo", sans-serif
 }
 
 a {
@@ -103,6 +103,10 @@ img{
 
 }
 
+.trophy-title {
+    font-family: "Sedan", "sans-serif";
+}
+
 .trophy-description i {
     padding: 5px;
     margin-left: 10px;
@@ -158,6 +162,5 @@ img{
 @media screen and (min-width: 768px) {
     .heading-text {
         height: 40vh;
-        background-image: url("/staticfiles/images/elden-ring-cover.jpg")
     }
 }

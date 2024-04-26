@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic.detail import DetailView
+from django.core.paginator import Paginator
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.admin.views.decorators import staff_member_required
@@ -40,6 +41,9 @@ def game_detail_view(request, slug):
     queryset = Game.objects.filter()
     game = get_object_or_404(queryset, slug=slug)
     trophies = game.trophies.all().order_by("-rarity")
+    paginator = Paginator(trophies, 10)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
 
     return render(
         request,
@@ -47,6 +51,7 @@ def game_detail_view(request, slug):
         {
             "game": game,
             "trophies": trophies,
+            "page_obj": page_obj
         },
     )
 
