@@ -15,7 +15,7 @@
                 <img class="img-thumbnail" src=" {{ trophies.featured_image.url }}" alt="{{ trophies.title }}">
                 {% endif %}
                 <div class="col-md-12 col-lg-12 ps-2">
-                    <p class="trophy-description">Trophy Description: {{trophies.description}}</p>
+                    <p class="trophy-description-detail">Trophy Description: {{trophies.description}}</p>
                     <p class="d-none d-sm-block trophy-rarity">
                         <i class="fa fa-solid fa-trophy"></i>{{trophies.rarity}}
                         <p class="text-center p-2">To view more information for any guide related to trophy:
@@ -35,7 +35,7 @@
         <!--Checking if user is not logged in and there being no guides-->
         {% if not trophies.guides.all and not user.is_authenticated %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <p class="text-center col-6">
+            <p class="text-center col-lg-6">
                 Do you want to help out other fellow trophy hunters like yourself? Then simply login or create an
                 account with us to join our ever growing community!
             </p>
