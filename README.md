@@ -26,6 +26,7 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
             - [Typography](#typography)
                 - [Headings](#headingss)
                 - [Body](#body)
+                - [Trophy Title](#trophy-title)
         - [Surface Plane]()
             - [Key Features](#key-features)
                 - [Navigation Bar](#navigation-bar)
@@ -218,6 +219,7 @@ The body font I decided to go for was the Raleway font I liked the way this fit 
 The Trophy Title font I decided to go with is the Sedan font. This font is slightly different as there are 258 trophies, I felt the trophies needed to stand out more on the application as otherwise the font could of all blended into one, having this different style allowed the trophies to stand out from the rest of the application.
 
 ![Trophy Title Typography](static/images/trophy-title-typography.png)
+
 ## Key Features
 
 ### Navigation Bar
@@ -556,5 +558,20 @@ This will be shown when the user is on the webpage the design is very simple a t
 
 * Creating and filtering genre form inspired and customised to project needs [Django genre form](https://www.youtube.com/watch?v=FTUxl5ZCMb8)
 * Displaying query set in generic display view inspired and customised to project needs [Django list view query set](https://www.geeksforgeeks.org/listview-class-based-views-django/)
+
+* Elden Ring Game detail from [true Achievements](https://www.trueachievements.com/game/Elden-Ring/achievements)
+* Elden Ring Trophies Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/15539-elden-ring)
+* Celeste Game detail from true Achievements [True Achievements](https://www.trueachievements.com/game/Celeste/achievements)
+* Celeste Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/7173-celeste)
+* Resident Evil 7 Biohazard Game detail from [True Achievements](https://www.trueachievements.com/game/Resident-Evil-7/achievements)
+* Resident Evil 7 Biohazard Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/5776-resident-evil-7-biohazard)
+* Tekken 8 Game detail from [True Achievements](https://www.trueachievements.com/game/Tekken-8/achievements)
+* Tekken 8 Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/25534-tekken-8)
+* Alien Isolation Game detail from [True Achievements](https://www.trueachievements.com/game/Alien-Isolation/achievements)
+* Alien Isolation Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/2967-alien-isolation)
+* F1 23 Game detail from [True Achievements](https://www.trueachievements.com/game/F1-23/achievements)
+* F1 23 Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/22490-f1-23)
+
+
 
 ## Acknowledgements
