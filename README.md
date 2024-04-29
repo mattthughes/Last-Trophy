@@ -203,8 +203,21 @@ This is the Color Palette I decided to go with, The red will be used for the err
 
 ### Headings
 
+The heading I have decided to go for is the Arimo font. This font stands out and fits well with the overall style of the application, making the headings stand out.
+
+![Heading Typography](static/images/heading-typography.png)
+
 ### Body
 
+The body font I decided to go for was the Raleway font I liked the way this fit with the overall colour scheme of the application where the text was not taking away from the content on the application
+
+![Body Typography](static/images/body-typography.png)
+
+### Trophy Title
+
+The Trophy Title font I decided to go with is the Sedan font. This font is slightly different as there are 258 trophies, I felt the trophies needed to stand out more on the application as otherwise the font could of all blended into one, having this different style allowed the trophies to stand out from the rest of the application.
+
+![Trophy Title Typography](static/images/trophy-title-typography.png)
 ## Key Features
 
 ### Navigation Bar
