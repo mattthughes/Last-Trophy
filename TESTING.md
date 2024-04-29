@@ -52,6 +52,26 @@
 
 ### Manual Testing
 
+#### Aims
+
+* The aim of testing is to make sure all elements work as intended without any console or server errors on the front end or the back end, make sure this application is responsive on all screen sizes.
+
+* This will be done by allowing the user to login, logout, register create, edit and delete there own comments and guides. The user will be able to click on each trophy leading to the information regarding this trophy such as any guides that have been created.
+
+* Make sure created error pages are shown rather than generic django errors.
+
+* When the user tries to view content via a url make sure the user is redirected to a login page making sure the user has the permissions for this.
+
+### Testing Steps 
+
+* I will test the responsiveness for all screen sizes by firstly clicking on the application and using the inspect tool to open the google chrome developer tools.
+* After this I will click on the laptop display and change the aspect ration to 280px which is the lowest screen size, after this I will begin adjusting the screen sizes to make sure all elements are displaying correctly on all screen sizes.
+* I will make sure all trophies go to the correct trophy and none are duplicated, if a user is logged in they can create guides, if they are the guide author they can edit and delete this guide otherwise redirect the user.
+* I will make sure all links open in seperate tabs not taking the user from the pain page.
+* I will make sure the created error pages are shown rather than django generic errors. 
+* All testing will be completed using Google Chrome, Internet Explorer.
+
+
 ### Testing Results
 
 ### Automated Testing

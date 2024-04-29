@@ -125,7 +125,6 @@ I created seven epics which were then developed into User stories, every detail 
 
 * UserStory [[#20](https://github.com/mattthughes/Last-Trophy/issues/20)] - As a site user I can receive notifications on guides I have written so that I can respond to comments or view the likes and dislikes
 
-
 ### The Scope Plane
 
 #### Features List
@@ -559,9 +558,9 @@ This will be shown when the user is on the webpage the design is very simple a t
 * Creating and filtering genre form inspired and customised to project needs [Django genre form](https://www.youtube.com/watch?v=FTUxl5ZCMb8)
 * Displaying query set in generic display view inspired and customised to project needs [Django list view query set](https://www.geeksforgeeks.org/listview-class-based-views-django/)
 
-* Elden Ring Game detail from [true Achievements](https://www.trueachievements.com/game/Elden-Ring/achievements)
+* Elden Ring Game detail from [True Achievements](https://www.trueachievements.com/game/Elden-Ring/achievements)
 * Elden Ring Trophies Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/15539-elden-ring)
-* Celeste Game detail from true Achievements [True Achievements](https://www.trueachievements.com/game/Celeste/achievements)
+* Celeste Game detail from [True Achievements](https://www.trueachievements.com/game/Celeste/achievements)
 * Celeste Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/7173-celeste)
 * Resident Evil 7 Biohazard Game detail from [True Achievements](https://www.trueachievements.com/game/Resident-Evil-7/achievements)
 * Resident Evil 7 Biohazard Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/5776-resident-evil-7-biohazard)
