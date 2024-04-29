@@ -74,4 +74,40 @@
 
 ### Testing Results
 
+`Celeste Game`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Forsaken Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Gateway Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Archaeology Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Checking Out Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Strawberry Badge Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Breathe Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+In the Mirror Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Reflection Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Celeste Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Pointless Machines Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Strawberry Medal Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Resurrections Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Eye of the Storm Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Scattered and Lost Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Black Moonrise Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Sever the Skyline Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Real Gamer Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Heart of the Mountain Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Heavy and Frail Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Good Karma Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Quiet and Falling Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Golden Feather Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Pink Sunrise Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Mirror Magic Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Center of the Earth Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+No More Running Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Say Goodbye Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Impress Your Friends Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+1UP Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Thanks For Playing Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Heartbeat|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+
 ### Automated Testing
