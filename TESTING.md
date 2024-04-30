@@ -255,4 +255,56 @@ Legendary Talismans|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail 
 Legendary Sorceries and Incantations|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 Lord of Frenzied Flame|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 Elden Ring|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+
+`Tekken 8 Game`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+What a rush!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Let the blistering sands consume you|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Your fate is already decided|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+That was too easy!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Under the divine protection of the Sirius|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Behold, the fruits of my labors|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Fear my wrath|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Now it's time to destroy you|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Outstanding!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+You think you can stop me?|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Come, humanity! Unleash the dogs of war!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+No pain, no gain!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+You're in for it now!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+(That's how a true champion fights!)|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Your money is my money!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+(You never learn)|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+You aren't alone anymore|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Sorry for getting rough back there|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+...|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Excellent!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+I would do well to follow your example|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+I'll live on, together with my sins|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Resuming mission|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+I aspire to greater heights!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Come on, just try and kill me|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Hope|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Just relax. You can do it|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Congrats on the victory!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+I'm actually pretty strong|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+I'll put an end to this|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+There's no way you can stop me|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+How do you take your coffee?|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Do you want to learn Marshall Arts?|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+I'll give you a rematch anytime, guv|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+This should be fun|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+A new star rising in the world of TEKKEN!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+The fists reveal the fighter|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+(Initiating Analysis)|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Get ready for the next battle!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Power isn't everything|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+All is vanity|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+(This one's in the bag!)|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Please don't tell my father|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Godfather|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+My moves are way faster than yours|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Despair|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+A fight is about survival|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 ### Automated Testing
