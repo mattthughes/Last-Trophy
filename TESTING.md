@@ -208,4 +208,51 @@ Resource Manager|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loa
 Mad Pelicans|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 Biosplattered|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 
+
+`Elden Ring Game`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Roundtable Hold|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Margit, The Fell Omen|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Erdtree Aflame|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Shardbearer Godrick|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Magma Wyrm Makar|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Great Rune|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Red Wolf of Radagon|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Leonie Misbegotten|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Rennala, Queen of the Full Moon|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Royal Knight Loretta|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Shardbearer Radahn|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Mimic Tear|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Godfrey the First Elden Lord|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Shardbearer Morgott|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Fire Giant|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+God-Slaying Armament|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Commander Niall|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Shardbearer Rykard|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Astel, Naturalborn of the Void|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Godskin Duo|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Godskin Noble|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Ancestor Spirit|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Maliketh the Black Blade|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Elemer of the Briar|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Dragonkin Soldier of Nokstella|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Hoarah Loux, the warrior|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Valiant Gargoyles|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Loretta Knight of the Haligtree|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Shardbearer Mohg|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Regal Ancestor Spirit|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Shardbearer Malenia|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Mohg, the Omen|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Lichdragon Fortissax|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Dragonlord Placidusax|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Age of the Stars|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Elden Lord|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Legendary Ashen Remains|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Legendary Armaments|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Legendary Talismans|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Legendary Sorceries and Incantations|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Lord of Frenzied Flame|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Elden Ring|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 ### Automated Testing
