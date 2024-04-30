@@ -110,4 +110,60 @@ Impress Your Friends Trophy|Load Trophy detail when clicked|Clicked Trophy Title
 Thanks For Playing Trophy|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 Heartbeat|Load Trophy detail when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 
+`Alien Isolation Game`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+A Record of Disaster|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Awake|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+The Missing|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Build to Survive|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Welcome to Sevastopol|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+A Perfect Organism|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+A Hunt Begins|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Every Bullet Counts|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+She's in the Vents...|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Fault Detected|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Not a Scratch|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+You Shouldn't Be There|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Light 'em Up|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Power Games|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+How Do You Feel?|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Back Off|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Stunned|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Shock to the System|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Caught in the Trap|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+I Admire its Purity|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Seegson Security Bypass|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+An Outpost of Progress|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Not the First|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Self Defense|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Use With Caution...|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Bait|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Hazard Containment|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+A Synthetic Solution|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Consultation|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+This Should Work|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Seegson Systems Expert|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Throwing the Switch|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+The Message|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Transmission|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Free the Torrens|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Ripley, Signing Off|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+End of the Hunt|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+A True Engineer|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Voices of Sevastopol|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Retreat From Fire|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+My Turn Now|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Hide. Run. Survive.|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Just out of Reach|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+100 Times Too Many|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Survivor|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Mind Your Step|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Mercy or Prudence?|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Archivist|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+The Taken|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+One Shot|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Alien: Isolation|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+
 ### Automated Testing
