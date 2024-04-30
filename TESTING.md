@@ -166,4 +166,46 @@ The Taken|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pas
 One Shot|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 Alien: Isolation|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 
+`Resident Evil 7 Biohazard Game`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+She's Alive|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+A-ha!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Behind Closed Doors|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Welcome to the Family, Son|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Master of Unlocking|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+He's Here, There, Everywhere!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Into the Depths|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Can't Catch Me|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Nice Try|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Things Got Personal|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Open Your Eyes|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+You Ain't Gettin' Away|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+In the Bag|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+The Grave Will Out the Truth|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+You Better Start Running|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Less is More|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Playing ir Safe|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Be Kind, Please Rewind|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+End of the Night|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+The Nightmare's Finally Over|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Slash Slash, Slashity Slash!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Back Off, Mrs. B!|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Fly Swatter|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Just A Memory Now|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Duck If You Love Life|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+1st Place at the Science Fair|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+That's a Spicy Meta-a-ball|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Just Get Me Outta Here|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Mr. Nowhere|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Out Before Dessert|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+The Devil Is in the Details|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Who's Your Daddy Now?|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Pelicans in Your Pocket|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Walk it Off|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Resource Manager|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Mad Pelicans|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Biosplattered|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+
 ### Automated Testing
