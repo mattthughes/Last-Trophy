@@ -74,6 +74,34 @@
 
 ### Testing Results
 
+`Responsive Tests`
+
+**Responsiveness**|**Index page**|**Category page**|**Games page**|**Trophies page**|**Guides page**|**Login page**|**Register page**|**Create Form**|**Edit Form**|**Delete Page**|**Approval page**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+Page Heading text|Pass|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A
+Navigation Bar|Pass|Pass|Pass|Pass|Pass|Pass|Pass|Pass|Pass|Pass|Pass
+Genre Form|N/A|N/A|Pass|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A
+Game Details|N/A|N/A|Pass|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A
+Trophy Details|N/A|N/A|Pass|Pass|Pass|N/A|N/A|N/A|N/A|N/A|N/A
+Add Game form|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A
+Edit Game form|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A
+Delete Game|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A
+Add Trophies form|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A
+Edit Trophies form|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A
+Delete Trophy|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A
+Guides|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A|N/A|N/A|Pass
+Likes|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A|N/A|N/A|N/A
+Dislikes|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A|N/A|N/A|N/A
+Create Guide|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A
+Edit Guide |N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A
+Delete Guide|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A
+Comments|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A|N/A|N/A|Pass
+Create Comment|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A
+Edit Comment|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A
+Delete Comment|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A
+Guide Approval|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass
+Comment Approval|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass
+
 `Celeste Game`
 
 **Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
