@@ -307,4 +307,59 @@ Godfather|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pas
 My moves are way faster than yours|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 Despair|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 A fight is about survival|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+
+`F1 23 Game`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Getting on the Step|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+On the Top Step|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Setting up for Success|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Team Orders|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Familiar Faces|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Going the Extra Mile|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Engineer|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Sharing the Love|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Making History|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Hitting a season|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+A Dozen Pieces|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Network Success|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Writing a new Chapter|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Challenge Yourself|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Spring Cleaning|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Proving Them Wrong|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Reduce|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Hitting a Bullseye|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Lighting Round the World|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Ups and Downs|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+All in a Weekend's Work|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Reuse|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Oil and Water|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Crucial Combo|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Tinkerer|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Friendly Competition|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Gathering Dust|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Undisputed Winner |Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Switcheroo|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Eagle Eye|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+One for the Book|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Recycle|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+For all Those Back at the Factory|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Spinning Around|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Peak Performance|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Smooth Operator|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Loyal Bond|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Living up to Expectations|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Hitting a Century|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Wait, I know you?|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Seasoned Rookie|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Under the Microscope|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Filling in the Gaps|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Media Darling|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Saturday Night Drama|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Ultimate Collector|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Shot in the Dark|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Golden Touch|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Elite Racer|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+Racing Legend|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 ### Automated Testing
