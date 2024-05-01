@@ -410,4 +410,26 @@ Delete Game(other user)|Delete game button to be hidden|Logged in as a different
 Delete Game (via url user not logged in)|Redirect user to login page if incorrect user load 403 error page|Tried to access delete game via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
 Delete Game (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access delete game via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
 Delete Game (via url admin)|Load Delete Game form|Tried to delete  game via url as admin|Loaded Delete Game page|Pass
+
+`Trophies Testing`
+
+**Element**|**Expected Outcome**|**Testing Peformed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Create Trophy (admin)|Create trophy button to appear when clicked create trophy form appears|Logged in as admin user |Create Trophy button appeared when clicked create trophy form loaded|Pass
+Create Trophy(other user)|Create trophy button to be hidden|Logged in as a different user|Create Trophy button hidden|Pass
+Create Trophy (via url user not logged in) |Redirect user to login page if incorrect user load 403 error page|Tried to access create trophy via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
+Create Trophy (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access create trophy via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
+Create Trophy (via url admin)|Load Create Trophy form|Tried to access create trophy via url as admin|Loaded Create Trophy form|Pass
+Edit Trophy(admin)|Edit trophy button to appear when clicked edit trophy form appears|Logged in as admin user |Edit Trophy button appeared when clicked edit trophy form loaded|Pass
+Edit Trophy(other user)|Edit Trophy button to be hidden|Logged in as a different user|Edit Trophy button hidden|Pass
+Edit Trophy (via url user not logged in)|Redirect user to login page if incorrect user load 403 error page|Tried to access edit trophy via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
+Edit Trophy (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access edit trophy via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
+Edit Trophy (via url admin)|Load Edit Trophy  form|Tried to access edit trophy via url as admin|Loaded Edit Trophy form|Pass
+Delete Trophy (admin)|Delete Trophy button to appear when clicked delete trophy page loads|Logged in as admin user |Delete Trophy button appeared when clicked delete trophy screen loaded|Pass
+Delete Trophy(other user)|Delete trophy button to be hidden|Logged in as a different user|Delete Trophy button hidden|Pass
+Delete Trophy (via url user not logged in)|Redirect user to login page if incorrect user load 403 error page|Tried to access delete trophy via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
+Delete Trophy (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access delete trophy via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
+Delete Trophy (via url admin)|Load Delete Trophy form|Tried to delete  trophy via url as admin|Loaded Delete Trophy page|Pass
+
+
 ### Automated Testing
