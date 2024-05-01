@@ -390,4 +390,24 @@ Shot in the Dark|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loa
 Golden Touch|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 Elite Racer|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
 Racing Legend|Load Trophy when clicked|Clicked Trophy Title|Trophy Detail loaded|Pass
+
+`Game Testing`
+
+**Element**|**Expected Outcome**|**Testing Peformed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Create Game (admin)|Create game button to appear when clicked create game form appears|Logged in as admin user |Create Game button appeared when clicked create game form loaded|Pass
+Create Game(other user)|Create game button to be hidden|Logged in as a different user|Create Game button hidden|Pass
+Create Game (via url user not logged in)|Redirect user to login page if incorrect user load 403 error page|Tried to access create game via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
+Create Game (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access create game via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
+Create Game (via url admin)|Load Create Game form|Tried to access create game via url as admin|Loaded Create Game form|Pass
+Edit Game (admin)|Edit game button to appear when clicked edit game form appears|Logged in as admin user |Edit game button appeared when clicked edit game form loaded|Pass
+Edit Game(other user)|Edit game button to be hidden|Logged in as a different user|Edit Game button hidden|Pass
+Edit Game (via url user not logged in)|Redirect user to login page if incorrect user load 403 error page|Tried to access edit game via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
+Edit Game (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access edit game via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
+Edit Game (via url admin)|Load Edit Game form|Tried to access edit game via url as admin|Loaded Edit Game form|Pass
+Delete Game (admin)|Delete game button to appear when clicked delete game page appears|Logged in as admin user |Delete game button appeared when clicked delete game screen loaded|Pass
+Delete Game(other user)|Delete game button to be hidden|Logged in as a different user|Delete Game button hidden|Pass
+Delete Game (via url user not logged in)|Redirect user to login page if incorrect user load 403 error page|Tried to access delete game via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
+Delete Game (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access delete game via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
+Delete Game (via url admin)|Load Delete Game form|Tried to delete  game via url as admin|Loaded Delete Game page|Pass
 ### Automated Testing
