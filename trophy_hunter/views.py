@@ -1,14 +1,21 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponse
 from django.views import generic
+from .models import Game
+import random
 
 # Create your views here.
 
 
 def index(request):
+    all_games = list(Game.objects.all())
+    random_game = random.sample(all_games,5)[0]
     return render(
         request,
-        "trophy_hunter/index.html"
+        "trophy_hunter/index.html",
+        {
+            "random_game": random_game
+        }
     )
 
 
