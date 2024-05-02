@@ -58,6 +58,7 @@
       {% else %}
       <img class="img-thumbnail" src=" {{ trophy.featured_image.url }}"
         alt="{{ trophy.title }}">
+        {% endif %}
       <p class="trophy-description p-1">{{trophy.description}}</p>
       <p class="d-none d-sm-block trophy-rarity p-1">
         <i class="fa fa-solid fa-trophy"></i>{{trophy.rarity}}%
@@ -72,7 +73,6 @@
       </div>
 
       {% endif %}
-  {% endif %}
   {% endfor %}
 
   

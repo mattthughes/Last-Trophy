@@ -39,6 +39,7 @@
 - Fixed Likes bug by seperating the guide view into another view orginally I was targeting the trophy model which would not let show the specific likes for that guide, to fix this I created a new view using the detail view of that specific guide. To see all the information regarding this guide, such as leaving likes and comments. I did this by using the get context data method overriding the default behaviour of the detail view to show more content in this view which fixed this issue.
 - Fixed comment error, originally the comments were being shown under every guide of that specific trophy, to fix this I removed the field trophy from the comment model. After this I then targeted the comment by using dot notation to find the comment model. If there was not a comment created the user could create a comment. By using dot notation to find the comment model and removing the trophy field section from the comment model fixed this issue.
 - Fixed Admin Guide deletion error. Orginally one of the user stories was to allow the admin user to delete guides on the front end if they needed to. Originally this didnt work with the test function I was using. In order to fix this I added an if statement checking if the admin user was making the request, if they were to return the objects author allowing the admin user to access this view. To make sure I also allowed the orginal guide user to still delete there own guides, I added an else statement to return this view if the author was making this request which fixed these issues.
+- Fixed placeholder trophy issue orginally, when the admin user created a trophy from the frontend the placeholder image would not display correctly along with the edit and delete buttons. The only way to then delete this trophy was from the backend, to try and fix this I tried to make the image field mandatory, so an image had to be submitted along with trying to change the image path none of this worked. During testing I noticed after the else statement I missed the end if so the if statement was never ending. To fix this I added the end if below the else behaviour which fixed this issue.
 
 ### Known Bugs
 
@@ -435,20 +436,25 @@ Delete Trophy (via url admin)|Load Delete Trophy form|Tried to delete  trophy vi
 
 **Element**|**Expected Outcome**|**Testing Peformed**|**Result**|**Pass/Fail**
 :-----:|:-----:|:-----:|:-----:|:-----:
-Create Trophy (admin)|Create trophy button to appear when clicked create trophy form appears|Logged in as admin user |Create Trophy button appeared when clicked create trophy form loaded|Pass
-Create Trophy(other user)|Create trophy button to be hidden|Logged in as a different user|Create Trophy button hidden|Pass
-Create Trophy (via url user not logged in) |Redirect user to login page if incorrect user load 403 error page|Tried to access create trophy via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
-Create Trophy (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access create trophy via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
-Create Trophy (via url admin)|Load Create Trophy form|Tried to access create trophy via url as admin|Loaded Create Trophy form|Pass
-Edit Trophy(admin)|Edit trophy button to appear when clicked edit trophy form appears|Logged in as admin user |Edit Trophy button appeared when clicked edit trophy form loaded|Pass
-Edit Trophy(other user)|Edit Trophy button to be hidden|Logged in as a different user|Edit Trophy button hidden|Pass
-Edit Trophy (via url user not logged in)|Redirect user to login page if incorrect user load 403 error page|Tried to access edit trophy via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
-Edit Trophy (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access edit trophy via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
-Edit Trophy (via url admin)|Load Edit Trophy  form|Tried to access edit trophy via url as admin|Loaded Edit Trophy form|Pass
-Delete Trophy (admin)|Delete Trophy button to appear when clicked delete trophy page loads|Logged in as admin user |Delete Trophy button appeared when clicked delete trophy screen loaded|Pass
-Delete Trophy(other user)|Delete trophy button to be hidden|Logged in as a different user|Delete Trophy button hidden|Pass
-Delete Trophy (via url user not logged in)|Redirect user to login page if incorrect user load 403 error page|Tried to access delete trophy via url logged in as user matth|Redirect to login page appeared once logged in error 403 page appeared|Pass
-Delete Trophy (via url user logged in)|Redirect user to 403 error page if not admin user|Tried to access delete trophy via url user already logged in|Redirect user to error 403 page stating incorrect permissions|Pass
-Delete Trophy (via url admin)|Load Delete Trophy form|Tried to delete  trophy via url as admin|Loaded Delete Trophy page|Pass
+Create Guide (logged in)|Create Guide button to appear when clicked create guide form to appear|Logged in as user clicked create guide|Create guide button appeared when clicked create guide form loaded|Pass
+Create Guide (user not logged in)|Login and Register buttons to appear informing the user to login first redirect user to login then after redirect to home page user can create a guide|Clicked login or register and logged into account reloaded trophy page and clicked create guide|Redirected to login or register page once logged in user was able to create a guide after clicking on a trophy|Pass
+Create Guide (via url user logged in)|Create Guide Form to load|Tried to access create guide form via url|Loaded create guide form|Pass
+Create Guide (via url user not logged in)|Redirect user to login once logged in load create guide form|Tried to access create guide form via url|Redirected to login page loaded create guide form once logged in|Pass
+Edit Guide (author)|Edit Guide button to appear when clicked edit guide form to appear|Logged in as author clicked edit guide|Edit guide button appeared when clicked edit guide form loaded|Pass
+Edit Guide(not the author)|Edit Guide button to be hidden|Logged in as user which is not the author|Edit guide button hidden|Pass
+Edit Guide (user not logged in)|Login and register buttons below guide informing the user to log in if not the author edit guide button to be hidden|Clicked login or register and logged into account reloaded trophy page |Redirected to login or register page once logged in user is able to edit guide if the author|Pass
+Edit Guide (via url author logged in)|Edit guide form to load|Tried to access edit guide form via url|Loaded edit guide form|Pass
+Edit Guide (via url author not logged in)|Redirect user to login once logged in load edit form if the author logged in|Tried to access edit guide form via url|Redirected to login page loaded edit guide form once author logged in|Pass
+Edit Guide (via url not the author not logged in)|Redirect user to login page if not the author load 403 error page|Tried to access edit guide form via url|Redirected to login page 403 error page loaded once logged in|Pass
+Edit Guide (via url not the author logged in)|Redirect user to 403 error page if not the guide author|Tried to access edit guide form via url|Redirected user to 403 error page|Pass
+Delete Guide (author)|Delete Guide button to appear when clicked delete guide page shown|Logged in as author clicked delete guide|Delete guide button appeared when clicked delete guide page loaded|Pass
+Delete Guide(not the author)|Delete Guide button to be hidden|Logged in as user which is not the author|Delete guide button hidden|Pass
+Delete Guide (Admin)|Delete Guide button to appear when clicked delete guide page shown|Logged in as admin user clicked delete guide|Delete guide button appeared when clicked delete guide page loaded|Pass
+Delete Guide (user not logged in)|Login and register buttons below guide informing the user to log in if not the author or admin user  delete guide button to be hidden|Clicked login or register and logged into account reloaded trophy page |Redirected to login or register page once logged in user is able to delete guide if the author|Pass
+Delete Guide (via url author logged in)|Delete guide page to load|Tried to access delete guide page via url|Loaded delete guide page|Pass
+Delete Guide (via url author not logged in)|Redirect user to login once logged in load delete guide page if the author logged in|Tried to access delete guide page via url|Redirected to login page loaded delete guide page once author logged in|Pass
+Delete Guide (via url not the author not logged in)|Redirect user to login page if not the author or admin load 403 error page|Tried to access delete guide page via url|Redirected to login page 403 error page loaded once logged in|Pass
+Delete Guide (via url not the author logged in)|Redirect user to 403 error page if not the guide author or admin|Tried to access delete guide page via url|Redirected user to 403 error page|Pass
+Delete Guide (via url admin)|Delete guide page to load|Tried to access delete guide page via url|Loaded delete guide page|Pass
 
 ### Automated Testing
