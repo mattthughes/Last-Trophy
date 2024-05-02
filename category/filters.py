@@ -10,5 +10,4 @@ class GameFilter(django_filters.FilterSet):
         fields = {
             'title': ['icontains'],
             'genre': ['exact'],
-
         }

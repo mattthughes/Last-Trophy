@@ -11,9 +11,8 @@
     <div class="row col-2 col-md-8 col-xl-12">
 
         <form method="GET" action="{% url 'game' %}" class="d-flex flex-column flex-xl-row genre-form">
+            {% csrf_token %}
             {{form.as_p}}
-
-
             <input type="submit" value="Submit" class="btn btn-success form-btn">
         </form>
     </div>
