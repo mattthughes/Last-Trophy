@@ -457,4 +457,29 @@ Delete Guide (via url not the author not logged in)|Redirect user to login page 
 Delete Guide (via url not the author logged in)|Redirect user to 403 error page if not the guide author or admin|Tried to access delete guide page via url|Redirected user to 403 error page|Pass
 Delete Guide (via url admin)|Delete guide page to load|Tried to access delete guide page via url|Loaded delete guide page|Pass
 
+`Comments Testing`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Create Comment (logged in)|Create Comment button to appear when clicked create comment form to appear|Logged in as user clicked create comment|Create comment button appeared when clicked create comment form loaded|Pass
+Create Comment (user not logged in)|Redirect user to login once clicked once logged in create comment form to load|Clicked login or register and logged into account reloaded guide  and clicked create comment|Redirected to login or register page once logged in user was able to create a comment after clicking on a guide|Pass
+Create Comment (via url user logged in)        |Create Comment Form to load|Tried to access create comment form via url|Loaded create comment form        |Pass
+Create Comment (via url user not logged in)|Redirect user to login once logged in load create comment form|Tried to access create comment form via url|Redirected to login page loaded create comment form once logged in|Pass
+Edit Comment (author)|Edit Comment button to appear when clicked edit comment form to appear|Logged in as author clicked edit comment|Edit comment button appeared when clicked edit comment form loaded|Pass
+Edit Comment(not the author)|Edit Comment button to be hidden|Logged in as user which is not the author|Edit comment button hidden|Pass
+Edit Comment (user not logged in)|Login and register buttons below comment informing the user to log in if not the author edit comment button to be hidden|Clicked login or register and logged into account reloaded guide page|"Redirected to login or register page once logged in user is able to edit comment if the author|"
+Edit Comment (via url author logged in)        |Edit comment form to load|Tried to access edit comment form via url|Loaded edit comment form|Pass
+Edit Comment (via url author not logged in)|Redirect user to login once logged in load edit comment form if the author logged in|Tried to access edit comment form via url|Redirected to login page loaded edit comment form once author logged in|Pass
+Edit Comment (via url not the author not logged in)|Redirect user to login page if not the author load 403 error page|Tried to access edit comment form via url|Redirected to login page 403 error page loaded once logged in|Pass
+Edit Comment (via url not the author logged in)|Redirect user to 403 error page if not the comment author|Tried to access edit comment form via url|Redirected user to 403 error page|Pass
+Delete Comment (author)|Delete Comment button to appear when clicked delete comment page shown|Logged in as author clicked delete comment|Delete Comment button appeared when clicked delete comment page loaded|Pass
+Delete Comment(not the author)|Delete Comment button to be hidden|Logged in as user which is not the author|Delete Comment button hidden|Pass
+Delete Comment (Admin)|Delete Comment button to appear when clicked delete comment page shown|Logged in as admin user clicked delete comment|Delete Comment button appeared when clicked delete comment page loaded|Pass
+Delete Comment (user not logged in)|Login and register buttons below comment informing the user to log in if not the author or admin user delete comment button to be hidden|Clicked login or register and logged into account reloaded comment page, clicked create comment|Redirected to login or register page once logged in user is able to delete comment if the author|Pass
+Delete Comment (via url author logged in)        |Delete comment page to load|Tried to access delete comment page via url|Loaded delete comment page|Pass
+Delete Comment (via url author not logged in)|Redirect user to login once logged in load delete comment page if the author logged in|Tried to access delete comment page via url|Redirected to login page loaded delete comment page once author logged in|Pass
+Delete Comment (via url not the author not logged in)|Redirect user to login page if not the author or admin load 403 error page|Tried to access delete comment page via url|Redirected to login page 403 error page loaded once logged in|Pass
+Delete Comment (via url not the author logged in)|Redirect user to 403 error page if not the comment author or admin|Tried to access delete comment page via url|Redirected user to 403 error page|Pass
+Delete Comment(via url admin)|Delete comment page to load|Tried to access delete comment page via url|Loaded delete comment page|Pass
+
 ### Automated Testing
