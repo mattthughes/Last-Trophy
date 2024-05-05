@@ -140,6 +140,14 @@ img{
     background-color: #DCDCDC;
 }
 
+.creation-form input {
+    height: 35px;
+}
+
+.creation-form select {
+    height: 35px;
+}
+
 .guide-list {
     background-color: #ffffff;
 }

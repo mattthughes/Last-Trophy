@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row col-12">
         <div class="form-group">
-            <form id="guideForm" method="post">
+            <form id="guideForm" method="post" class="creation-form">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button id="submitButton" type="submit" class="btn btn-success btn-lg">Submit</button>
