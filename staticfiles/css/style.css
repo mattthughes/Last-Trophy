@@ -53,10 +53,21 @@ a {
 
 .form-btn {
     margin-left: 8px;
+    height: 40px;
 }
 
 .genre-table {
     background-color: #DCDCDC;
+}
+
+select {
+    width: 200px;
+    height: 20px;
+}
+
+input {
+    width: 200px;
+    height: 20px;
 }
 
 img{
