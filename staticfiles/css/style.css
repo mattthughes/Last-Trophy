@@ -193,8 +193,8 @@ img {
 
 @media screen and (min-width:500px) {
     .game-image {
-        height: 300px;
-        width: 700px;
+        height: fit-content;
+        width: fit-content;
     }
 
 }
