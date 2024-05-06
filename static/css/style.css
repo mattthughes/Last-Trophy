@@ -85,7 +85,7 @@ img {
 
 .game-image {
     height: 200px;
-    width: 400px;
+    width: 500px;
 }
 
 .game-section {
@@ -194,7 +194,7 @@ img {
 @media screen and (min-width:500px) {
     .game-image {
         height: 300px;
-        width: 500px;
+        width: 700px;
     }
 
 }
@@ -205,7 +205,7 @@ img {
     }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
     .base-image {
         height: 250px;
         width: 450px;
