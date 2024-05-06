@@ -10,9 +10,9 @@
       <div class="border col-md-4 game-section">
         <h3 class="text-center">{{game.title}}</h3>
         {% if "placeholder" in game.featured_image.url %}
-        <img class="img-thumbnail" src="{% static 'images/elden-ring-cover.jpg' %}" alt="placeholder image">
+        <img class="game-image img-thumbnail " src="{% static 'images/elden-ring-cover.jpg' %}" alt="placeholder image">
         {% else %}
-        <img class="img-thumbnail" src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
+        <img class="game-image img-thumbnail " src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
         {% endif %}
         <div class="game-info">
           <p>

@@ -8,8 +8,8 @@ body {
     font-size: 14px;
     padding-bottom: 70px;
     font-family: "Raleway", sans-serif;
-  }
-  
+}
+
 
 main {
     flex-grow: 1;
@@ -17,7 +17,9 @@ main {
 }
 
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-size: 16px;
     font-family: "Arimo", sans-serif
 }
@@ -33,7 +35,7 @@ a {
 }
 
 .heading-paragraph {
-    padding: 15px; 
+    padding: 15px;
 }
 
 .btn {
@@ -45,6 +47,7 @@ a {
     height: 200px;
     width: 350px;
 }
+
 
 
 .genre-form {
@@ -75,9 +78,14 @@ input {
     height: 20px;
 }
 
-img{
-    float:left;
+img {
+    float: left;
     margin-left: 2px;
+}
+
+.game-image {
+    height: 200px;
+    width: 400px;
 }
 
 .game-section {
@@ -129,7 +137,7 @@ img{
 .trophy-description i {
     padding: 5px;
     margin-left: 10px;
-    
+
 }
 
 .trophy-rarity {
@@ -183,6 +191,14 @@ img{
     padding-right: 20px;
 }
 
+@media screen and (min-width:500px) {
+    .game-image {
+        height: 300px;
+        width: 500px;
+    }
+
+}
+
 @media screen and (min-width: 800px) {
     .heading-text {
         height: 80.5vh;
@@ -194,6 +210,11 @@ img{
         height: 250px;
         width: 450px;
     }
+
+    .game-image {
+        height: 150px;
+        width: 700px;
+    }
 }
 
 /* Media Query larger desktop */
@@ -204,10 +225,17 @@ img{
         height: 85vh;
     }
 
+    .game-image {
+        width: 700px;
+        height: 250px;
+
+    }
+
+
     .trophy-description {
         font-size: 16px;
     }
-    
+
 }
 
 
@@ -215,4 +243,6 @@ img{
     .heading-text {
         height: 79vh;
     }
+
+
 }
