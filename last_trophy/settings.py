@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'last_trophy.wsgi.application'
 
 #DATABASES = {
     #'default': {
-       # 'ENGINE': 'django.db.backends.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
     #}
 #}
@@ -110,6 +110,7 @@ WSGI_APPLICATION = 'last_trophy.wsgi.application'
 DATABASE_URL = os.getenv('DATABASE_URL')
 DATABASES = {
     'default': dj_database_url.config(),
+    
 }
 
 CSRF_TRUSTED_ORIGINS = [
