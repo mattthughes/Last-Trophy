@@ -565,7 +565,7 @@ git commit -m "message"- This command was used to add the changes to the reposit
 
 git push - This command pushes all the commited code in the repository queue to Github.
 
-#### Heroku Deployment
+### Heroku Deployment
 
 1. Log in to Heroku or set up an account.
 2. From the dashboard click create new app.
@@ -582,7 +582,8 @@ git push - This command pushes all the commited code in the repository queue to 
 10. If you would like every change you make on your IDE to appear on the deployed app click Enable Automatic Deploy. Otherwise you can deploy this manually each time to have more control of deploys.
 11. For the last step click Deploy Branch in the manual deploy section this will start to the build the app slowly once this has been built a deployed link will appear allowing to to view your deployed app.
 
-#### Running Application Locally
+
+### Running Application Locally
 
 Navigated to the GitHub Repository:
 
@@ -592,11 +593,15 @@ Navigated to the GitHub Repository:
 4. Type git cone alongside the repository link you have just copied into the IDE terminal, the project will now be cloned for use.
 
 
-#### Fork Project
+### Fork Project
 
 1. Log in or sign u to GitHub.
 2. Go to the repository for this project [mattthughes/last-trophy](https://github.com/mattthughes/Last-Trophy)
 3. Click the Fork button on the right corner to fork the project.
+
+## Testing 
+
+* I tested this project extensively, making sure everything worked as intended this was all documented in the TestingMd file which can be viewed here [TestingMd](https://github.com/mattthughes/Last-Trophy/blob/main/TESTING.md)
 
 ## Credits
 
