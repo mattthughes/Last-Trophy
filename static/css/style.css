@@ -78,6 +78,10 @@ input {
     height: 20px;
 }
 
+input[type="checkbox"] {
+    width: 10px;
+}
+
 img {
     float: left;
     margin-left: 2px;
@@ -138,6 +142,10 @@ img {
     padding: 5px;
     margin-left: 10px;
 
+}
+
+.trophy-description-detail {
+    padding: 2em;
 }
 
 .trophy-rarity {
@@ -239,6 +247,10 @@ img {
 
     .trophy-description {
         font-size: 16px;
+    }
+
+    .trophy-description-detail {
+        padding: 2px
     }
 
 }
