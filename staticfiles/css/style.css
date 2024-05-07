@@ -158,8 +158,8 @@ img {
 }
 
 .trophy-image {
-    width: 60px;
-    height: 60px;
+    width: fit-content;
+    height: fit-content;
 }
 
 .trophy-info {
