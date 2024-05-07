@@ -555,6 +555,49 @@ This will be shown when the user is on the webpage the design is very simple a t
 
 ## Deployment
 
+This application was created using GitPod and was then pushed to GitHub to the respository called [Last-Trophy](https://github.com/mattthughes/Last-Trophy)
+
+To make sure I was able to keep updated with the changes I used the following git commands:
+
+git add- This command was used to add the changes to the staging area before changes are commited.
+
+git commit -m "message"- This command was used to add the changes to the repository queue.
+
+git push - This command pushes all the commited code in the repository queue to Github.
+
+#### Heroku Deployment
+
+1. Log in to Heroku or set up an account.
+2. From the dashboard click create new app.
+3. Name your app this will need to be unique as you cannot use an existing application name.
+4. Click on the settings menu.
+5. Scroll down to the Config vars and click Reveal Config Vars.
+6. Add the following config vars:
+    * SECRET_KEY:(Your Secret Key)
+    * DATABASE_URL:(Env.py file)
+    * CLOUDINARY_URL:(Cloudinary api url)
+7. Scroll to the top of the page and select Deploy.
+8. In the deployment method select GitHub and confirm you would like to connect to GitHub.
+9. Enter your GitHub repository Id and then select connect.
+10. If you would like every change you make on your IDE to appear on the deployed app click Enable Automatic Deploy. Otherwise you can deploy this manually each time to have more control of deploys.
+11. For the last step click Deploy Branch in the manual deploy section this will start to the build the app slowly once this has been built a deployed link will appear allowing to to view your deployed app.
+
+#### Running Application Locally
+
+Navigated to the GitHub Repository:
+
+1. Click on the code drop down and click on HTTPS
+2. Copy the Repository link to the clipboard
+3. Open your IDE such as GitPod, CodeAnywhere or any of your choosing making sure git is also installed
+4. Type git cone alongside the repository link you have just copied into the IDE terminal, the project will now be cloned for use.
+
+
+#### Fork Project
+
+1. Log in or sign u to GitHub.
+2. Go to the repository for this project [mattthughes/last-trophy](https://github.com/mattthughes/Last-Trophy)
+3. Click the Fork button on the right corner to fork the project.
+
 ## Credits
 
 * Creating and filtering genre form inspired and customised to project needs [Django genre form](https://www.youtube.com/watch?v=FTUxl5ZCMb8)
