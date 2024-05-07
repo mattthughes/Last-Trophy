@@ -1,15 +1,14 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic.detail import DetailView
 from django.core.paginator import Paginator
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from trophy_hunter.models import Game, Trophies
 from .forms import GameForm, TrophiesForm
 from .filters import GameFilter
 # Create your views here.
+
 
 def game_list(request):
     """
@@ -255,4 +254,3 @@ class DeleteTrophyView(
         return reverse(
             'game-detail', kwargs={'slug': self.object.game.slug}
             )
-            

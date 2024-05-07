@@ -8,6 +8,52 @@
 
 ### Python Validation
 
+#### Category 
+
+`View`
+
+![Category view](static/images/category-view.png)
+
+`urls`
+
+![Category Urls](static/images/category-url.png)
+
+`Form`
+
+![Category Form](static/images/category-form-view.png)
+
+#### Guides
+
+`View`
+
+![Guide View](static/images/guides-view.png)
+
+`urls`
+
+![Guide Urls](static/images/guide-url.png)
+
+`Form`
+
+![Guide Form](static/images/guide-form.png)
+
+#### Trophy Hunter
+
+`View`
+
+![Trophy Hunter View](static/images/trophy-hunter-view.png)
+
+`urls`
+
+![Trophy Hunter Urls](static/images/trophy-hunter-url.png)
+
+`Models`
+
+![Trophy Hunter Models](static/images/models-trophy-hunter.png)
+
+`Form`
+
+![Trophy Hunter Form](static/images/trophy-hunter-form.png)
+
 ### Solved Bugs
 
 - Fixed function attribute error by going back into the trophy model and adjusting some key values such as the related name component and the trophy field name on the game model.

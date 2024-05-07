@@ -11,8 +11,14 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 
+
 class LastTrophyPermissions(LoginRequiredMixin, UserPassesTestMixin):
-    
+    """
+    This function is checking if the user making the
+    request is the superuser, if they are to return
+    the author, else to return the author if the logged
+    in user is the author
+    """
     def test_func(self):
         if self.request.user.is_superuser:
             return self.get_object().author
@@ -48,6 +54,7 @@ class GuideView(DetailView):
         context["disliked"] = disliked
         return context
 
+
 class GuideNotApproved(PermissionRequiredMixin, ListView):
     """
     This class is showcasing the guides which are not approved
@@ -57,7 +64,6 @@ class GuideNotApproved(PermissionRequiredMixin, ListView):
     model = Guide
     template_name = 'guides_not_approved.html'
     permission_required = "approve_guide"
-
 
     def get_queryset(self, *args, **kwargs):
         qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
@@ -82,8 +88,6 @@ class GuideApproved(PermissionRequiredMixin, SuccessMessageMixin, UpdateView):
     success_message = 'Approved'
     template_name = 'approve_guides.html'
     permission_required = "approve_guide"
-    
-    
 
     def get_success_url(self):
         return reverse(
@@ -108,7 +112,9 @@ class AdminListGuides(PermissionRequiredMixin, ListView):
         return super().form_valid(form)
 
 
-class AdminDeleteGuide(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
+class AdminDeleteGuide(
+    PermissionRequiredMixin, SuccessMessageMixin, DeleteView
+        ):
     """
     This class is using the guide model
     with the template delete guide which
@@ -131,6 +137,7 @@ class AdminDeleteGuide(PermissionRequiredMixin, SuccessMessageMixin, DeleteView)
         return reverse(
             'guides-list'
             )
+
 
 class GuideNotApproved(PermissionRequiredMixin, SuccessMessageMixin, ListView):
     """
@@ -166,7 +173,9 @@ class AdminCommentList(PermissionRequiredMixin, ListView):
         return super().form_valid(form)
 
 
-class AdminCommentDelete(PermissionRequiredMixin, SuccessMessageMixin, DeleteView):
+class AdminCommentDelete(
+    PermissionRequiredMixin, SuccessMessageMixin, DeleteView
+        ):
     """
     This class is using the comment model
     with the template delete comment which

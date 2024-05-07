@@ -9,7 +9,7 @@ import random
 
 def index(request):
     all_games = list(Game.objects.all())
-    random_game = random.sample(all_games,5)[0]
+    random_game = random.sample(all_games, 5)[0]
     return render(
         request,
         "trophy_hunter/index.html",
