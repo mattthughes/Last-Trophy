@@ -18,9 +18,11 @@
             <div class="card-header">
                 <h3>{{random_game.title}}</h3>
                 {% if "placeholder" in random_game.featured_image.url %}
-                <img class="base-image img-thumbnail" src="{% static 'images/elden-ring-cover.jpg' %}" alt="placeholder image">
+                <img class="base-image img-thumbnail" src="{% static 'images/elden-ring-cover.jpg' %}"
+                    alt="placeholder image">
                 {% else %}
-                <img class="base-image img-thumbnail" src=" {{ random_game.featured_image.url }}" alt="{{ game.title }}">
+                <img class="base-image img-thumbnail" src=" {{ random_game.featured_image.url }}"
+                    alt="{{ game.title }}">
                 {% endif %}
             </div>
 
@@ -61,7 +63,5 @@
 
         {% endif %}
     </div>
-
-</div>
 </div>
 {% endblock %}

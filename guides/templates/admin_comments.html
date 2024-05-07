@@ -11,14 +11,13 @@
             
             {% for comment in object_list %} 
             <!-- Display guides awaiting approval -->
-            <li><a href="{% url 'delete-comment-list' comment.pk %}">Comment: {{ comment.body }}</a></li> 
-            <hr/> 
+            <li class="pt-2"><a href="{% url 'delete-comment-list' comment.pk %}">Comment: {{ comment.body }}</a></li> 
             <!-- if all guides approved-->
             {% empty %} 
             <li>No comments avaliable.</li>
             {% endfor %}
-            <a class="btn btn-primary pb-2" href="{% url 'game' %}">Back</a> 
         </ul>
+        <a class="btn btn-primary pb-2" href="{% url 'game' %}">Back</a> 
 
     </div>
 </div>
