@@ -167,6 +167,24 @@
 
 ### Wave Report
 
+* This section shows all the wave validation results sign up, login, admin features could not be tested during this.
+
+`Index`
+
+![Index Wave Report](static/images/wave-index.png)
+
+`Game`
+
+![Game Wave Report](static/images/game-wave.png)
+
+`Game-Detail`
+
+![Game Detail Wave Report](static/images/wave-game-detail.png)
+
+`Trophy-Detail`
+
+![Trophy Detail Wave Report](static/images/trophy-detail-wave.png)
+
 ### Manual Testing
 
 #### Aims
