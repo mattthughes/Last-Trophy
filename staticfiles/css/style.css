@@ -144,9 +144,14 @@ img {
     margin-left: 10px;
 }
 
-.trophy-images {
+.trophy-images-section {
     display: flex;
     background-color: #DCDCDC;
+}
+
+.trophy-image {
+    width: 60px;
+    height: 60px;
 }
 
 .trophy-info {

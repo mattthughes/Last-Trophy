@@ -51,12 +51,12 @@
     <div class="trophy-name">
       <a href="{% url 'trophy-detail' trophy.slug %}" class="trophy-title"><strong>{{trophy.title}}</strong></a>
     </div>
-    <div class="col-11 col-md-6 col-lg-6 trophy-images border m-1">
+    <div class="col-11 col-md-6 col-lg-6 trophy-images-section border m-1">
       {% if "placeholder" in trophy.featured_image.url %}
-      <img class="img-thumbnail" src="{% static 'images/elden-ring-cover.jpg' %}"
+      <img class="trophy-image img-thumbnail" src="{% static 'images/elden-ring-cover.jpg' %}"
         alt="placeholder image">
       {% else %}
-      <img class="img-thumbnail" src=" {{ trophy.featured_image.url }}"
+      <img class="trophy-image img-thumbnail" src=" {{ trophy.featured_image.url }}"
         alt="{{ trophy.title }}">
         {% endif %}
       <p class="trophy-description p-1">{{trophy.description}}</p>
