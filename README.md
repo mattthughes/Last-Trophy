@@ -1,4 +1,6 @@
-# Last Trophy 
+# Last Trophy
+
+![Am I Responsive Last Trophy](static/images/am-i-responsive-last-trophy.png)
 
 Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and Django the main premise of this project is to help users with Trophy hunting this application will allow users to view achievement guides, create an account, comment, rate other guides and more more features that will be showcased down below.
 
