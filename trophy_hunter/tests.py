@@ -22,7 +22,8 @@ class TestViews(TestCase):
     def test_view_url_accessible_by_name(self):
         response = self.client.get(reverse('game'))
         self.assertEqual(response.status_code, 200)
-    
+
+
     def test_game_detail_view(self):
         test_user1 = User.objects.create_user(username='testuser1', password='1X<ISRUkw+tuK')
         test = Game.objects.create(

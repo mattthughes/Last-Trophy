@@ -167,7 +167,47 @@
 
 #### Mobile Lighthouse Testing
 
+`Home`
+
+![Home Mobile lighthouse test](static/images/lighthouse-home-mobile.png)
+
+`Game`
+
+![Game Mobile lighthouse test](static/images/lighthouse-mobile-game.png)
+
+`Game-detail`
+
+![Game Detail lighthouse test](static/images/mobile-game-detail-lighthouse.png)
+
+`Trophy-detail`
+
+![Trophy detail lighthouse test](static/images/trophy-detail-lighthouse-mobile.png)
+
+`Guide-detail`
+
+![Guide-detail lighthouse test](static/images/lighthouse-guide-detail-mobile.png)
+
 #### Desktop Lighthouse Testing
+
+`Home`
+
+![Home Mobile lighthouse test](static/images/lighthouse-home-desktop.png)
+
+`Game`
+
+![Game Mobile lighthouse test](static/images/lighthouse-game-desktop.png)
+
+`Game-detail`
+
+![Game Detail lighthouse test](static/images/lighthouse-game-detail-desktop.png)
+
+`Trophy-detail`
+
+![Trophy detail lighthouse test](static/images/trophy-detail-lighthouse-desktop.png)
+
+`Guide-detail`
+
+![Guide-detail lighthouse test](static/images/guide-detail-desktop-lighthouse.png)
 
 ### Wave Report
 
