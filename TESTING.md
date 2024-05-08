@@ -683,12 +683,29 @@ Delete Guides(via url admin)|Guides list appears allowing the admin user to dele
 Delete Guides(via url admin not logged in)|Redirect user to login once logged in to load guides list|Tried to access delete guides via url|Redirected user to login once logged in guides list loaded|Pass
 Delete Guides (via url not admin user logged in)|Redirect user to 403 page|Tried to access delete guides via url|Redirect user to error 403 page|Pass
 Delete Guides(via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access delete guides via url|Redirected user to login once logged in redirected to error 403 page|Pass
-Delete Guides(Zero guides)|A short message stating no guides to delete appears|Clicked on approve guides button|Short message stating no guides to approve appeared|Pass
+Delete Guides(Zero guides)|A short message stating no guides to delete appears|Deleted all guides|Short message stating no guides to approve appeared|Pass
 Delete Guides (Deleted)|Load guide deletion page after deletion redirect user to guide list|Clicked on guide title deleted guide|Guide deletion page loaded after deletion user redirected|Pass
 Delete Guides (Back button)|Redirect admin user to guide list page|Clicked back button|Redirected admin user to guide list page|Pass
 Delete Guide page(via url admin)|Load guide deletion page|Tried to access delete deletion page|Guide deletion page loaded|Pass
-Delete Guides(via url admin not logged in)|Redirect user to login once logged in to load guide deletion page|Tried to access delete deletion page|Guide deletion page loaded|Pass
-Delete Guides (via url not admin user logged in)|Redirect user to 403 page|Tried to access delete deletion page|Redirect user to error 403 page|Pass
-Delete Guides(via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access delete deletion page|Redirected user to login once logged in redirected to error 403 page|Pass
+Delete Guides page (via url admin not logged in)|Redirect user to login once logged in to load guide deletion page|Tried to access delete deletion page|Guide deletion page loaded|Pass
+Delete Guides page (via url not admin user logged in)|Redirect user to 403 page|Tried to access delete deletion page|Redirect user to error 403 page|Pass
+Delete Guides page(via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access delete deletion page|Redirected user to login once logged in redirected to error 403 page|Pass
+
+`Comments Deletion`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Delete Comments(admin)|Delete comments button to be visible when clicked a comments list appears allowing the admin user to delete any comment|Clicked on guide and delete comments button|Loaded Comments list|Pass
+Delete Comments(via url admin)|Comments list appears allowing the admin user to delete any comment|Tried to access delete comments via url|Loaded Comments list|Pass
+Delete Comments(via url admin not logged in)|Redirect user to login once logged in to load comments list|Tried to access delete comments via url|Redirected user to login once logged in comments list loaded|Pass
+Delete Comments(via url not admin user logged in)|Redirect user to 403 page|Tried to access delete comments via url|Redirect user to error 403 page|Pass
+Delete Comments(via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access delete comments via url|Redirected user to login once logged in redirected to error 403 page|Pass
+Delete Comments(Zero comments)|A short message stating no comments to delete appears|Deleted all comments|Short message stating no comments to delete appeared|Pass
+Delete Comments (Deleted)|Load comment deletion page after deletion redirect user to comment list|Clicked on comment description deleted comment|comment deletion page loaded after deletion user redirected|Pass
+Delete Comments(Back button)|Redirect admin user to comment list page|Clicked back button|Redirected admin user to comment list page|Pass
+Delete Comments page(via url admin)|Load comment deletion page|Tried to access comment deletion page|Comment deletion page loaded|Pass
+Delete Comments page(via url admin not logged in)|Redirect user to login once logged in to load comment deletion page|Tried to access comment deletion page|Comment deletion page loaded|Pass
+Delete Comments page (via url not admin user logged in)|Redirect user to 403 page|Tried to access comment deletion page|Redirect user to error 403 page|Pass
+Delete Comments page(via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access comment deletion page|Redirected user to login once logged in redirected to error 403 page|Pass
 
 ### Automated Testing
