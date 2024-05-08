@@ -10,11 +10,11 @@
             <!-- Iterate over guides not approved -->
             
             {% for guide in object_list %} 
-            <!-- Display guides awaiting approval -->
+            <!-- Display guides awaiting deletion -->
             <li class="pt-2"><a href="{% url 'delete-guide-list' guide.pk %}">Title: {{ guide.title }}</a></li> 
-            <!-- if all guides approved-->
+            <!-- if all guides deleted-->
             {% empty %} 
-            <li>No Guides to approve.</li>
+            <li>No Guides to delete.</li>
             {% endfor %}
         </ul>
         <a class="btn btn-primary pb-2" href="{% url 'game' %}">Back</a> 

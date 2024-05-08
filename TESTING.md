@@ -660,4 +660,35 @@ Delete Comment (via url not the author not logged in)|Redirect user to login pag
 Delete Comment (via url not the author logged in)|Redirect user to 403 error page if not the comment author or admin|Tried to access delete comment page via url|Redirected user to 403 error page|Pass
 Delete Comment(via url admin)|Delete comment page to load|Tried to access delete comment page via url|Loaded delete comment page|Pass
 
+
+`Guide Approval and Guide Deletion`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Guide Approval (admin)|Approve guides button to be visible when clicked load guides awaiting approval|Clicked on trophy and approve guides button|Loaded guides awaiting approval|Pass
+Guide Approval (via url admin)|Guides awaiting approval to load|Tried to access guide approval via url|Loaded guides awaiting approval|Pass
+Guide Approval(via url admin not logged in)|Redirect user to login once logged in to load guides awaiting approval|Tried to access guide approval via url|Redirected user to login once logged in guides awaiting approval loaded|Pass
+Guide Approval (via url not admin user logged in)|Redirect user to 403 page|Tried to access guide approval via url|Redirect user to error 403 page|Pass
+Guide Approval (via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access guide approval via url|Redirected user to login once logged in redirected to error 403 page|Pass
+Guide Approval(Zero guides to approve)|A short message stating no guides to approve appears|Clicked on approve guides button|Short message stating no guides to approve appeared|Pass
+Guide Approval (Back button)|Redirect admin user to guide approval page|Clicked back button|Redirected admin user to guide approval page|Pass
+Guide Approval form(admin)|Load guide approval form|Clicked on guide awaiting approval|Loaded guide approval form|Pass
+Guide Approval form(approved)|Guide to disapear from awaiting approval list and to appear on trophy page|Clicked to approve guide and loaded trophy page|Guide disappeared from awaiting list and appeared on trophy page|Pass
+Guide Approval form (via url admin)|Load guide approval form|Tried to access guide approval form via url|Loaded guide approval form|Pass
+Guide Approval form (via url admin not logged in)|Redirect user to login once logged in to load guides approval form|Tried to access guide approval form via url|Loaded guide approval form|Pass
+Guide Approval form (via url not admin user logged in)|Redirect user to 403 page|Tried to access guide approval form via url|Redirect user to error 403 page|Pass
+Guide Approval form (via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access guide approval form via url|Redirected user to login once logged in redirected to error 403 page|Pass
+Delete Guides (admin)|Delete guides button to be visible when clicked a guides list appears allowing the admin user to delete any guide|Clicked on trophy and delete guides button|Loaded Guides list|Pass
+Delete Guides(via url admin)|Guides list appears allowing the admin user to delete any guide|Tried to access delete guides via url|Loaded Guides list|Pass
+Delete Guides(via url admin not logged in)|Redirect user to login once logged in to load guides list|Tried to access delete guides via url|Redirected user to login once logged in guides list loaded|Pass
+Delete Guides (via url not admin user logged in)|Redirect user to 403 page|Tried to access delete guides via url|Redirect user to error 403 page|Pass
+Delete Guides(via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access delete guides via url|Redirected user to login once logged in redirected to error 403 page|Pass
+Delete Guides(Zero guides)|A short message stating no guides to delete appears|Clicked on approve guides button|Short message stating no guides to approve appeared|Pass
+Delete Guides (Deleted)|Load guide deletion page after deletion redirect user to guide list|Clicked on guide title deleted guide|Guide deletion page loaded after deletion user redirected|Pass
+Delete Guides (Back button)|Redirect admin user to guide list page|Clicked back button|Redirected admin user to guide list page|Pass
+Delete Guide page(via url admin)|Load guide deletion page|Tried to access delete deletion page|Guide deletion page loaded|Pass
+Delete Guides(via url admin not logged in)|Redirect user to login once logged in to load guide deletion page|Tried to access delete deletion page|Guide deletion page loaded|Pass
+Delete Guides (via url not admin user logged in)|Redirect user to 403 page|Tried to access delete deletion page|Redirect user to error 403 page|Pass
+Delete Guides(via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access delete deletion page|Redirected user to login once logged in redirected to error 403 page|Pass
+
 ### Automated Testing
