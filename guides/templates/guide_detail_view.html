@@ -22,7 +22,8 @@
             <form action="{% url 'like-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
                 {% if liked %}
-                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-secondary text-white ms-2">Unlike</button>
+                <button type="submit" name="guide_id" value="{{ guide.id }}"
+                    class="btn btn-secondary text-white ms-2">Unlike</button>
                 {% else %}
                 <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-primary ms-2">Like</button>
                 {% endif %}
@@ -31,9 +32,11 @@
             <form action="{% url 'dislike-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
                 {% if disliked %}
-                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-secondary text-white ms-2">Remove Dislike</button>
+                <button type="submit" name="guide_id" value="{{ guide.id }}"
+                    class="btn btn-secondary text-white ms-2">Remove Dislike</button>
                 {% else %}
-                <button type="submit" name="guide_id" value="{{ guide.id }}" class="btn btn-danger ms-2">Dislike</button>
+                <button type="submit" name="guide_id" value="{{ guide.id }}"
+                    class="btn btn-danger ms-2">Dislike</button>
                 {% endif %}
                 {{ total_dislikes }} - Dislikes
             </form>
@@ -65,13 +68,26 @@
         <div class="pt-2">
             <a class="btn btn-success ms-1" href="{% url 'add-comment' guide.pk %}">Add Comment</a>
         </div>
-        
 
     </div>
-        {% if user.is_superuser %}
+    {% if user.is_superuser %}
+    <div class="col-12 pt-3 d-flex flex-column align-items-center">
+        <a class="btn btn-danger" href="{% url 'comments-list' %}">Delete Comments</a>
+    </div>
+    {% endif %}
+
+    {% if not user.is_authenticated %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <a class="btn btn-danger" href="{% url 'comments-list' %}">Delete Comments</a>
-        </div>
-        {% endif %}
+            <p class="text-center col-lg-6">
+                Do you want to help out other fellow trophy hunters like yourself? Then simply login or create an
+                account with us to join our ever growing community!
+            </p>
+            <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a>
+            <a class="btn btn-primary" href="{% url 'account_signup' %}">Register</a>
+
+    </div>
+
+    {% endif %}
+
 </div>
 {% endblock %}
