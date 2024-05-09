@@ -1,5 +1,24 @@
 # Testing
 
+## CONTENTS
+
+- [Testing](#testing)
+- [HTML Validation](#html-validation)
+- [Python Validation](#python-validation)
+- [Solved Bugs](#solved-bugs)
+- [Known Bugs](#known-bugs)
+- [Lighthouse Testing](#lighthouse-testing)
+    - [Mobile lighthouse testing](#mobile-lighthouse-testing)
+    - [Desktop lighthouse testing](#desktop-lighthouse-testing)
+- [Wave Report](#wave-report)
+- [Manual Testing](#manual-testing)
+    - [Aims](#aims)
+    - [Testing Steps](#testing-steps)
+    - [Testing Results](#testing-results)
+- [Automated Testing](#automated-testing)
+
+Welcome to testing results of full stack application known as Last Trophy in this document you will find all the testing resuts such as solved bugs, how they were fixed any known bugs, manual and automated testing as well and how they were tested making sure each element worked as intended.
+
 ## Testing Content 
 
 ### HTML Validation
@@ -645,7 +664,7 @@ Create Comment (via url user logged in)        |Create Comment Form to load|Trie
 Create Comment (via url user not logged in)|Redirect user to login once logged in load create comment form|Tried to access create comment form via url|Redirected to login page loaded create comment form once logged in|Pass
 Edit Comment (author)|Edit Comment button to appear when clicked edit comment form to appear|Logged in as author clicked edit comment|Edit comment button appeared when clicked edit comment form loaded|Pass
 Edit Comment(not the author)|Edit Comment button to be hidden|Logged in as user which is not the author|Edit comment button hidden|Pass
-Edit Comment (user not logged in)|Login and register buttons below comment informing the user to log in if not the author edit comment button to be hidden|Clicked login or register and logged into account reloaded guide page|"Redirected to login or register page once logged in user is able to edit comment if the author|"
+Edit Comment (user not logged in)|Login and register buttons below comment informing the user to log in if not the author edit comment button to be hidden|Clicked login or register and logged into account reloaded guide page|"Redirected to login or register page once logged in user is able to edit comment if the author|Pass
 Edit Comment (via url author logged in)        |Edit comment form to load|Tried to access edit comment form via url|Loaded edit comment form|Pass
 Edit Comment (via url author not logged in)|Redirect user to login once logged in load edit comment form if the author logged in|Tried to access edit comment form via url|Redirected to login page loaded edit comment form once author logged in|Pass
 Edit Comment (via url not the author not logged in)|Redirect user to login page if not the author load 403 error page|Tried to access edit comment form via url|Redirected to login page 403 error page loaded once logged in|Pass
