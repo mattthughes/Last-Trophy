@@ -608,18 +608,25 @@ Navigated to the GitHub Repository:
 * Creating and filtering genre form inspired and customised to project needs [Django genre form](https://www.youtube.com/watch?v=FTUxl5ZCMb8)
 * Displaying query set in generic display view inspired and customised to project needs [Django list view query set](https://www.geeksforgeeks.org/listview-class-based-views-django/)
 
+* Elden Ring Game Image on [Ebay](https://www.ebay.co.uk/itm/304348648747)
 * Elden Ring Game detail from [True Achievements](https://www.trueachievements.com/game/Elden-Ring/achievements)
 * Elden Ring Trophies Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/15539-elden-ring)
+* Celeste Game Image on [MobyGames](https://www.mobygames.com/game/101142/celeste/cover/group-162329/cover-654261/)
 * Celeste Game detail from [True Achievements](https://www.trueachievements.com/game/Celeste/achievements)
 * Celeste Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/7173-celeste)
+* Resident Evil 7 Game Image on [Wccftech](https://wccftech.com/resident-evil-7-new-teasers-showcase-familiar-franchise-features/)
 * Resident Evil 7 Biohazard Game detail from [True Achievements](https://www.trueachievements.com/game/Resident-Evil-7/achievements)
 * Resident Evil 7 Biohazard Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/5776-resident-evil-7-biohazard)
+* Tekken 8 Game Image on [Insider-gaming](https://insider-gaming.com/tekken-8/)
 * Tekken 8 Game detail from [True Achievements](https://www.trueachievements.com/game/Tekken-8/achievements)
 * Tekken 8 Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/25534-tekken-8)
+* Alien Isolation Game Image on [David muscat Literature](https://davidmuscatliterature.wordpress.com/2019/02/03/game-review-alien-isolation/)
 * Alien Isolation Game detail from [True Achievements](https://www.trueachievements.com/game/Alien-Isolation/achievements)
 * Alien Isolation Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/2967-alien-isolation)
+* F1 23 Game Image from [Tech Gameworld](https://techgameworld.com/all-about-f1-23-features-trailers-and-release-date-of-the-new-game/)
 * F1 23 Game detail from [True Achievements](https://www.trueachievements.com/game/F1-23/achievements)
 * F1 23 Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/22490-f1-23)
+
 
 
 
