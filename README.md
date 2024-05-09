@@ -15,15 +15,20 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
             - [Epics](#epics)
             - [User Stories](#user-stories-list)
         - [Scope Plane](#the-scope-plane)
-        - [Structure Plane]()
-            - [Opportunities](#opportunities)
+            - [Features list](#features-list)
         - [Skeleton Plane](#the-skeleton-plane)
             - [Wireframes](#wireframes)
                 - [GameList Wireframe](#games-list-wireframe)
                 - [Sign up Wireframe](#sign-up-wireframe)
                 - [Login Wireframe](#login-wireframe)
                 - [User Guides wireframe](#user-guides-wireframe)
-            - [Database Schema](#database-schema)
+            - [Database Relationship Model](#database-relationship-models)
+                - [Database Schema](#database-schema)
+                    - [Games Model](#games-model)
+                    - [Trophies Model](#trophies-model)
+                    - [Guides Model](#guides-model)
+                    - [Comments Model](#comment-model)
+        - [Design plane](#design-plane)
             - [Color Palette](#color-palette)
             - [Typography](#typography)
                 - [Headings](#headingss)
@@ -37,6 +42,7 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
                 - [Games List](#games-list)
                     - [Mobile Games view](#mobile-games-view)
                     - [Desktop Games view](#desktop-games-view)
+                    - [Admin Games view](#admin-games-view)
                 - [Sign up](#sign-up-page)
                     - [Mobile Sign up view](#mobile-sign-up-view)
                     - [Desktop Sign up view](#desktop-sign-up-view)
@@ -49,14 +55,24 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
                 - [Categories](#categories)
                     - [Mobile Categories view](#mobile-category-view)
                     - [Desktop Categories view](#desktop-category-view)
+                - [Comments](#comments)
+                    - [Mobile comments view](#mobile-view-comment)
+                    - [Desktop comments view](#desktop-view-comment)
+                - [Guides and Comments List](#guides-and-comments-list)
+                    - [Mobile guides and comments list](#mobile-view-guides-and-comments-list)
+                    - [Desktop guides and comments list](#desktop-view-guides-and-comments-list)
                 - [Favicon](#favicon)
                     [Desktop favicon view](#desktop-favicon-view)
-        - [Technology](#technology)
-            - [Languages](#languages)
-                - [Frameworks & Tools](#frameworks--tools)
-        - [Deployment](#deployment)
-            - [Credits](#credits)
-            - [Acknowledgements](#acknowledgements)
+    - [Technology](#technology)
+        - [Languages](#languages)
+            - [Frameworks & Tools](#frameworks--tools)
+    - [Deployment](#deployment)
+        - [Heroku Deployment](#heroku-deployment)
+        - [Running Application locally](#running-application-locally)
+        - [Fork Project](#fork-project)
+    - [Testing](#testing)
+    - [Credits](#credits)
+    - [Acknowledgements](#acknowledgements)
 
                     
 
@@ -221,7 +237,9 @@ The Trophy Title font I decided to go with is the Sedan font. This font is sligh
 
 ![Trophy Title Typography](static/images/trophy-title-typography.png)
 
-## Key Features
+## Surface Plane
+
+### Key Features
 
 ### Navigation Bar
 
@@ -303,7 +321,7 @@ The sign up page will be showcased to the user allowing them to create an accoun
 ![Sign up Desktop view](static/images/sign-up-desktop-view.png)
 
 
-### Login in Page
+### Sign in Page
 
 The login page will be showcased to the user, allowing them to login to an existing account to review the guides they have created, create other guides or respond to feedback.
 
@@ -499,7 +517,6 @@ This is the view if all guides are approved
 
 This will be shown when the user is on the webpage the design is very simple a trophy symbolising what the application is about.
 
-#### Mobile Favicon view
 
 #### Desktop Favicon view
 
