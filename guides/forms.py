@@ -35,7 +35,7 @@ class ApproveGuideForm(forms.ModelForm):
 
 class CommentForm(forms.ModelForm):
     """
-    Form class for users to create comments for specific guides.
+    Form class for users to create comments, edit comments for specific guides.
     """
     class Meta:
         model = Comment

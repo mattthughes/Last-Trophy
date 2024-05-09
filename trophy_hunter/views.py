@@ -8,6 +8,13 @@ import random
 
 
 def index(request):
+    """
+    This function is using a random
+    libary to randomise a game from
+    the model Game this is returning
+    the random game object and the
+    render.
+    """
     all_games = list(Game.objects.all())
     random_game = random.sample(all_games, 5)[0]
     return render(

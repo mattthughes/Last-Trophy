@@ -17,7 +17,7 @@ class LastTrophyPermissions(LoginRequiredMixin, UserPassesTestMixin):
     This function is checking if the user making the
     request is the superuser, if they are to return
     the author, else to return the author if the logged
-    in user is the author
+    in user is the author.
     """
     def test_func(self):
         if self.request.user.is_superuser:
@@ -201,6 +201,13 @@ class AdminCommentDelete(
 
 
 class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """
+    This class is using the create view to use
+    the comment form created and put this on the
+    webpage once the comment has been created a
+    success message stating comment created is
+    shown to give that feedback to the user.
+    """
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'
@@ -275,7 +282,7 @@ class DeleteComment(LastTrophyPermissions, SuccessMessageMixin, DeleteView):
     Comment after the Comment has been deleted
     a pop up message stating Comment deleted
     will appear on the page providing the
-    user
+    user with this visual feedback.
     """
     model = Comment
     success_message = "Comment Deleted"
@@ -396,7 +403,7 @@ class EditGuideView(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     """
     This function is checking to see if the
     form is valid by getting the trophy id
-    as the primary key and the author as the
+    as the primary key
 
     """
 
@@ -413,7 +420,7 @@ class DeleteGuide(LastTrophyPermissions, SuccessMessageMixin, DeleteView):
     guide after the guide has been deleted
     a pop up message stating guide deleted
     will appear on the page providing the
-    user
+    user with this visual feedback
     """
     model = Guide
     success_message = "Guide Deleted"

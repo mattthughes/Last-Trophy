@@ -4,7 +4,7 @@ from trophy_hunter.models import Game, Trophies
 
 class GameForm(forms.ModelForm):
     """
-    Form class for users to create a guide
+    Form class for users to create and edit guides
     """
     class Meta:
         model = Game
@@ -30,7 +30,7 @@ class GameForm(forms.ModelForm):
 
 class TrophiesForm(forms.ModelForm):
     """
-    Form class for users to create a trophy
+    Form class for users to create trophies and edit trophies
     """
     class Meta:
         """

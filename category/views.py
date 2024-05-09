@@ -13,9 +13,9 @@ from .filters import GameFilter
 def game_list(request):
     """
     This function is taking a request which is
-    get and is quereing the game data model,
+    get and is querying the game data model,
     setting the form as the game filter form
-    and the game as the filtered querey set
+    and the game as the filtered query set
     then returing the request, the template
     category which is the template and the context.
     """
@@ -84,7 +84,8 @@ class AddGameView(PermissionRequiredMixin, SuccessMessageMixin, CreateView):
     """
     This function is checking to see if the
     form is valid by getting the trophy id
-    as the primary key and the author as the
+    as the primary key and checking to see
+    if the author is making the request.
 
     """
     def form_valid(self, form):
@@ -136,7 +137,7 @@ class DeleteGame(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     with the template delete game which
     will pop up when the user clicks delete
     game after the game has been deleted
-    a pop up message stating guide deleted
+    a pop up message stating game deleted
     will appear on the page providing the
     user with this feedback.
     """
@@ -237,7 +238,7 @@ class DeleteTrophyView(
     with the template delete game which
     will pop up when the user clicks delete
     game after the game has been deleted
-    a pop up message stating guide deleted
+    a pop up message stating game deleted
     will appear on the page providing the
     user with this feedback.
     """

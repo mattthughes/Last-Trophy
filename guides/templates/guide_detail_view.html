@@ -18,6 +18,7 @@
             <a href="#">Guide Written by {{guide.author}}</a>
             <p>Added {{guide.created_on}}</p>
         </div>
+        <!--Likes Element-->
         <div class="rate-buttons">
             <form action="{% url 'like-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
@@ -29,6 +30,7 @@
                 {% endif %}
                 {{ total_likes }} - Likes
             </form>
+            <!--Dislikes Element-->
             <form action="{% url 'dislike-guide' guide.pk %}" method="POST">
                 {% csrf_token %}
                 {% if disliked %}
@@ -57,6 +59,7 @@
                 <a class="btn btn-success" href="{% url 'edit-comment' comment.pk %}">Edit Comment</a>
             </div>
             {% endif %}
+            <!--Checking to see if the user is logged in, the comment author or is the admin user if they are they can then delete there comment-->
             {% if user.is_authenticated and comment.author == user or user.is_superuser %}
             <div class="d-flex align-items-center justify-content-between flex-column">
                 <a class="btn btn-danger" href="{% url 'delete-comment' comment.pk %}">Delete Comment</a>
@@ -70,20 +73,21 @@
         </div>
 
     </div>
+    <!--Admin user can delete comments-->
     {% if user.is_superuser %}
     <div class="col-12 pt-3 d-flex flex-column align-items-center">
         <a class="btn btn-danger" href="{% url 'comments-list' %}">Delete Comments</a>
     </div>
     {% endif %}
-
+    <!--If the user is not logged in inform them to login or register-->
     {% if not user.is_authenticated %}
-        <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <p class="text-center col-lg-6">
-                Do you want to help out other fellow trophy hunters like yourself? Then simply login or create an
-                account with us to join our ever growing community!
-            </p>
-            <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a>
-            <a class="btn btn-primary" href="{% url 'account_signup' %}">Register</a>
+    <div class="col-12 pt-3 d-flex flex-column align-items-center">
+        <p class="text-center col-lg-6">
+            Do you want to help out other fellow trophy hunters like yourself? Then simply login or create an
+            account with us to join our ever growing community!
+        </p>
+        <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a>
+        <a class="btn btn-primary" href="{% url 'account_signup' %}">Register</a>
 
     </div>
 
