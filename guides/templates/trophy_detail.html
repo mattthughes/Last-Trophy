@@ -10,7 +10,7 @@
             <div class="border col-12 col-md-8 col-lg-8 trophy-info">
                 <h3 class="pt-2 ps-1">Trophy title: {{trophies.title}}</h3>
                 {% if "placeholder" in trophies.featured_image.url %}
-                <img class="trophy-image img-thumbnail" src="{% static 'static/images/elden-ring-cover.jpg' %}" alt="placeholder">
+                <img class="placeholder-trophy img-thumbnail" src="{% static 'images/placeholder-trophy.webp' %}" alt="placeholder">
                 {% else %}
                 <img class="trophy-image img-thumbnail" src=" {{ trophies.featured_image.url }}" alt="{{ trophies.title }}">
                 {% endif %}

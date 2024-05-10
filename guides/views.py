@@ -5,9 +5,9 @@ from django.views.generic.list import ListView
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
+from django.http import HttpResponseRedirect
 from trophy_hunter.models import Trophies, Guide, Comment
 from .forms import GuideForm, ApproveGuideForm, CommentForm
-from django.http import HttpResponseRedirect
 
 # Create your views here.
 

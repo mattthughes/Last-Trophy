@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sedan:ital@0;1&display=swap');
+
 /* Generic styles */
 
 body {
@@ -10,12 +11,10 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
-
 main {
     flex-grow: 1;
     background-color: #F8F8FF
 }
-
 
 h1,
 h2,
@@ -28,6 +27,8 @@ a {
     text-decoration: none;
     color: black;
 }
+
+/* Heading styles */
 
 .heading-text {
     height: 71vh;
@@ -43,12 +44,14 @@ a {
     width: fit-content;
 }
 
+/* Random game image styling */
+
 .base-image {
     height: 200px;
     width: 350px;
 }
 
-
+/* Genre form styling */
 
 .genre-form {
     padding-top: 8px;
@@ -68,10 +71,14 @@ a {
     background-color: #DCDCDC;
 }
 
+/* Select input drop down styling */
+
 select {
     width: 200px;
     height: 20px;
 }
+
+/* input styling for form elements */
 
 input {
     width: 200px;
@@ -82,11 +89,14 @@ input[type="checkbox"] {
     width: 10px;
 }
 
+/* Image styling */
+
 img {
     float: left;
     margin-left: 2px;
 }
 
+/* Game detail styling */
 .game-image {
     height: 200px;
     width: 500px;
@@ -113,12 +123,17 @@ img {
     padding: 20px;
 }
 
+/* Trophy section styling */
+
+.placeholder-trophy {
+    width: 54px;
+    height: 54px;
+}
 
 .trophy-heading {
     padding-left: 4px;
 
 }
-
 
 .trophy-name {
     margin-left: 5px;
@@ -126,7 +141,6 @@ img {
     padding-bottom: 10px;
     color: black;
 }
-
 
 .trophy-description {
     margin-left: 2px;
@@ -166,6 +180,8 @@ img {
     background-color: #DCDCDC;
 }
 
+/* Create and edit form styling */
+
 .creation-form input {
     height: 35px;
 }
@@ -173,6 +189,8 @@ img {
 .creation-form select {
     height: 35px;
 }
+
+/* Guide element styling */
 
 .guide-list {
     background-color: #ffffff;
@@ -182,6 +200,8 @@ img {
     background-color: #ffffff;
 }
 
+/* Comment element styling */
+
 .comment-section {
     background-color: #ffffff;
 }
@@ -190,6 +210,8 @@ img {
     background-color: #fffaf0;
 }
 
+/* Social media icons styling */
+
 .social-icons {
     list-style: none;
     display: flex;
@@ -197,12 +219,13 @@ img {
     padding-right: 35px;
 }
 
-
 .social-icons>li {
     font-size: 1.5em;
     padding-left: 0;
     padding-right: 20px;
 }
+
+/* Media Query for smaller devices */
 
 @media screen and (min-width:500px) {
     .game-image {
@@ -212,11 +235,7 @@ img {
 
 }
 
-@media screen and (min-width: 800px) {
-    .heading-text {
-        height: 80.5vh;
-    }
-}
+/* Media Query tablet devices */
 
 @media screen and (min-width: 768px) {
     .base-image {
@@ -230,7 +249,13 @@ img {
     }
 }
 
-/* Media Query larger desktop */
+@media screen and (min-width: 800px) {
+    .heading-text {
+        height: 80.5vh;
+    }
+}
+
+/* Media Query for laptop devices */
 
 @media screen and (min-width: 1024px) {
 
@@ -243,8 +268,7 @@ img {
         height: 250px;
 
     }
-
-
+    
     .trophy-description {
         font-size: 16px;
     }
@@ -255,6 +279,7 @@ img {
 
 }
 
+/* Media Query for larger desktop devices */
 
 @media screen and (min-width: 1200px) {
     .heading-text {

@@ -125,6 +125,11 @@ img {
 
 /* Trophy section styling */
 
+.placeholder-trophy {
+    width: 54px;
+    height: 54px;
+}
+
 .trophy-heading {
     padding-left: 4px;
 

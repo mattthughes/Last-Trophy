@@ -19,7 +19,7 @@
                 <!--Randomised game element-->
                 <h3>{{random_game.title}}</h3>
                 {% if "placeholder" in random_game.featured_image.url %}
-                <img class="base-image img-thumbnail" src="{% static 'images/elden-ring-cover.jpg' %}"
+                <img class="base-image img-thumbnail" src="{% static 'images/placeholder-game.webp' %}"
                     alt="placeholder image">
                 {% else %}
                 <img class="base-image img-thumbnail" src=" {{ random_game.featured_image.url }}"

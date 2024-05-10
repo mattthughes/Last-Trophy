@@ -8,7 +8,7 @@
       <div class="border col-md-4 game-section">
         <h3 class="text-center">{{game.title}}</h3>
         {% if "placeholder" in game.featured_image.url %}
-        <img class="game-image img-thumbnail " src="{% static 'images/elden-ring-cover.jpg' %}" alt="placeholder image">
+        <img class="game-image img-thumbnail " src="{% static 'images/placeholder-game.webp' %}" alt="placeholder image">
         {% else %}
         <img class="game-image img-thumbnail " src=" {{ game.featured_image.url }}" alt="{{ game.title }}">
         {% endif %}
@@ -50,7 +50,7 @@
     </div>
     <div class="col-11 col-md-6 col-lg-6 trophy-images-section border m-1">
       {% if "placeholder" in trophy.featured_image.url %}
-      <img class="trophy-image img-thumbnail" src="{% static 'images/elden-ring-cover.jpg' %}"
+      <img class="placeholder-trophy img-thumbnail" src="{% static 'images/placeholder-trophy.webp' %}"
         alt="placeholder image">
       {% else %}
       <img class="trophy-image img-thumbnail" src=" {{ trophy.featured_image.url }}"
