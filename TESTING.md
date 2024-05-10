@@ -5,6 +5,9 @@
 - [Testing](#testing)
 - [HTML Validation](#html-validation)
 - [Python Validation](#python-validation)
+    - [Trophy Hunter](#trophy-hunter)
+    - [Category](#category)
+    - [Guides](#guides)
 - [Solved Bugs](#solved-bugs)
 - [Known Bugs](#known-bugs)
 - [Lighthouse Testing](#lighthouse-testing)
@@ -99,6 +102,24 @@ Welcome to testing results of full stack application known as Last Trophy in thi
 
 ### Python Validation
 
+#### Trophy Hunter
+
+`View`
+
+![Trophy Hunter View](static/images/trophy-hunter-view.png)
+
+`urls`
+
+![Trophy Hunter Urls](static/images/trophy-hunter-url.png)
+
+`Models`
+
+![Trophy Hunter Models](static/images/models-trophy-hunter.png)
+
+`Form`
+
+![Trophy Hunter Form](static/images/trophy-hunter-form.png)
+
 #### Category 
 
 `View`
@@ -127,23 +148,11 @@ Welcome to testing results of full stack application known as Last Trophy in thi
 
 ![Guide Form](static/images/guide-form.png)
 
-#### Trophy Hunter
 
-`View`
 
-![Trophy Hunter View](static/images/trophy-hunter-view.png)
+### CSS Validation 
 
-`urls`
-
-![Trophy Hunter Urls](static/images/trophy-hunter-url.png)
-
-`Models`
-
-![Trophy Hunter Models](static/images/models-trophy-hunter.png)
-
-`Form`
-
-![Trophy Hunter Form](static/images/trophy-hunter-form.png)
+![CSS Validation](static/images/css-last-trophy-validator.png)
 
 ### Solved Bugs
 
