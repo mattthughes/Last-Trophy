@@ -55,9 +55,9 @@ class TestViews(TestCase):
             rating=4.9
         )
 
-        response = self.client.get
-        (reverse(
-            'game-detail', args=(test_game.slug,)))
+        response = self.client.get(
+            reverse('game-detail', args=(test_game.slug,))
+            )
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'game_detail.html')
 
@@ -87,8 +87,9 @@ class TestViews(TestCase):
 
         )
 
-        response = self.client.get
-        (reverse('trophy-detail', args=(test_trophy.slug,)))
+        response = self.client.get(
+            reverse('trophy-detail', args=(test_trophy.slug,))
+            )
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'trophy_detail.html')
 
