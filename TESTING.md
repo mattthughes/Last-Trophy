@@ -19,6 +19,10 @@
     - [Testing Steps](#testing-steps)
     - [Testing Results](#testing-results)
 - [Automated Testing](#automated-testing)
+    - [Aims](#automated-testing-aims)
+    - [Testing Logic](#testing-logic)
+    - [Testing Results](#automated-testing-results)
+
 
 Welcome to testing results of full stack application known as Last Trophy in this document you will find all the testing resuts such as solved bugs, how they were fixed any known bugs, manual and automated testing as well and how they were tested making sure each element worked as intended.
 
@@ -737,3 +741,31 @@ Delete Comments page (via url not admin user logged in)|Redirect user to 403 pag
 Delete Comments page(via url not admin user not logged in)|Redirect user to login once logged in redirect to error 403 page|Tried to access comment deletion page|Redirected user to login once logged in redirected to error 403 page|Pass
 
 ### Automated Testing
+
+#### Automated Testing Aims
+
+* To make sure all views work as intended.
+* To make sure there are not any errors during testing.
+* To make sure the correct template is used.
+
+#### Testing Logic
+
+`Game View test`
+
+![Game View test](static/images/game-view-test.png)
+
+`Game Detail test`
+
+![Game Detail test](static/images/game-detail-test.png)
+
+`Trophy Detail test`
+
+![Trophy Detail test](static/images/trophy-detail-test.png)
+
+`Guide Detail test`
+
+![Guide Detail test](static/images/guide-detail-test.png)
+
+#### Automated Testing Results
+
+![Testing Results](static/images/tests.png)
