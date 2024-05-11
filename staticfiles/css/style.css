@@ -76,6 +76,7 @@ a {
 select {
     width: 200px;
     height: 20px;
+    margin-left: 12px;
 }
 
 /* input styling for form elements */
@@ -83,6 +84,7 @@ select {
 input {
     width: 200px;
     height: 20px;
+    margin-left: 12px;
 }
 
 input[type="checkbox"] {
