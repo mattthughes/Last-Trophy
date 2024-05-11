@@ -76,7 +76,7 @@ a {
 select {
     width: 200px;
     height: 20px;
-    margin-left: 12px;
+    margin-left: 10px;
 }
 
 /* input styling for form elements */
@@ -84,7 +84,7 @@ select {
 input {
     width: 200px;
     height: 20px;
-    margin-left: 12px;
+    margin-left: 10px;
 }
 
 input[type="checkbox"] {
@@ -186,10 +186,12 @@ img {
 
 .creation-form input {
     height: 35px;
+    margin: 0;
 }
 
 .creation-form select {
     height: 35px;
+    margin: 0;
 }
 
 /* Guide element styling */
