@@ -1,5 +1,7 @@
 # Testing
 
+Welcome to testing results of full stack application known as Last Trophy in this document you will find all the testing resuts such as solved bugs, how they were fixed any known bugs, manual and automated testing as well and how they were tested making sure each element worked as intended.
+
 ## CONTENTS
 
 - [Testing](#testing)
@@ -24,7 +26,6 @@
     - [Testing Results](#automated-testing-results)
 
 
-Welcome to testing results of full stack application known as Last Trophy in this document you will find all the testing resuts such as solved bugs, how they were fixed any known bugs, manual and automated testing as well and how they were tested making sure each element worked as intended.
 
 ## Testing Content 
 
