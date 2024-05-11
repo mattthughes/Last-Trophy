@@ -56,8 +56,6 @@ class GuideView(DetailView):
         return context
 
 
-
-
 class GuideApproved(PermissionRequiredMixin, SuccessMessageMixin, UpdateView):
     """
     This class is using the form approve guide form to
@@ -135,6 +133,11 @@ class GuideNotApproved(PermissionRequiredMixin, ListView):
     permission_required = "approve_guides"
     paginate_by = 10
 
+    """
+    This function is getting the queryset guide not approved and
+    is filtering this to false only the guides not approved will
+    appear in this list
+    """
     def get_queryset(self, *args, **kwargs):
         qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
         qs = qs.filter(approved=False)
@@ -198,6 +201,13 @@ class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = CommentForm
     template_name = 'add_comment.html'
     success_message = 'Comment created'
+
+    """
+    This function is returning the guide view
+    in order to return the correct guide this
+    is getting the primary key of the guide
+    the user was on.
+    """
 
     def get_success_url(self):
         return reverse(
