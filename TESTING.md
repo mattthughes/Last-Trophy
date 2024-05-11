@@ -39,57 +39,75 @@ Welcome to testing results of full stack application known as Last Trophy in thi
 ![Index Logged in validation](static/images/logged-in-user-index-validator.png)
 
 `Game`
+
 ![Game Validation](static/images/game-html.png)
 
 `Game Detail`
+
 ![Game Detail Validation](static/images/game-detail-html.png)
 
 `Add Game`
+
 ![Add Game Validation](static/images/add-game-validator.png)
 
 `Edit Game`
+
 ![Edit Game Validation](static/images/edit-game-validator.png)
 
 `Delete Game`
+
 ![Delete Game Validation](static/images/delete-game-validator.png)
 
 `Add Trophy`
+
 ![Add Trophy Validation](static/images/create-trophy-validator.png)
 
 `Edit Trophy`
+
 ![Edit Trophy Validation](static/images/edit-trophy-validator.png)
 
 `Delete Trophy`
+
 ![Delete Trophy Validation](static/images/delete-trophy-validator.png)
 
 `Create Guide`
+
 ![Create Guide Validation](static/images/add-guide-validator.png)
 
 `Approve Guide`
+
 ![Approve Guide Validation](static/images/approve-guide-validator.png)
 
 `Guides not approved`
+
 ![Guides Not Approved Validation](static/images/guides-not-approved-validator.png)
 
 `Edit Guide`
+
 ![Edit Guide Validation](static/images/edit-guide-validator.png)
 
 `Delete Guide`
+
 ![Delete Guide Validation](static/images/delete-guide-validator.png)
 
 `Guide List`
+
 ![Guides List Validation](static/images/admin-delete-guides-validator.png)
 
 `Add Comment`
+
 ![Add Comment Validation](static/images/add-comment-validator.png)
 
 `Edit Comment`
+
 ![Edit Comment Validation](static/images/edit-comment-validator.png)
 
 `Delete Comment`
+
 ![Delete Comment Validation](static/images/delete-comment-validator.png)
 
 `Comment List`
+
 ![Comment List Validation](static/images/delete-comments-validator.png)
 
 `Login`

@@ -72,6 +72,9 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
         - [Fork Project](#fork-project)
     - [Testing](#testing)
     - [Credits](#credits)
+        - [Content](#content)
+        - [Code](#code)
+        - [Imagery and Trophy Descriptions](#imagery-and-trophy-descriptions)
     - [Acknowledgements](#acknowledgements)
 
                     
@@ -622,6 +625,9 @@ Navigated to the GitHub Repository:
 
 ## Credits
 
+### Content
+
+* All content was written by Matthew Hughes
 
 ### Code
 
@@ -634,7 +640,7 @@ Navigated to the GitHub Repository:
 
 
 
-### Imagery
+### Imagery and Trophy Descriptions
 
 * Elden Ring Game Image on [Ebay](https://www.ebay.co.uk/itm/304348648747)
 * Elden Ring Game detail from [True Achievements](https://www.trueachievements.com/game/Elden-Ring/achievements)
