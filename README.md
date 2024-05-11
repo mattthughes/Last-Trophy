@@ -590,17 +590,37 @@ git push - This command pushes all the commited code in the repository queue to 
 1. Log in to Heroku or set up an account.
 2. From the dashboard click create new app.
 3. Name your app this will need to be unique as you cannot use an existing application name.
-4. Click on the settings menu.
-5. Scroll down to the Config vars and click Reveal Config Vars.
-6. Add the following config vars:
-    * SECRET_KEY:(Your Secret Key)
-    * DATABASE_URL:(Env.py file)
-    * CLOUDINARY_URL:(Cloudinary api url)
-7. Scroll to the top of the page and select Deploy.
-8. In the deployment method select GitHub and confirm you would like to connect to GitHub.
-9. Enter your GitHub repository Id and then select connect.
-10. If you would like every change you make on your IDE to appear on the deployed app click Enable Automatic Deploy. Otherwise you can deploy this manually each time to have more control of deploys.
-11. For the last step click Deploy Branch in the manual deploy section this will start to the build the app slowly once this has been built a deployed link will appear allowing to to view your deployed app.
+4. This will create the app within Heroku and will bring you to the deploy tab. From this navigate to the resources tab.
+5. Add the database to the app, to do this navigate to the add ons section and search for Heroku Postgres select the pckage that appears and add Heroku Postgres as the database.
+6. Navigate to the settings tab, within the config vars section copy this DATABASE_URL to the clipboard to use this later in your django app.
+7. Within the djanjo app repository create a new file called env.py to do this type into the terminal touch env.py. Within the file create an environment variable for the DATABASE_URL pasting the address from your clipboard you copied from heroku.
+8. Add a SECRET_KEY to the app using another another environment variable you can obtain a secret key from a random secret key generator paste this secret key into the environment variable your secret key variable should be written like this os.environ.setdefault(
+    "SECRET_KEY", "Yoursecret key")
+9. Add the secret key just created to your heroku config vars by adding SECRET_KEY and the key you created as the value.
+10. In the settings.py file  import Path from pathlib, import os and import dj_database_url
+11. insert this line if os.path.isfile("env.py"): import env into the settings.py file 
+12. Remove the default secret key that django has in the settings.py file and type SECRET_KEY = os.environ.get('SECRET_KEY')
+13. Next replace the default database by either commenting out the code or deleting it you can use the default database for any automated testing later, replace this database with DATABASE_URL = os.getenv('DATABASE_URL')
+DATABASES = {
+    'default': dj_database_url.config(),}
+14. In the terminal migrate over any changes you have just made by typing python3 manage.py migrate you may need to make the migrations first if you do type python3 manage.py makemigrations and then the migrate command after.
+15. Navigate to cloudinary in the browser and create an account or login if you already have an account.
+16. From the dashboard copy the CLOUDINARY_URL and navigate over to the django app and create a new environment variable by typing os.environ[Cloudinary_URL] paste the url that you just copied after the assignment operator.
+17. In Heroku add the CLOUDINARY_URL and the value you copied to the config vars.
+18. Add the KEY - DISABLE_COLLECTSTATIC with the Value - 1 to the config vars.
+19. Make sure to delete this key value par prior to final project deployment.
+20. Navigate back to the settings.py file and add the cloudinary libaries to the installed apps the order should be cloudinary_storage then django.contrib.staticfiles and then cloudinary below this make sure you follow this order.
+21. Next add the STATIC files settings which are the url, storage path, directory path, root path, media url and default file storage path.
+22. Change the templates directory to TEMPLATES_DIR - 'DIRS': [TEMPLATES_DIR]
+23. Add Heroku to the ALLOWED_HOSTS list. It should read as .herokuapp.com
+24. Create a static, templates folder in the code editor.
+25. Createa new file in the top level directory and call it Procfile
+26. In the Procfile add the following code web: guincorn PROJECT_NAME.wsgi
+27. Make sure to add, commit and push changes to GitHub.
+28. Navigate back to Heroku and click on the deploy tab scroll down to the  deployment method, select GitHub and confirm you would like to connect to GitHub.
+29. Enter your GitHub repository Id and then select connect.
+30. If you would like every change you make on your IDE to appear on the deployed app click Enable Automatic Deploy. Otherwise you can deploy this manually each time to have more control of deploys.
+31. For the last step click Deploy Branch in the manual deploy section this will start to the build the app slowly once this has been built a deployed link will appear allowing to to view your deployed app.
 
 
 ### Running Application Locally
