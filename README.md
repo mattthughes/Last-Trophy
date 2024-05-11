@@ -34,8 +34,11 @@ Welcome to Last Trophy this project was created using HTML, CSS, JavaScript and 
                 - [Headings](#headingss)
                 - [Body](#body)
                 - [Trophy Title](#trophy-title)
-        - [Surface Plane]()
+        - [Surface Plane](#surface-plane)
             - [Key Features](#key-features)
+                - [Home Page](#home-page)
+                    - [Mobile Home page](#mobile-home-page)
+                    - [Desktop Home page](#desktop-home-page)
                 - [Navigation Bar](#navigation-bar)
                     - [Mobile Navigation View](#mobile-navigation-view)
                     - [Desktop Navigation View](#desktop-navigation-view)
@@ -243,6 +246,32 @@ The Trophy Title font I decided to go with is the Sedan font. This font is sligh
 ## Surface Plane
 
 ### Key Features
+
+### Home Page
+
+This Feature will show two different screens depending if the user is logged in or not if the user is not logged in a short welcome message will appear asking the user to either login or register, Once logged in the welcome message will change welcoming the user back to Last Trophy where a random game will appear showing the user the type of Games the website has if they would like to view the full details regarding this game they can click on the games button and then click on the games title which will lead them to the full details regarding this game.
+
+#### Mobile Home Page
+
+`Not Logged in`
+
+![Index Mobile not logged in](static/images/index-mobile-not-logged-in.png)
+
+
+`Logged in`
+
+![Index Mobile logged in](static/images/index-logged-in-mobile.png)
+
+
+#### Desktop Home Page
+
+`Not Logged in`
+
+![Index Desktop not logged in](static/images/index-not-logged-in-desktop.png)
+
+`Logged in`
+
+![Index Desktop Logged in](static/images/index-logged-in-desktop.png)
 
 ### Navigation Bar
 
