@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.messages.views import SuccessMessageMixin
+from django.core.paginator import Paginator
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views.generic.list import ListView
 from django.contrib.auth.mixins import PermissionRequiredMixin
@@ -55,23 +56,6 @@ class GuideView(DetailView):
         return context
 
 
-class GuideNotApproved(PermissionRequiredMixin, ListView):
-    """
-    This class is showcasing the guides which are not approved
-    in a list only the admin user will be able to view this page
-    which will be controlled by the permission required mixin.
-    """
-    model = Guide
-    template_name = 'guides_not_approved.html'
-    permission_required = "approve_guide"
-
-    def get_queryset(self, *args, **kwargs):
-        qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
-        qs = qs.filter(approved=False)
-        return qs
-
-    def form_valid(self, form):
-        return super().form_valid(form)
 
 
 class GuideApproved(PermissionRequiredMixin, SuccessMessageMixin, UpdateView):
@@ -85,7 +69,7 @@ class GuideApproved(PermissionRequiredMixin, SuccessMessageMixin, UpdateView):
     """
     model = Guide
     form_class = ApproveGuideForm
-    success_message = 'Approved'
+    success_message = 'Guide Approved'
     template_name = 'approve_guides.html'
     permission_required = "approve_guide"
 
@@ -107,6 +91,7 @@ class AdminListGuides(PermissionRequiredMixin, ListView):
     model = Guide
     template_name = 'admin_guides.html'
     permission_required = "delete_guide"
+    paginate_by = 10
 
     def form_valid(self, form):
         return super().form_valid(form)
@@ -139,7 +124,7 @@ class AdminDeleteGuide(
             )
 
 
-class GuideNotApproved(PermissionRequiredMixin, SuccessMessageMixin, ListView):
+class GuideNotApproved(PermissionRequiredMixin, ListView):
     """
     This class is showcasing the guides which are not approved
     in a list only the admin user will be able to view this page
@@ -148,7 +133,7 @@ class GuideNotApproved(PermissionRequiredMixin, SuccessMessageMixin, ListView):
     model = Guide
     template_name = 'guides_not_approved.html'
     permission_required = "approve_guides"
-    success_message = 'Guide Approved'
+    paginate_by = 10
 
     def get_queryset(self, *args, **kwargs):
         qs = super(GuideNotApproved, self).get_queryset(*args, **kwargs)
@@ -168,6 +153,7 @@ class AdminCommentList(PermissionRequiredMixin, ListView):
     model = Comment
     template_name = 'admin_comments.html'
     permission_required = "delete_comment"
+    paginate_by = 5
 
     def form_valid(self, form):
         return super().form_valid(form)
@@ -319,6 +305,9 @@ def trophy_detail_view(request, slug):
     trophies = get_object_or_404(queryset, slug=slug)
     game_guide = trophies.guides.filter(approved=True)
     guide_form = GuideForm()
+    paginator = Paginator(game_guide, 3)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
     return render(
         request,
         "trophy_detail.html",
@@ -326,6 +315,7 @@ def trophy_detail_view(request, slug):
             "trophies": trophies,
             "game_guide": game_guide,
             "guide_form": guide_form,
+            'page_obj': page_obj
         },
     )
 

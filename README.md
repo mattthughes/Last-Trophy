@@ -622,8 +622,19 @@ Navigated to the GitHub Repository:
 
 ## Credits
 
+
+### Code
+
 * Creating and filtering genre form inspired and customised to project needs [Django genre form](https://www.youtube.com/watch?v=FTUxl5ZCMb8)
 * Displaying query set in generic display view inspired and customised to project needs [Django list view query set](https://www.geeksforgeeks.org/listview-class-based-views-django/)
+* Creating Likes and adding them to the correct model was inspired from here and customised to my projects needs [Likes creation](https://www.youtube.com/watch?v=PXqRPqDjDgc)
+* Remove likes from the model was inspired from here and customised to my projects needs [Remove likes](https://www.youtube.com/watch?v=dwgIi8dspa4&t=13s)
+* Restricting access for views inspired and customised to projects needs from here [Django restricting views](https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to_)
+* Creating and running tests inspired and customised to projects needs from here [Django testing](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
+
+
+
+### Imagery
 
 * Elden Ring Game Image on [Ebay](https://www.ebay.co.uk/itm/304348648747)
 * Elden Ring Game detail from [True Achievements](https://www.trueachievements.com/game/Elden-Ring/achievements)
@@ -645,6 +656,8 @@ Navigated to the GitHub Repository:
 * F1 23 Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/22490-f1-23)
 
 
-
-
 ## Acknowledgements
+
+* I would like to thank my mentor Graeme for his help during our sessions, which helped me make changes where needed and constantly keep me on track during this project.
+* I would like to thank everyone in the code institute slack community that took there time to help in giving out feedback.
+* I would like to thank all my friends and family, who took the time to help test the project and provide me with any feedback to improve the project.

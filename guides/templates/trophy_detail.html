@@ -10,17 +10,20 @@
             <div class="border col-12 col-md-8 col-lg-8 trophy-info">
                 <h3 class="pt-2 ps-1">Trophy title: {{trophies.title}}</h3>
                 {% if "placeholder" in trophies.featured_image.url %}
-                <img class="placeholder-trophy img-thumbnail" src="{% static 'images/placeholder-trophy.webp' %}" alt="placeholder">
+                <img class="placeholder-trophy img-thumbnail" src="{% static 'images/placeholder-trophy.webp' %}"
+                    alt="placeholder">
                 {% else %}
-                <img class="trophy-image img-thumbnail" src=" {{ trophies.featured_image.url }}" alt="{{ trophies.title }}">
+                <img class="trophy-image img-thumbnail" src=" {{ trophies.featured_image.url }}"
+                    alt="{{ trophies.title }}">
                 {% endif %}
                 <div class="col-md-12 col-lg-12 ps-2">
                     <p class="trophy-description">Trophy Description: {{trophies.description}}</p>
                     <p class="d-none d-sm-block trophy-rarity">
                         <i class="fa fa-solid fa-trophy"></i>{{trophies.rarity}}</p>
-                        <p class="text-center trophy-description-detail">To view more information for any guide related to trophy:
-                            {{trophies.title}} just click on the guide title to help out other trophy hunters like
-                            yourself!</p>
+                    <p class="text-center trophy-description-detail">To view more information for any guide related to
+                        trophy:
+                        {{trophies.title}} just click on the guide title to help out other trophy hunters like
+                        yourself!</p>
                 </div>
             </div>
         </div>
@@ -56,7 +59,7 @@
         <!--Checking if there any guides if there are guides loop through this in a for loop-->
         {% if trophies.guides.all %}
         <h3 class="text-center">Guides:</h3>
-        {% for guide in game_guide %}
+        {% for guide in page_obj %}
         <div class="d-flex flex-column align-items-center guide-section">
             <a href="{% url 'guide-view' guide.pk %}" class="text-center pt-3">{{guide.title}}</a>
             <div class="col-12 col-md-8 border guide-list">
@@ -66,13 +69,13 @@
                 <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
                     <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
                 </div>
-                    {% endif %}
+                {% endif %}
                 {% if user.is_authenticated and guide.author == user or user.is_superuser %}
                 <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
                     <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
                 </div>
-                   
-                
+
+
                 {% endif %}
                 <div
                     class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
@@ -96,6 +99,20 @@
         {% endif %}
 
         {% endif %}
+        
+        <!--Next and previous buttons for pagination-->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+                </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                {% endif %}
+            </ul>
+        </nav>
         <!--Checking if the user is logged in and there is guides-->
         {% if trophies.guides.all and user.is_authenticated %}
         <div class="col-12 pt-3 d-flex flex-column align-items-center">
@@ -117,5 +134,8 @@
                 {% endif %}
             </div>
         </div>
+
+        
+        
     </div>
-{% endblock %}
+    {% endblock %}
