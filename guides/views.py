@@ -314,7 +314,6 @@ def trophy_detail_view(request, slug):
     queryset = Trophies.objects.filter()
     trophies = get_object_or_404(queryset, slug=slug)
     game_guide = trophies.guides.filter(approved=True)
-    guide_form = GuideForm()
     paginator = Paginator(game_guide, 3)
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
@@ -324,7 +323,6 @@ def trophy_detail_view(request, slug):
         {
             "trophies": trophies,
             "game_guide": game_guide,
-            "guide_form": guide_form,
             'page_obj': page_obj
         },
     )
