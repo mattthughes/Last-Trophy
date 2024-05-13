@@ -213,6 +213,8 @@ Welcome to testing results of full stack application known as Last Trophy in thi
 - Fixed placeholder trophy issue orginally, when the admin user created a trophy from the frontend the placeholder image would not display correctly along with the edit and delete buttons. The only way to then delete this trophy was from the backend, to try and fix this I tried to make the image field mandatory, so an image had to be submitted along with trying to change the image path none of this worked. During testing I noticed after the else statement I missed the end if so the if statement was never ending. To fix this I added the end if below the else behaviour which fixed this issue.
 - Fixed scroll effect on the games detail page. The user was able to on all devices scroll to the right hiding certain content and seeing the edge of the page. To fix this I removed the class row from the div element which fixed this issue.
 - Fixed sign up html errors by instead of using the template form as p I created the form element myself and made the required changes as I was unable to fix these errors by using the form as p changing this fixed these errors.
+- Fixed Game input and select bugs they were not displaying correctly on different screen sizes. To fix this I added a border for both input and select variables which fixed this issue.
+- Fixed pagination game guide warning, orginally this was not specificing a specific order in the object list. To fix this I added a class meta tag which would order the guides in ascending order of when they were created showing the oldest guides at the top of the page.
 
 ### Known Bugs
 

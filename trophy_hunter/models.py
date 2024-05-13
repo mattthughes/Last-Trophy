@@ -59,6 +59,9 @@ class Guide(models.Model):
     likes = models.ManyToManyField(User, related_name='guide_likes')
     dislikes = models.ManyToManyField(User, related_name='guide_dislikes')
 
+    class Meta:
+        ordering = ["created_on"]
+
     def total_likes(self):
         return self.likes.count()
 
