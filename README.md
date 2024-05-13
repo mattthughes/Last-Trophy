@@ -687,7 +687,7 @@ Navigated to the GitHub Repository:
 * Restricting access for views inspired and customised to projects needs from here [Django restricting views](https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to)
 * Creating and running tests inspired and customised to projects needs from here [Django testing](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
 * Using the random module to randomise the game model on the index home screen from here and customised to my projects needs[Random model](https://www.youtube.com/watch?v=RfwzB7-qw7E)
-* Adding an if statement to determine which database to use provided by Code Institute Mentor Daisy and taken from here [Settings if statement] (https://github.com/Dee-McG/LGBTQ-Networking-Platform/blob/28227b43140be4b99d0b08d720fd9a48659f36e4/lgbqt/settings.py#L107)
+* Adding an if statement to determine which database to use provided by Code Institute Mentor Daisy and taken from here[Settings if statement](https://github.com/Dee-McG/LGBTQ-Networking-Platform/blob/28227b43140be4b99d0b08d720fd9a48659f36e4/lgbqt/settings.py#L107)
 
 
 

@@ -215,7 +215,7 @@ Welcome to testing results of full stack application known as Last Trophy in thi
 - Fixed sign up html errors by instead of using the template form as p I created the form element myself and made the required changes as I was unable to fix these errors by using the form as p changing this fixed these errors.
 - Fixed Game input and select bugs they were not displaying correctly on different screen sizes. To fix this I added a border for both input and select variables which fixed this issue.
 - Fixed pagination game guide warning, orginally this was not specificing a specific order in the object list. To fix this I added a class meta tag which would order the guides in ascending order of when they were created showing the oldest guides at the top of the page.
-- Fixed Trophy slug bug orginally the trophy slug had a default value and did not have a unique requirement if the admin user created two trophies with the same slug the application would crash to fix this I removed the default field and added a unique = true requirement to the trophy model which detected if there was another slug with the same name which fixed this issue.
+- Fixed Trophy slug bug orginally the trophy slug had a default value and did not have a unique requirement. If the admin user created two trophies with the same slug the application would crash. To fix this I removed the default field and added a unique = true requirement to the trophy model which detected if there was another slug with the same name which fixed this issue.
 
 ### Known Bugs
 
