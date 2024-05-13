@@ -45,7 +45,7 @@ urlpatterns = [
     path('/<int:pk>/Add/Comment/', AddComment.as_view(), name='add-comment'),
     path('/<int:pk>/Edit/', EditComment.as_view(), name='edit-comment'),
     path(
-        '<int:pk>/Delete/Comment/',
+        '/<int:pk>/Delete/Comment/',
         DeleteComment.as_view(), name='delete-comment'
         )
 ]
