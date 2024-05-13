@@ -709,6 +709,8 @@ Navigated to the GitHub Repository:
 * F1 23 Game Image from [Tech Gameworld](https://techgameworld.com/all-about-f1-23-features-trailers-and-release-date-of-the-new-game/)
 * F1 23 Game detail from [True Achievements](https://www.trueachievements.com/game/F1-23/achievements)
 * F1 23 Trophies Images, Description and rarity from [Psn Trophies](https://psnprofiles.com/trophies/22490-f1-23)
+* Placeholder Game image [City of Mebanenc](https://cityofmebanenc.gov/parks-facilities-trails/placeholder-image/)
+* Placeholder Trophy image [Icon Finder](https://www.iconfinder.com/icons/1552464/image_photo_placeholder_screenshot_icon)
 
 
 ## Acknowledgements
