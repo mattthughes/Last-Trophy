@@ -32,108 +32,104 @@
 </div>
 
 <!--Guide Detail Element-->
-<div class="container-fluid">
-    <div class="row">
-        <!--Checking if user is not logged in and there being no guides-->
-        {% if not trophies.guides.all and not user.is_authenticated %}
-        <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <p class="text-center col-lg-6">
-                Do you want to help out other fellow trophy hunters like yourself? Then simply login or create an
-                account with us to join our ever growing community!
-            </p>
-            <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a>
-            <a class="btn btn-primary" href="{% url 'account_signup' %}">Register</a>
-            <!--checking if user is logged in and there not being any guides-->
-            {% elif not trophies.guides.all and user.is_authenticated %}
-            <p class="text-center pt-2">
-                Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and
-                take your next step
-                in joining our ever growing community
-            </p>
-            <div class="col-12 pt-3 d-flex flex-column align-items-center">
-                <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create</a>
-            </div>
 
+<!--Checking if user is not logged in and there being no guides-->
+{% if not trophies.guides.all and not user.is_authenticated %}
+<div class="col-12 pt-3 d-flex flex-column align-items-center">
+    <p class="text-center col-lg-6">
+        Do you want to help out other fellow trophy hunters like yourself? Then simply login or create an
+        account with us to join our ever growing community!
+    </p>
+    <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a>
+    <a class="btn btn-primary" href="{% url 'account_signup' %}">Register</a>
+</div>
+{% endif %}
+<!--checking if user is logged in and there not being any guides-->
+{% if not trophies.guides.all and user.is_authenticated %}
+<div class="col-12 pt-3 d-flex flex-column align-items-center">
+    <p class="text-center pt-2">
+        Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and
+        take your next step
+        in joining our ever growing community
+    </p>
+    <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create</a>
+</div>
+{% endif %}
+
+<!--Checking if there any guides if there are guides loop through this in a for loop-->
+{% if trophies.guides.all %}
+<h3 class="text-center">Guides:</h3>
+{% for guide in page_obj %}
+<div class="d-flex flex-column align-items-center guide-section">
+    <a href="{% url 'guide-view' guide.pk %}" class="text-center pt-3">{{guide.title}}</a>
+    <div class="col-12 col-md-8 border guide-list">
+        <p class="text-break p-3">{{guide.body}}</p>
+        <!--If the user is the guide author they can edit or delete there own-->
+        {% if user.is_authenticated and guide.author == user %}
+        <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
+            <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
         </div>
         {% endif %}
-        <!--Checking if there any guides if there are guides loop through this in a for loop-->
-        {% if trophies.guides.all %}
-        <h3 class="text-center">Guides:</h3>
-        {% for guide in page_obj %}
-        <div class="d-flex flex-column align-items-center guide-section">
-            <a href="{% url 'guide-view' guide.pk %}" class="text-center pt-3">{{guide.title}}</a>
-            <div class="col-12 col-md-8 border guide-list">
-                <p class="text-break p-3">{{guide.body}}</p>
-                <!--If the user is the guide author they can edit or delete there own-->
-                {% if user.is_authenticated and guide.author == user %}
-                <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
-                    <a class="btn btn-success" href="{% url 'edit-guide' guide.pk %}">Edit guide</a>
-                </div>
-                {% endif %}
-                {% if user.is_authenticated and guide.author == user or user.is_superuser %}
-                <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
-                    <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
-                </div>
-
-
-                {% endif %}
-                <div
-                    class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
-                    <a href="#">Guide Written by {{guide.author}}</a>
-                    <p>Added {{guide.created_on}}</p>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-        {% endif %}
-        <!--If the guide is not approved and the admin user is logged in-->
-        {% if not guide.approved and user.is_superuser %}
-        <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <a class="btn btn-success" href="{% url 'not-approved-guide' %}">Approve Guides</a>
-        </div>
-        <!--Admin user can delete guides-->
-        {% if user.is_superuser %}
-        <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <a class="btn btn-danger" href="{% url 'guides-list' %}">Delete Guides</a>
+        {% if user.is_authenticated and guide.author == user or user.is_superuser %}
+        <div class="guide-buttons d-flex align-items-center justify-content-between flex-column">
+            <a class="btn btn-danger" href="{% url 'delete-guide' guide.pk %}">Delete Guide</a>
         </div>
         {% endif %}
-
-        {% endif %}
-
-        <!--Next and previous buttons for pagination-->
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center pt-3">
-                {% if page_obj.has_previous %}
-                <li>
-                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
-                </li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-        <!--Checking if the user is logged in and there is guides-->
-        {% if trophies.guides.all and user.is_authenticated %}
-        <div class="col-12 pt-3 d-flex flex-column align-items-center">
-            <p class="text-center col-md-8">
-                Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and
-                take your next step
-                in joining our ever growing community.
-            </p>
-            <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
-            {% endif %}
-            <!--Checking if there are guides and the user is not logged in-->
-            {% if trophies.guides.all and not user.is_authenticated %}
-            <div class="col-12 pt-3 d-flex flex-column align-items-center">
-                <p class="text-center col-md-8">
-                    To create your own excellent guides like the ones above just simply login in below to help out other
-                    trophy hunters!
-                </p>
-                <a class="btn btn-success" href="{% url 'account_login' %}">Login</a>
-            </div>
-            {% endif %}
+        <div class="guide-author col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start ps-1">
+            <a href="#">Guide Written by {{guide.author}}</a>
+            <p>Added {{guide.created_on}}</p>
         </div>
     </div>
 </div>
+{% endfor %}
+{% endif %}
+<!--If the guide is not approved and the admin user is logged in-->
+{% if not guide.approved and user.is_superuser %}
+<div class="col-12 pt-3 d-flex flex-column align-items-center">
+    <a class="btn btn-success" href="{% url 'not-approved-guide' %}">Approve Guides</a>
+</div>
+<!--Admin user can delete guides-->
+{% if user.is_superuser %}
+<div class="col-12 pt-3 d-flex flex-column align-items-center">
+    <a class="btn btn-danger" href="{% url 'guides-list' %}">Delete Guides</a>
+</div>
+{% endif %}
+
+{% endif %}
+
+<!--Next and previous buttons for pagination-->
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center pt-3">
+        {% if page_obj.has_previous %}
+        <li>
+            <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+        </li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        {% endif %}
+    </ul>
+</nav>
+<!--Checking if the user is logged in and there is guides-->
+{% if trophies.guides.all and user.is_authenticated %}
+<div class="col-12 pt-3 d-flex flex-column align-items-center">
+    <p class="text-center col-md-8">
+        Do you want to help out other fellow trophy hunters like yourself? Then simply click create guide and
+        take your next step
+        in joining our ever growing community.
+    </p>
+    <a class="btn btn-success" href="{% url 'create-guide' trophies.pk %}">Create guide</a>
+</div>
+{% endif %}
+<!--Checking if there are guides and the user is not logged in-->
+{% if trophies.guides.all and not user.is_authenticated %}
+<div class="col-12 pt-3 d-flex flex-column align-items-center">
+    <p class="text-center col-md-8">
+        To create your own excellent guides like the ones above just simply login in below to help out other
+        trophy hunters!
+    </p>
+    <a class="btn btn-success" href="{% url 'account_login' %}">Login</a>
+
+</div>
+{% endif %}
 {% endblock %}
