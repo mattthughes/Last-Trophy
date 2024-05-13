@@ -75,16 +75,18 @@ a {
 
 select {
     width: 200px;
-    height: 20px;
-    margin-left: 10px;
+    height: 25px;
+    margin-left: 12px;
+    border: solid #d3d3d3;
 }
 
 /* input styling for form elements */
 
 input {
     width: 200px;
-    height: 20px;
-    margin-left: 10px;
+    height: 25px;
+    margin-left: 12px;
+    border: solid #d3d3d3;
 }
 
 input[type="checkbox"] {
