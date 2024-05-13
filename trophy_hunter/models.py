@@ -31,7 +31,7 @@ class Game(models.Model):
 
 class Trophies(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, default="trop-slug")
+    slug = models.SlugField(max_length=200, unique=True)
     game = models.ForeignKey(
         Game, on_delete=models.CASCADE, related_name='trophies')
     featured_image = CloudinaryField('image', default='placeholder')
