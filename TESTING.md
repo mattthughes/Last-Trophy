@@ -220,6 +220,7 @@ Welcome to testing results of full stack application known as Last Trophy in thi
 ### Known Bugs
 
 * When Approving a guide on the front end the success message does not load in the guides not approved list. I have tried adding the messages logic into the approved guides template instead which did not work. I have tried using the messages framework but there was difficulty reworking the view from a class based view ultimately I was unable to fix this at the moment.
+* Test database needs permission in order to be created tried to create an if statement for this the only fix was commenting out the main database for the backend database then all tests work as intended unable to do this for submission.
 
 ### Lighthouse Testing
 
